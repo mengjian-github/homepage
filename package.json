@@ -18,7 +18,7 @@
   ],
   "scripts": {
     "dev": "next dev",
-    "build": "next build",
+    "build": "npx tailwindcss -i ./app/globals.css -o ./app/output.css && next build",
     "start": "next start",
     "lint": "next lint"
   },
@@ -34,6 +34,7 @@
     "@types/node": "^20",
     "@types/react": "^18",
     "@types/react-dom": "^18",
+    "autoprefixer": "^10.4.20",
     "eslint": "^8.56.0",
     "eslint-config-next": "14.1.0",
     "postcss": "^8",
