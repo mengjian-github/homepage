@@ -1,7 +1,21 @@
 {
-  "name": "website",
-  "version": "0.1.0",
+  "name": "mengjian-homepage",
+  "version": "1.0.0",
   "private": true,
+  "description": "孟健的个人网站 - 基于Next.js构建的个人主页",
+  "author": "孟健 <mjcoding@example.com>",
+  "homepage": "https://mengjian.dev",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/mengjian-github/homepage"
+  },
+  "keywords": [
+    "个人网站",
+    "前端开发",
+    "技术博客",
+    "Next.js",
+    "Portfolio"
+  ],
   "scripts": {
     "dev": "next dev",
     "build": "next build",
@@ -9,19 +23,27 @@
     "lint": "next lint"
   },
   "dependencies": {
+    "framer-motion": "^12.4.7",
+    "next": "15.1.7",
+    "next-themes": "^0.4.4",
     "react": "^19.0.0",
     "react-dom": "^19.0.0",
-    "next": "15.1.7"
+    "react-icons": "^5.5.0"
   },
   "devDependencies": {
-    "typescript": "^5",
+    "@eslint/eslintrc": "^3",
     "@types/node": "^20",
     "@types/react": "^19",
     "@types/react-dom": "^19",
-    "postcss": "^8",
-    "tailwindcss": "^3.4.1",
     "eslint": "^9",
     "eslint-config-next": "15.1.7",
-    "@eslint/eslintrc": "^3"
-  }
+    "postcss": "^8",
+    "tailwindcss": "^3.4.1",
+    "typescript": "^5"
+  },
+  "packageManager": "pnpm@9.4.0+sha512.f549b8a52c9d2b8536762f99c0722205efc5af913e77835dbccc3b0b0b2ca9e7dc8022b78062c17291c48e88749c70ce88eb5a74f1fa8c4bf5e18bb46c8bd83a",
+  "engines": {
+    "node": ">=18.0.0"
+  },
+  "license": "MIT"
 }
