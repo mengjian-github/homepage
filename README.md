@@ -1,5 +1,7 @@
 # 孟健的个人网站
 
+[![部署状态](https://img.shields.io/badge/部署-成功-brightgreen)](https://mengjian.dev)
+
 这是孟健的个人网站源代码，基于 [Next.js 14](https://nextjs.org/) 构建，使用 App Router、TypeScript 和 TailwindCSS。
 
 ## 项目介绍
