@@ -9,6 +9,10 @@ const nextConfig = {
   },
   poweredByHeader: false,
   compress: true,
+  swcMinify: true,
+  experimental: {
+    optimizeCss: true,
+  },
 };
 
 export default nextConfig; 
