@@ -10,9 +10,10 @@ const nextConfig = {
   poweredByHeader: false,
   compress: true,
   swcMinify: true,
-  experimental: {
-    optimizeCss: true,
-  },
+  // 暂时禁用可能导致构建变慢的实验性功能
+  // experimental: {
+  //   optimizeCss: true,
+  // },
 };
 
 export default nextConfig; 
