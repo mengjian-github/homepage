@@ -9,7 +9,7 @@ export default function Home() {
     "@context": "https://schema.org",
     "@type": "Person",
     "name": "孟健",
-    "jobTitle": "前端开发专家",
+    "jobTitle": "前端开发专家，豆包Marscode官方讲师",
     "description": "10年+前端开发经验，Flow-Parallel前端团队负责人",
     "url": "https://mengjian.dev",
     "sameAs": [
@@ -40,6 +40,7 @@ export default function Home() {
               <p className="text-xl text-gray-600 dark:text-gray-300 max-w-2xl">
                 10年+前端开发经验，专注于大型互联网产品研发与技术。
                 目前担任 Flow-Parallel 前端团队负责人，致力于推动 AI 与前端技术融合发展。
+                同时也是<a href="https://bytedance.larkoffice.com/docx/Bd5HdlklBocDt5xXpQCc6Lkdnmc" target="_blank" rel="noopener noreferrer" className="text-blue-600 dark:text-blue-400 hover:underline">豆包Marscode官方讲师</a>。
               </p>
               
               <div className="flex flex-wrap gap-4 justify-center md:justify-start">

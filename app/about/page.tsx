@@ -42,7 +42,7 @@ export default function AboutPage() {
                   目前担任 Flow-Parallel 前端团队负责人，致力于推动 AI 与前端技术融合发展。拥有丰富的大型互联网产品研发经验，曾在腾讯负责过 QQ、腾讯课堂等多个核心产品的前端开发工作。
                 </p>
                 <p className="text-gray-600 dark:text-gray-300 leading-relaxed">
-                  专注于 AI 领域深耕 D2C（Design To Code）、Github Copilot 等前沿技术研究。具备全栈开发能力，包括设计、后台、客户端等全栈研发经验。
+                  专注于 AI 领域深耕 D2C（Design To Code）、Github Copilot 等前沿技术研究。具备全栈开发能力，包括设计、后台、客户端等全栈研发经验。同时也是<a href="https://bytedance.larkoffice.com/docx/Bd5HdlklBocDt5xXpQCc6Lkdnmc" target="_blank" rel="noopener noreferrer" className="text-blue-600 dark:text-blue-400 hover:underline">豆包Marscode官方讲师</a>。
                 </p>
               </div>
             </div>
@@ -105,6 +105,7 @@ export default function AboutPage() {
                 <li>负责推动 AI 与前端技术融合发展</li>
                 <li>全栈开发设计、后台、客户端等全栈研发</li>
                 <li>AI 领域深耕 D2C（Design To Code）、Github Copilot 等前沿技术研究</li>
+                <li>担任<a href="https://bytedance.larkoffice.com/docx/Bd5HdlklBocDt5xXpQCc6Lkdnmc" target="_blank" rel="noopener noreferrer" className="text-blue-600 dark:text-blue-400 hover:underline">豆包Marscode官方讲师</a>，分享AI编程相关知识</li>
               </ul>
             </div>
             
@@ -197,6 +198,10 @@ export default function AboutPage() {
               <li>
                 <span className="font-semibold text-gray-900 dark:text-white">行业演讲：</span> 
                 腾讯云专场 AI 分享交流、GMTC 全球大前端技术大会演讲嘉宾。
+              </li>
+              <li>
+                <span className="font-semibold text-gray-900 dark:text-white">AI领域：</span> 
+                担任<a href="https://bytedance.larkoffice.com/docx/Bd5HdlklBocDt5xXpQCc6Lkdnmc" target="_blank" rel="noopener noreferrer" className="text-blue-600 dark:text-blue-400 hover:underline">豆包Marscode官方讲师</a>，教授AI编程技能。
               </li>
               <li>
                 <span className="font-semibold text-gray-900 dark:text-white">技术著作：</span> 
