@@ -9,15 +9,15 @@ export default function Home() {
     "@context": "https://schema.org",
     "@type": "Person",
     "name": "孟健",
-    "jobTitle": "前端开发专家，豆包Marscode官方讲师",
-    "description": "10年+前端开发经验，Flow-Parallel前端团队负责人",
+    "jobTitle": "前端开发专家，豆包Marscode官方讲师，技术作家",
+    "description": "10年+前端开发经验，Flow-Parallel前端团队负责人，《DeepSeek极简入门与应用》作者",
     "url": "https://mengjian.dev",
     "sameAs": [
       "https://github.com/mengjian-github",
       "https://www.zhihu.com/people/meng-jian-39-32",
       "https://juejin.cn/user/4212984287073895"
     ],
-    "knowsAbout": ["前端开发", "React", "Next.js", "TypeScript", "AI", "D2C"]
+    "knowsAbout": ["前端开发", "React", "Next.js", "TypeScript", "AI", "D2C", "DeepSeek"]
   };
 
   return (
@@ -40,7 +40,8 @@ export default function Home() {
               <p className="text-xl text-gray-600 dark:text-gray-300 max-w-2xl">
                 10年+前端开发经验，专注于大型互联网产品研发与技术。
                 目前担任 Flow-Parallel 前端团队负责人，致力于推动 AI 与前端技术融合发展。
-                同时也是<a href="https://bytedance.larkoffice.com/docx/Bd5HdlklBocDt5xXpQCc6Lkdnmc" target="_blank" rel="noopener noreferrer" className="text-blue-600 dark:text-blue-400 hover:underline">豆包Marscode官方讲师</a>。
+                同时也是<a href="https://bytedance.larkoffice.com/docx/Bd5HdlklBocDt5xXpQCc6Lkdnmc" target="_blank" rel="noopener noreferrer" className="text-blue-600 dark:text-blue-400 hover:underline">豆包Marscode官方讲师</a>，
+                以及《DeepSeek极简入门与应用》一书的作者。
               </p>
               
               <div className="flex flex-wrap gap-4 justify-center md:justify-start">
@@ -190,6 +191,37 @@ export default function Home() {
                   >
                     查看项目 <FiArrowRight className="ml-1" />
                   </a>
+                </div>
+              </div>
+            </div>
+          </div>
+          
+          {/* 我的著作 */}
+          <div className="mt-12">
+            <h3 className="text-2xl font-bold text-center text-gray-900 dark:text-white mb-8">我的著作</h3>
+            <div className="bg-white dark:bg-gray-900 rounded-lg shadow-md overflow-hidden max-w-2xl mx-auto">
+              <div className="md:flex">
+                <div className="md:flex-shrink-0 md:w-48 h-64 relative">
+                  <Image
+                    src="/images/my-first-book.jpg"
+                    alt="DeepSeek极简入门与应用"
+                    fill
+                    className="object-cover"
+                  />
+                </div>
+                <div className="p-6">
+                  <h3 className="text-xl font-semibold mb-2 text-gray-900 dark:text-white">DeepSeek极简入门与应用</h3>
+                  <p className="text-gray-600 dark:text-gray-300 mb-4">我的第一本著作，深入浅出地介绍DeepSeek大模型的入门知识与实际应用场景。</p>
+                  <div className="mt-4">
+                    <a 
+                      href="https://item.jd.com/14960026.html" 
+                      target="_blank" 
+                      rel="noopener noreferrer"
+                      className="text-blue-600 dark:text-blue-400 hover:underline font-medium flex items-center"
+                    >
+                      在京东购买 <FiArrowRight className="ml-1" />
+                    </a>
+                  </div>
                 </div>
               </div>
             </div>

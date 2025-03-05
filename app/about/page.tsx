@@ -42,7 +42,7 @@ export default function AboutPage() {
                   目前担任 Flow-Parallel 前端团队负责人，致力于推动 AI 与前端技术融合发展。拥有丰富的大型互联网产品研发经验，曾在腾讯负责过 QQ、腾讯课堂等多个核心产品的前端开发工作。
                 </p>
                 <p className="text-gray-600 dark:text-gray-300 leading-relaxed">
-                  专注于 AI 领域深耕 D2C（Design To Code）、Github Copilot 等前沿技术研究。具备全栈开发能力，包括设计、后台、客户端等全栈研发经验。同时也是<a href="https://bytedance.larkoffice.com/docx/Bd5HdlklBocDt5xXpQCc6Lkdnmc" target="_blank" rel="noopener noreferrer" className="text-blue-600 dark:text-blue-400 hover:underline">豆包Marscode官方讲师</a>。
+                  专注于 AI 领域深耕 D2C（Design To Code）、Github Copilot 等前沿技术研究。具备全栈开发能力，包括设计、后台、客户端等全栈研发经验。同时也是<a href="https://bytedance.larkoffice.com/docx/Bd5HdlklBocDt5xXpQCc6Lkdnmc" target="_blank" rel="noopener noreferrer" className="text-blue-600 dark:text-blue-400 hover:underline">豆包Marscode官方讲师</a>，以及《DeepSeek极简入门与应用》一书的作者。
                 </p>
               </div>
             </div>
@@ -99,13 +99,14 @@ export default function AboutPage() {
                   <h3 className="text-xl font-bold text-gray-900 dark:text-white">字节跳动</h3>
                   <p className="text-lg text-gray-600 dark:text-gray-300">Flow-Parallel 前端团队负责人</p>
                 </div>
-                <span className="text-gray-500 dark:text-gray-400 mt-2 md:mt-0">2022年至今</span>
+                <span className="text-gray-500 dark:text-gray-400 mt-2 md:mt-0">2024年至今</span>
               </div>
               <ul className="list-disc pl-5 text-gray-600 dark:text-gray-300 space-y-2">
                 <li>负责推动 AI 与前端技术融合发展</li>
                 <li>全栈开发设计、后台、客户端等全栈研发</li>
                 <li>AI 领域深耕 D2C（Design To Code）、Github Copilot 等前沿技术研究</li>
                 <li>担任<a href="https://bytedance.larkoffice.com/docx/Bd5HdlklBocDt5xXpQCc6Lkdnmc" target="_blank" rel="noopener noreferrer" className="text-blue-600 dark:text-blue-400 hover:underline">豆包Marscode官方讲师</a>，分享AI编程相关知识</li>
+                <li>出版《DeepSeek极简入门与应用》技术书籍，系统介绍DeepSeek大模型的应用</li>
               </ul>
             </div>
             
@@ -174,6 +175,66 @@ export default function AboutPage() {
           </div>
         </div>
         
+        {/* 我的著作 */}
+        <div className="mb-20">
+          <div className="text-center mb-10">
+            <h2 className="text-3xl font-bold text-gray-900 dark:text-white">我的著作</h2>
+            <p className="mt-4 text-lg text-gray-600 dark:text-gray-300">我的技术书籍和出版作品</p>
+          </div>
+          
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+            <div className="bg-white dark:bg-gray-800 rounded-xl shadow-lg overflow-hidden">
+              <div className="md:flex h-full">
+                <div className="md:flex-shrink-0 md:w-1/3 relative">
+                  <div className="h-64 w-full relative">
+                    <Image
+                      src="/images/my-first-book.jpg"
+                      alt="DeepSeek极简入门与应用"
+                      fill
+                      className="object-cover"
+                    />
+                  </div>
+                </div>
+                <div className="p-6 md:w-2/3 flex flex-col">
+                  <h3 className="text-xl font-bold text-gray-900 dark:text-white mb-2">DeepSeek极简入门与应用</h3>
+                  <p className="text-gray-600 dark:text-gray-300 mb-4 flex-grow">
+                    我的第一本出版书籍，深入浅出地介绍DeepSeek大模型的入门知识与实际应用场景。
+                  </p>
+                  <div className="mt-auto">
+                    <a 
+                      href="https://item.jd.com/14960026.html" 
+                      target="_blank" 
+                      rel="noopener noreferrer"
+                      className="inline-flex items-center text-blue-600 dark:text-blue-400 hover:underline font-medium"
+                    >
+                      在京东购买 <FiArrowRight className="ml-1" />
+                    </a>
+                  </div>
+                </div>
+              </div>
+            </div>
+            
+            <div className="bg-white dark:bg-gray-800 rounded-xl shadow-lg overflow-hidden">
+              <div className="p-6 h-full flex flex-col">
+                <h3 className="text-xl font-bold text-gray-900 dark:text-white mb-2">React 源码全解</h3>
+                <p className="text-gray-600 dark:text-gray-300 mb-4 flex-grow">
+                  开源电子书，深入解析React源码的核心原理和实现机制，帮助开发者更好地理解React框架。
+                </p>
+                <div className="mt-auto">
+                  <a 
+                    href="https://github.com/mengjian-github" 
+                    target="_blank" 
+                    rel="noopener noreferrer"
+                    className="inline-flex items-center text-blue-600 dark:text-blue-400 hover:underline font-medium"
+                  >
+                    查看项目 <FiArrowRight className="ml-1" />
+                  </a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        
         {/* 荣誉奖项 */}
         <div>
           <div className="text-center mb-10">
@@ -205,7 +266,7 @@ export default function AboutPage() {
               </li>
               <li>
                 <span className="font-semibold text-gray-900 dark:text-white">技术著作：</span> 
-                开源书籍《React 源码全解》作者。
+                开源书籍《React 源码全解》作者，以及出版书籍《DeepSeek极简入门与应用》作者。
               </li>
               <li>
                 <span className="font-semibold text-gray-900 dark:text-white">社区影响：</span> 
