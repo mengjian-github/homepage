@@ -175,7 +175,7 @@ export default function BlogPage() {
           <div className="bg-white dark:bg-gray-800 rounded-xl shadow-lg p-8 max-w-2xl mx-auto">
             <h2 className="text-2xl font-bold text-gray-900 dark:text-white mb-4">订阅我的公众号</h2>
             <p className="text-gray-600 dark:text-gray-300 mb-6">
-              关注&quot;孟健的AI编程认知&quot;公众号，获取更多前端、AI、技术管理等方面的原创内容。
+              关注&quot;孟健AI编程&quot;公众号，获取更多前端、AI、技术管理等方面的原创内容。
             </p>
             <div className="flex justify-center">
               <a 

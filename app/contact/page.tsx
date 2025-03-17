@@ -15,7 +15,7 @@ const contactMethods = [
   {
     icon: <FiMessageCircle className="h-10 w-10" />,
     title: "微信公众号",
-    description: "关注「孟健的AI编程认知」，获取最新技术资讯和原创文章",
+    description: "关注「孟健AI编程」，获取最新技术资讯和原创文章",
     action: "关注公众号",
     link: "https://mp.weixin.qq.com/s/IkluVSLTf4nvlOJbLfZyGg"
   },
