@@ -10,6 +10,13 @@ const nextConfig = {
   poweredByHeader: false,
   compress: true,
   swcMinify: true,
+  transpilePackages: [
+    'framer-motion',
+    'react-particles',
+    'tsparticles',
+    'tsparticles-engine',
+    'tsparticles-slim'
+  ],
   // 暂时禁用可能导致构建变慢的实验性功能
   // experimental: {
   //   optimizeCss: true,

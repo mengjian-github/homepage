@@ -15,16 +15,51 @@ export default {
     'text-gray-600', 'dark:text-gray-300', 'text-blue-600', 'dark:text-blue-400',
     'container', 'mx-auto', 'px-4', 'py-8', 'my-8', 'gap-4',
     'grid', 'grid-cols-1', 'md:grid-cols-2', 'lg:grid-cols-3',
-    'rounded-lg', 'shadow-md', 'p-6'
+    'rounded-lg', 'shadow-md', 'shadow-lg', 'shadow-xl', 'p-6',
+    'hover:scale-105', 'transform', 'transition-all', 'duration-300',
+    'from-blue-600', 'to-purple-600', 'bg-gradient-to-r', 'bg-clip-text', 'text-transparent',
+    'gradient-text', 'gradient-btn', 'hover-card',
+    'animate-pulse-slow'
   ],
   theme: {
     extend: {
       colors: {
         background: "var(--background)",
         foreground: "var(--foreground)",
+        primary: {
+          DEFAULT: "var(--primary)",
+          dark: "var(--primary-dark)",
+        },
+        secondary: {
+          DEFAULT: "var(--secondary)",
+          dark: "var(--secondary-dark)",
+        },
       },
       fontFamily: {
-        sans: ["var(--font-sans)", "Arial", "sans-serif"],
+        sans: ["var(--font-sans)"],
+        heading: ["var(--font-heading)"],
+      },
+      animation: {
+        'float': 'float 6s ease-in-out infinite',
+        'float-slow': 'float 8s ease-in-out infinite',
+        'pulse-slow': 'pulse 4s cubic-bezier(0.4, 0, 0.6, 1) infinite',
+      },
+      keyframes: {
+        float: {
+          '0%, 100%': { transform: 'translateY(0)' },
+          '50%': { transform: 'translateY(-10px)' },
+        },
+      },
+      backgroundImage: {
+        'gradient-radial': 'radial-gradient(var(--tw-gradient-stops))',
+        'grid-pattern': 'linear-gradient(to right, var(--primary) 1px, transparent 1px), linear-gradient(to bottom, var(--primary) 1px, transparent 1px)',
+      },
+      boxShadow: {
+        'glow': '0 0 20px rgba(59, 130, 246, 0.5)',
+        'glow-purple': '0 0 20px rgba(168, 85, 247, 0.5)',
+      },
+      zIndex: {
+        '-5': '-5',
       },
     },
   },

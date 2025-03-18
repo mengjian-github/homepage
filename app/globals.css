@@ -5,6 +5,16 @@
 :root {
   --background: #ffffff;
   --foreground: #171717;
+  
+  /* 主题色 */
+  --primary: #3b82f6;
+  --primary-dark: #2563eb;
+  --secondary: #a855f7;
+  --secondary-dark: #9333ea;
+  
+  /* 字体 */
+  --font-sans: var(--font-sans), system-ui, sans-serif;
+  --font-heading: var(--font-poppins), var(--font-sans), system-ui, sans-serif;
 }
 
 @media (prefers-color-scheme: dark) {
@@ -17,5 +27,52 @@
 body {
   color: var(--foreground);
   background: var(--background);
-  font-family: var(--font-sans), Arial, Helvetica, sans-serif;
+  font-family: var(--font-sans);
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: var(--font-heading);
+}
+
+/* 平滑滚动 */
+html {
+  scroll-behavior: smooth;
+}
+
+/* 渐变文本 */
+.gradient-text {
+  @apply bg-gradient-to-r from-blue-600 to-purple-600 bg-clip-text text-transparent;
+}
+
+/* 渐变按钮 */
+.gradient-btn {
+  @apply bg-gradient-to-r from-blue-600 to-purple-600 hover:from-blue-700 hover:to-purple-700 text-white transform transition-all duration-300 hover:scale-105 shadow-md hover:shadow-lg;
+}
+
+/* 卡片悬停效果 */
+.hover-card {
+  @apply transform transition-all duration-300 hover:shadow-xl hover:-translate-y-1;
+}
+
+/* 页面过渡动画 */
+.page-enter {
+  opacity: 0;
+  transform: translateY(10px);
+}
+
+.page-enter-active {
+  opacity: 1;
+  transform: translateY(0);
+  transition: opacity 300ms, transform 300ms;
+}
+
+.page-exit {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.page-exit-active {
+  opacity: 0;
+  transform: translateY(-10px);
+  transition: opacity 300ms, transform 300ms;
 }
