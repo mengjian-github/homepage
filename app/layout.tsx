@@ -70,7 +70,7 @@ export default function RootLayout({
         <link rel="icon" href="/favicon.ico" />
       </head>
       <body
-        className={`${inter.variable} ${poppins.variable} antialiased min-h-screen flex flex-col font-sans`}
+        className={`${inter.variable} ${poppins.variable} antialiased min-h-screen flex flex-col font-sans bg-gradient-to-br from-blue-50 via-white to-purple-50 dark:from-gray-900 dark:via-gray-800 dark:to-gray-900 transition-colors duration-500`}
       >
         <ThemeProvider
           attribute="class"
@@ -78,12 +78,16 @@ export default function RootLayout({
           enableSystem
           disableTransitionOnChange
         >
-          <ParticlesBackground />
-          <Navbar />
-          <main className="flex-grow pt-16">
-            {children}
-          </main>
-          <Footer />
+          <div className="fixed inset-0 z-0">
+            <ParticlesBackground />
+          </div>
+          <div className="relative z-10">
+            <Navbar />
+            <main className="flex-grow pt-16">
+              {children}
+            </main>
+            <Footer />
+          </div>
         </ThemeProvider>
       </body>
     </html>

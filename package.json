@@ -3,7 +3,7 @@
   "version": "1.0.0",
   "private": true,
   "description": "孟健的个人网站 - 基于Next.js构建的个人主页",
-  "author": "孟健 <mjcoding@example.com>",
+  "author": "孟健 <384709054@qq.com>",
   "homepage": "https://mengjian.dev",
   "repository": {
     "type": "git",
@@ -23,7 +23,12 @@
     "lint": "next lint"
   },
   "dependencies": {
+    "@radix-ui/react-slot": "^1.1.2",
+    "@react-pdf/renderer": "^4.3.0",
+    "class-variance-authority": "^0.7.1",
+    "clsx": "^2.1.1",
     "framer-motion": "^10.16.4",
+    "lucide-react": "^0.487.0",
     "next": "14.1.0",
     "next-themes": "^0.4.4",
     "react": "^18.2.0",
@@ -31,6 +36,7 @@
     "react-icons": "^5.0.1",
     "react-intersection-observer": "^9.5.3",
     "react-particles": "^2.12.2",
+    "tailwind-merge": "^3.2.0",
     "tsparticles": "^2.12.0",
     "tsparticles-engine": "^2.12.0",
     "tsparticles-slim": "^2.12.0"

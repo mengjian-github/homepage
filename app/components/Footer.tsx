@@ -1,7 +1,7 @@
 "use client";
 
 import Link from 'next/link';
-import { FiGithub, FiMessageCircle } from 'react-icons/fi';
+import { FiGithub, FiMessageCircle, FiMail } from 'react-icons/fi';
 import { SiZhihu, SiJuejin } from 'react-icons/si';
 import { motion } from 'framer-motion';
 
@@ -116,11 +116,12 @@ const Footer = () => {
               >
                 <h3 className="text-lg font-semibold text-gray-900 dark:text-white mb-4">联系我</h3>
                 <p className="text-gray-600 dark:text-gray-300 mb-2">有问题? 发送邮件给我。</p>
-                <a 
-                  href="mailto:mjcoding@example.com" 
-                  className="text-blue-600 dark:text-blue-400 hover:underline transition-colors"
+                <a
+                  className="flex items-center text-gray-600 dark:text-gray-400 hover:text-blue-600 dark:hover:text-blue-400 transition-colors"
+                  href="mailto:384709054@qq.com"
                 >
-                  mjcoding@example.com
+                  <FiMail className="w-5 h-5 mr-2" />
+                  384709054@qq.com
                 </a>
                 <p className="text-gray-600 dark:text-gray-300 mt-4 mb-2">或者扫描我的微信二维码</p>
                 <Link 

@@ -6,12 +6,14 @@ import { FiMenu, FiX } from 'react-icons/fi';
 import { motion, AnimatePresence } from 'framer-motion';
 import { useTheme } from 'next-themes';
 import { FiSun, FiMoon } from 'react-icons/fi';
+import { usePathname } from 'next/navigation';
 
 const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
   const [mounted, setMounted] = useState(false);
   const [scrolled, setScrolled] = useState(false);
   const { theme, setTheme } = useTheme();
+  const pathname = usePathname();
   
   useEffect(() => {
     setMounted(true);
@@ -31,6 +33,7 @@ const Navbar = () => {
   const navLinks = [
     { href: '/', label: '主页' },
     { href: '/about', label: '关于我' },
+    { href: '/resume', label: '在线简历' },
     { href: '/projects', label: '项目经验' },
     { href: '/blog', label: '博客文章' },
     { href: '/contact', label: '联系方式' },
@@ -86,10 +89,15 @@ const Navbar = () => {
                 >
                   <Link
                     href={link.href}
-                    className="relative px-3 py-2 rounded-md text-sm font-medium text-gray-700 hover:text-gray-900 dark:text-gray-300 dark:hover:text-white hover:bg-gray-100 dark:hover:bg-gray-800 transition group"
+                    className={`relative px-3 py-2 rounded-md text-sm font-medium transition group
+                      ${pathname === link.href 
+                        ? 'text-blue-600 dark:text-blue-400 bg-blue-50 dark:bg-blue-900/20' 
+                        : 'text-gray-700 hover:text-gray-900 dark:text-gray-300 dark:hover:text-white hover:bg-gray-100 dark:hover:bg-gray-800'
+                      }`}
                   >
                     {link.label}
-                    <span className="absolute inset-x-0 bottom-0 h-0.5 bg-gradient-to-r from-blue-600 to-purple-600 transform scale-x-0 origin-left transition-transform group-hover:scale-x-100" />
+                    <span className={`absolute inset-x-0 bottom-0 h-0.5 bg-gradient-to-r from-blue-600 to-purple-600 transform transition-transform
+                      ${pathname === link.href ? 'scale-x-100' : 'scale-x-0 origin-left group-hover:scale-x-100'}`} />
                   </Link>
                 </motion.div>
               ))}
@@ -159,7 +167,11 @@ const Navbar = () => {
                 >
                   <Link
                     href={link.href}
-                    className="block px-3 py-2 rounded-md text-base font-medium text-gray-700 hover:text-gray-900 dark:text-gray-300 dark:hover:text-white hover:bg-gray-100 dark:hover:bg-gray-800 transition-colors"
+                    className={`block px-3 py-2 rounded-md text-base font-medium transition-colors
+                      ${pathname === link.href
+                        ? 'text-blue-600 dark:text-blue-400 bg-blue-50 dark:bg-blue-900/20'
+                        : 'text-gray-700 hover:text-gray-900 dark:text-gray-300 dark:hover:text-white hover:bg-gray-100 dark:hover:bg-gray-800'
+                      }`}
                     onClick={() => setIsOpen(false)}
                   >
                     {link.label}
