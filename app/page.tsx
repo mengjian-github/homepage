@@ -20,7 +20,7 @@ export default function Home() {
     "@type": "Person",
     "name": "孟健",
     "jobTitle": "前端开发专家，豆包Marscode官方讲师，技术作家",
-    "description": "10年+前端开发经验，Flow-Parallel前端团队负责人，《DeepSeek极简入门与应用》作者",
+    "description": "10年+前端开发经验，Flow-Parallel前端团队负责人，《DeepSeek极简入门与应用》作者（销量突破60万册）",
     "url": "https://mengjian.dev",
     "sameAs": [
       "https://github.com/mengjian-github",
@@ -83,7 +83,7 @@ export default function Home() {
                 10年+前端开发经验，专注于大型互联网产品研发与技术。
                 目前担任 Flow-Parallel 前端团队负责人，致力于推动 AI 与前端技术融合发展。
                 同时也是<a href="https://bytedance.larkoffice.com/docx/Bd5HdlklBocDt5xXpQCc6Lkdnmc" target="_blank" rel="noopener noreferrer" className="text-blue-600 dark:text-blue-400 hover:underline">豆包Marscode官方讲师</a>，
-                以及《DeepSeek极简入门与应用》一书的作者。
+                以及《DeepSeek极简入门与应用》一书的作者（销量已突破60万册）。
               </motion.p>
               
               <motion.div 
