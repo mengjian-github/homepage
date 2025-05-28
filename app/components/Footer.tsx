@@ -34,7 +34,7 @@ const Footer = () => {
     },
     { 
       icon: <FiMessageCircle className="w-5 h-5" />, 
-      href: 'https://mp.weixin.qq.com/s/IkluVSLTf4nvlOJbLfZyGg',
+      href: 'https://mp.weixin.qq.com/s/Z4k_5_waWJbRRo5lZBZmog',
       label: '微信公众号'
     },
   ];

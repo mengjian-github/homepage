@@ -67,7 +67,7 @@ const articles = [
     title: "加入孟健的AI编程陪伴群",
     description: "邀请你加入我创建的AI编程陪伴群，共同学习、交流AI与编程技术，分享前沿资讯。",
     date: "2023-12-01",
-    link: "https://mp.weixin.qq.com/s/IkluVSLTf4nvlOJbLfZyGg",
+    link: "https://mp.weixin.qq.com/s/Z4k_5_waWJbRRo5lZBZmog",
     image: null,
     color: "from-blue-400 to-indigo-500",
     icon: <FiUsers className="w-12 h-12" />,
@@ -179,7 +179,7 @@ export default function BlogPage() {
             </p>
             <div className="flex justify-center">
               <a 
-                href="https://mp.weixin.qq.com/s/IkluVSLTf4nvlOJbLfZyGg" 
+                href="https://mp.weixin.qq.com/s/Z4k_5_waWJbRRo5lZBZmog" 
                 target="_blank" 
                 rel="noopener noreferrer"
                 className="px-6 py-3 bg-blue-600 hover:bg-blue-700 text-white font-medium rounded-lg transition-colors inline-flex items-center"

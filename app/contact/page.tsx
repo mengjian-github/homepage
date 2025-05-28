@@ -17,12 +17,12 @@ const contactMethods = [
     title: "微信公众号",
     description: "关注「孟健AI编程」，获取最新技术资讯和原创文章",
     action: "关注公众号",
-    link: "https://mp.weixin.qq.com/s/IkluVSLTf4nvlOJbLfZyGg"
+    link: "https://mp.weixin.qq.com/s/Z4k_5_waWJbRRo5lZBZmog"
   },
   {
     icon: <FiMail className="h-10 w-10" />,
     title: "微信",
-    description: "我的微信号：mjcoding",
+    description: "我的微信号：mjcoding3",
     action: "添加微信",
     link: null
   },
@@ -52,7 +52,7 @@ const contactMethods = [
     title: "AI 编程陪伴群",
     description: "加入我的 AI 编程陪伴群，与志同道合的开发者交流学习",
     action: "加入社区",
-    link: "https://mp.weixin.qq.com/s/IkluVSLTf4nvlOJbLfZyGg"
+    link: "https://mp.weixin.qq.com/s/Z4k_5_waWJbRRo5lZBZmog"
   }
 ];
 
@@ -114,7 +114,7 @@ export default function ContactPage() {
             
             <div className="text-center p-6 bg-gray-50 dark:bg-gray-700 rounded-lg">
               <p className="text-lg font-medium text-gray-900 dark:text-white mb-4">
-                欢迎添加我的微信：mjcoding
+                欢迎添加我的微信：mjcoding3
               </p>
               <p className="text-gray-600 dark:text-gray-300">
                 请在添加时注明来意，我会尽快回复您。

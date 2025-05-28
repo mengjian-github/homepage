@@ -226,7 +226,7 @@ const ResumeDocument = () => (
           </View>
         </View>
         <View style={styles.contactRow}>
-          <Text style={styles.contactItem}>微信: mjcoding</Text>
+          <Text style={styles.contactItem}>微信: mjcoding3</Text>
           <Text style={styles.contactItem}>•</Text>
           <Text style={styles.contactItem}>个人网站: mengjian.site</Text>
           <Text style={styles.contactItem}>•</Text>

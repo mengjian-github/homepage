@@ -136,7 +136,7 @@ export default function Home() {
                   <SiJuejin className="w-6 h-6" />
                 </a>
                 <a 
-                  href="https://mp.weixin.qq.com/s/IkluVSLTf4nvlOJbLfZyGg" 
+                  href="https://mp.weixin.qq.com/s/Z4k_5_waWJbRRo5lZBZmog" 
                   target="_blank" 
                   rel="noopener noreferrer"
                   className="text-gray-500 hover:text-gray-900 dark:text-gray-400 dark:hover:text-white transition-colors duration-300 transform hover:scale-110"
@@ -524,7 +524,7 @@ export default function Home() {
               viewport={{ once: true }}
               transition={{ duration: 0.5, delay: 0.2 }}
               whileHover={{ scale: 1.05 }}
-              href="https://mp.weixin.qq.com/s/IkluVSLTf4nvlOJbLfZyGg" 
+              href="https://mp.weixin.qq.com/s/Z4k_5_waWJbRRo5lZBZmog" 
               target="_blank" 
               rel="noopener noreferrer"
               className="inline-block px-8 py-4 bg-white text-blue-600 font-bold rounded-full shadow-lg hover:shadow-xl transition-all duration-300"

@@ -99,11 +99,11 @@ export default function ResumePage() {
                   掘金
                 </a>
                 <button 
-                  onClick={() => window.alert('微信号：mjcoding')}
+                  onClick={() => window.alert('微信号：mjcoding3')}
                   className="flex items-center text-gray-600 dark:text-gray-300 hover:text-blue-600 dark:hover:text-blue-400 w-full text-left"
                 >
                   <SiWechat className="mr-2" />
-                  微信：mjcoding
+                  微信：mjcoding3
                 </button>
               </div>
             </div>
