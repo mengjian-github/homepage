@@ -39,10 +39,13 @@ export default function AboutPage() {
                   全栈开发工程师 / 技术管理者
                 </h2>
                 <p className="mt-2 text-gray-600 dark:text-gray-300 mb-6 leading-relaxed">
-                  目前担任 Flow-Parallel 前端团队负责人，致力于推动 AI 与前端技术融合发展。拥有丰富的大型互联网产品研发经验，曾在腾讯负责过 QQ、腾讯课堂等多个核心产品的前端开发工作。
+                  目前担任字节跳动 Flow-Parallel 前端团队负责人，致力于推动 AI 与前端技术融合发展。拥有丰富的大型互联网产品研发经验，曾在腾讯负责过 QQ、腾讯课堂等多个核心产品的前端开发工作。
+                </p>
+                <p className="text-gray-600 dark:text-gray-300 mb-4 leading-relaxed">
+                  专注于 AI 领域深耕 D2C（Design To Code）、Github Copilot 等前沿技术研究。具备全栈开发能力，包括设计、后台、客户端等全栈研发经验。同时也是<a href="https://bytedance.larkoffice.com/docx/Bd5HdlklBocDt5xXpQCc6Lkdnmc" target="_blank" rel="noopener noreferrer" className="text-blue-600 dark:text-blue-400 hover:underline">豆包Marscode官方讲师</a>，以及《DeepSeek极简入门与应用》一书的作者。
                 </p>
                 <p className="text-gray-600 dark:text-gray-300 leading-relaxed">
-                  专注于 AI 领域深耕 D2C（Design To Code）、Github Copilot 等前沿技术研究。具备全栈开发能力，包括设计、后台、客户端等全栈研发经验。同时也是<a href="https://bytedance.larkoffice.com/docx/Bd5HdlklBocDt5xXpQCc6Lkdnmc" target="_blank" rel="noopener noreferrer" className="text-blue-600 dark:text-blue-400 hover:underline">豆包Marscode官方讲师</a>，以及《DeepSeek极简入门与应用》一书的作者。
+                  近期开发了多个备受关注的开源项目，包括<a href="https://www.wechatdaily.online/" target="_blank" rel="noopener noreferrer" className="text-blue-600 dark:text-blue-400 hover:underline">微信群聊日报生成器</a>（基于AI的群聊分析工具）和<a href="https://www.larkmd.online/" target="_blank" rel="noopener noreferrer" className="text-blue-600 dark:text-blue-400 hover:underline">飞书文档转公众号排版工具</a>（专业的内容创作工具），致力于用技术提升工作效率。
                 </p>
               </div>
             </div>
@@ -102,11 +105,14 @@ export default function AboutPage() {
                 <span className="text-gray-500 dark:text-gray-400 mt-2 md:mt-0">2024年至今</span>
               </div>
               <ul className="list-disc pl-5 text-gray-600 dark:text-gray-300 space-y-2">
-                <li>负责推动 AI 与前端技术融合发展</li>
-                <li>全栈开发设计、后台、客户端等全栈研发</li>
+                <li>负责推动 AI 与前端技术融合发展，探索前沿技术在实际业务中的应用</li>
+                <li>全栈开发设计、后台、客户端等全栈研发，具备完整的产品开发能力</li>
                 <li>AI 领域深耕 D2C（Design To Code）、Github Copilot 等前沿技术研究</li>
                 <li>担任<a href="https://bytedance.larkoffice.com/docx/Bd5HdlklBocDt5xXpQCc6Lkdnmc" target="_blank" rel="noopener noreferrer" className="text-blue-600 dark:text-blue-400 hover:underline">豆包Marscode官方讲师</a>，分享AI编程相关知识</li>
-                <li>出版《DeepSeek极简入门与应用》技术书籍，系统介绍DeepSeek大模型的应用</li>
+                <li>出版《DeepSeek极简入门与应用》技术书籍，销量突破60万册，成为AI领域畅销书</li>
+                <li>开发<a href="https://www.wechatdaily.online/" target="_blank" rel="noopener noreferrer" className="text-blue-600 dark:text-blue-400 hover:underline">微信群聊日报生成器</a>，基于AI技术的群聊分析工具，支持跨平台使用</li>
+                <li>开发<a href="https://www.larkmd.online/" target="_blank" rel="noopener noreferrer" className="text-blue-600 dark:text-blue-400 hover:underline">飞书文档转公众号排版工具</a>，专业的内容创作工具，显著提升创作效率</li>
+                <li>开源项目<a href="https://github.com/mengjian-github/copilot-analysis" target="_blank" rel="noopener noreferrer" className="text-blue-600 dark:text-blue-400 hover:underline">逆向分析Copilot</a>获得GitHub 1000+ stars，在技术社区产生广泛影响</li>
               </ul>
             </div>
             
