@@ -24,7 +24,7 @@
 
 ## 技术栈
 
-- **前端框架**：Next.js 14 (App Router)
+- **技术框架**：Next.js 14 (App Router)
 - **编程语言**：TypeScript
 - **样式方案**：TailwindCSS
 - **UI组件**：自定义组件 + React Icons
@@ -140,7 +140,7 @@ MIT
 
 ## 关于作者
 
-孟健，字节跳动 Flow-Parallel 前端团队负责人，《DeepSeek极简入门与应用》作者（销量突破60万册），专注于 AI 与前端技术融合发展。
+孟健，大厂技术负责人，《DeepSeek极简入门与应用》作者（销量突破70万册），专注于 AI 与技术融合发展。
 
 - 🌐 **个人网站**：[https://mengjian.site](https://mengjian.site)
 - 📧 **联系方式**：通过网站联系页面获取

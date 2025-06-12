@@ -18,9 +18,9 @@ const poppins = Poppins({
 });
 
 export const metadata: Metadata = {
-  title: "孟健 - 前端开发专家",
-  description: "孟健的个人网站 - 10年+前端开发经验，Flow-Parallel前端团队负责人，AI与前端融合技术专家",
-  keywords: "孟健, 前端开发, 技术专家, React, AI, GitHub Copilot, D2C, 腾讯, 字节跳动, Flow-Parallel",
+  title: "孟健 - 技术开发专家",
+  description: "孟健的个人网站 - 10年+技术开发经验，技术负责人，AI与技术融合专家",
+  keywords: "孟健, 技术开发, 技术专家, React, AI, GitHub Copilot, D2C, 腾讯, 大厂",
   authors: [{ name: "孟健", url: "https://github.com/mengjian-github" }],
   creator: "孟健",
   publisher: "孟健",
@@ -32,8 +32,8 @@ export const metadata: Metadata = {
     type: "website",
     locale: "zh_CN",
     url: "https://mengjian.dev",
-    title: "孟健 - 前端开发专家",
-    description: "孟健的个人网站 - 10年+前端开发经验，Flow-Parallel前端团队负责人，AI与前端融合技术专家",
+          title: "孟健 - 技术开发专家",
+      description: "孟健的个人网站 - 10年+技术开发经验，技术负责人，AI与技术融合专家",
     siteName: "孟健的个人网站",
     images: [
       {
@@ -46,8 +46,8 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: "summary_large_image",
-    title: "孟健 - 前端开发专家",
-    description: "孟健的个人网站 - 10年+前端开发经验，Flow-Parallel前端团队负责人，AI与前端融合技术专家",
+    title: "孟健 - 技术开发专家",
+    description: "孟健的个人网站 - 10年+技术开发经验，技术负责人，AI与技术融合专家",
     images: ["/images/og-image.png"],
   },
   robots: {

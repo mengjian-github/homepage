@@ -29,15 +29,15 @@ export default function ResumePage() {
           <h1 className="text-4xl font-bold">个人简历</h1>
           <DownloadResumeButton />
         </div>
-        
+
         {/* 头部个人信息 */}
-        <motion.div 
+        <motion.div
           initial="hidden"
           animate="visible"
           variants={staggerChildren}
           className="text-center mb-16"
         >
-          <motion.div 
+          <motion.div
             variants={fadeInUp}
             className="relative w-40 h-40 mx-auto mb-8"
           >
@@ -51,26 +51,26 @@ export default function ResumePage() {
               />
             </div>
           </motion.div>
-          
-          <motion.h1 
+
+          <motion.h1
             variants={fadeInUp}
             className="text-4xl font-bold mb-4"
           >
             孟健
           </motion.h1>
-          
-          <motion.p 
+
+          <motion.p
             variants={fadeInUp}
             className="text-xl text-gray-600 dark:text-gray-300 mb-6"
           >
-            Flow-Parallel 前端团队负责人 | 豆包Marscode官方讲师 | 技术作家
+            技术负责人 | 技术作家
           </motion.p>
         </motion.div>
 
         {/* 主要内容 */}
         <div className="grid grid-cols-1 lg:grid-cols-3 gap-8">
           {/* 左侧栏 */}
-          <motion.div 
+          <motion.div
             initial={{ opacity: 0, x: -20 }}
             animate={{ opacity: 1, x: 0 }}
             transition={{ duration: 0.5 }}
@@ -98,7 +98,7 @@ export default function ResumePage() {
                   <SiJuejin className="mr-2" />
                   掘金
                 </a>
-                <button 
+                <button
                   onClick={() => window.alert('微信号：mjcoding3')}
                   className="flex items-center text-gray-600 dark:text-gray-300 hover:text-blue-600 dark:hover:text-blue-400 w-full text-left"
                 >
@@ -115,7 +115,7 @@ export default function ResumePage() {
               </h2>
               <div className="space-y-4">
                 <div>
-                  <h3 className="font-semibold mb-2">前端开发</h3>
+                  <h3 className="font-semibold mb-2">技术开发</h3>
                   <div className="flex flex-wrap gap-2">
                     <span className="px-3 py-1 bg-blue-100 dark:bg-blue-900 text-blue-800 dark:text-blue-200 rounded-full text-sm">React</span>
                     <span className="px-3 py-1 bg-green-100 dark:bg-green-900 text-green-800 dark:text-green-200 rounded-full text-sm">Vue</span>
@@ -150,7 +150,7 @@ export default function ResumePage() {
           </motion.div>
 
           {/* 右侧主要内容 */}
-          <motion.div 
+          <motion.div
             initial={{ opacity: 0, x: 20 }}
             animate={{ opacity: 1, x: 0 }}
             transition={{ duration: 0.5 }}
@@ -164,24 +164,24 @@ export default function ResumePage() {
               <div className="space-y-6">
                 <div className="relative pl-6 border-l-2 border-blue-500">
                   <div className="absolute -left-[9px] top-0 w-4 h-4 bg-blue-500 rounded-full"></div>
-                  <h3 className="font-bold text-lg">字节跳动</h3>
-                  <p className="text-gray-600 dark:text-gray-300">Flow-Parallel 前端团队负责人</p>
+                  <h3 className="font-bold text-lg">大厂</h3>
+                  <p className="text-gray-600 dark:text-gray-300">技术负责人</p>
                   <p className="text-gray-500 dark:text-gray-400 text-sm mb-2">2024 - 至今</p>
                   <ul className="list-disc list-inside text-gray-600 dark:text-gray-300 space-y-1">
-                    <li>负责猫箱AI产品的研发工作</li>
-                    <li>担任豆包Marscode官方讲师</li>
-                    <li>致力于推动 AI 与前端技术融合发展</li>
+                    <li>负责AI产品的研发工作</li>
+                    <li>专注AI技术教学</li>
+                    <li>致力于推动 AI 与技术融合发展</li>
                   </ul>
                 </div>
 
                 <div className="relative pl-6 border-l-2 border-blue-500">
                   <div className="absolute -left-[9px] top-0 w-4 h-4 bg-blue-500 rounded-full"></div>
                   <h3 className="font-bold text-lg">腾讯</h3>
-                  <p className="text-gray-600 dark:text-gray-300">QQ 大前端五组负责人（T11）</p>
+                  <p className="text-gray-600 dark:text-gray-300">QQ 大技术五组负责人（T11）</p>
                   <p className="text-gray-500 dark:text-gray-400 text-sm mb-2">2022.12 - 2023</p>
                   <ul className="list-disc list-inside text-gray-600 dark:text-gray-300 space-y-1">
                     <li>负责 QQ 群基础、QQ 群视频等多个核心业务</li>
-                    <li>负责大前端 AI 方向建设落地，整体提效 30%以上</li>
+                    <li>负责大技术 AI 方向建设落地，整体提效 30%以上</li>
                     <li>建设智能代码生成平台 Ultron Smartcode</li>
                   </ul>
                 </div>
@@ -189,10 +189,10 @@ export default function ResumePage() {
                 <div className="relative pl-6 border-l-2 border-blue-500">
                   <div className="absolute -left-[9px] top-0 w-4 h-4 bg-blue-500 rounded-full"></div>
                   <h3 className="font-bold text-lg">腾讯</h3>
-                  <p className="text-gray-600 dark:text-gray-300">腾讯课堂运营前端负责人</p>
+                  <p className="text-gray-600 dark:text-gray-300">腾讯课堂运营技术负责人</p>
                   <p className="text-gray-500 dark:text-gray-400 text-sm mb-2">2018.03 - 2022.11</p>
                   <ul className="list-disc list-inside text-gray-600 dark:text-gray-300 space-y-1">
-                    <li>负责课堂 C 侧业务的前端预审、技术方案</li>
+                    <li>负责课堂 C 侧业务的技术预审、技术方案</li>
                     <li>多端实现拉通优化，涉及 PC、H5、APP 等</li>
                     <li>负责部门研发效能建设</li>
                   </ul>
@@ -201,10 +201,10 @@ export default function ResumePage() {
                 <div className="relative pl-6 border-l-2 border-blue-500">
                   <div className="absolute -left-[9px] top-0 w-4 h-4 bg-blue-500 rounded-full"></div>
                   <h3 className="font-bold text-lg">腾讯</h3>
-                  <p className="text-gray-600 dark:text-gray-300">厘米秀前端开发</p>
+                  <p className="text-gray-600 dark:text-gray-300">厘米秀技术开发</p>
                   <p className="text-gray-500 dark:text-gray-400 text-sm mb-2">2016.07 - 2018.03</p>
                   <ul className="list-disc list-inside text-gray-600 dark:text-gray-300 space-y-1">
-                    <li>负责厘米秀团队前端开发工作</li>
+                    <li>负责厘米秀团队技术开发工作</li>
                     <li>转岗腾讯课堂，离开团队时绩效考核 4 星</li>
                   </ul>
                 </div>
@@ -237,13 +237,13 @@ export default function ResumePage() {
               </h2>
               <div className="space-y-6">
                 <div>
-                  <h3 className="font-bold text-lg mb-2">AI 大前端落地专项</h3>
+                  <h3 className="font-bold text-lg mb-2">AI 大技术落地专项</h3>
                   <p className="text-gray-500 dark:text-gray-400 text-sm mb-2">2022.06 - 2023</p>
                   <ul className="list-disc list-inside text-gray-600 dark:text-gray-300 space-y-1">
                     <li>基于 PB 解析与 TDesign 场景化抽象，构建智能后台 P2C 方案</li>
                     <li>对于有设计稿的业务场景，搭建整套 D2C 方案，开发 Figma 插件</li>
                     <li>D2C 对标业界的 locofy、codefun 等产品，目前还原度已达到 95%以上</li>
-                    <li>P2C 和 D2C 已经落地到整个 QQ 团队的前端业务开发中</li>
+                    <li>P2C 和 D2C 已经落地到整个 QQ 团队的技术业务开发中</li>
                   </ul>
                 </div>
 
@@ -258,11 +258,11 @@ export default function ResumePage() {
                 </div>
 
                 <div>
-                  <h3 className="font-bold text-lg mb-2">前端统一监控看板项目</h3>
+                  <h3 className="font-bold text-lg mb-2">技术统一监控看板项目</h3>
                   <p className="text-gray-500 dark:text-gray-400 text-sm mb-2">2021.09 - 2022.03</p>
                   <ul className="list-disc list-inside text-gray-600 dark:text-gray-300 space-y-1">
                     <li>独立部署 Grafana 镜像，打通内部权限系统</li>
-                    <li>前端集成 lmlog-aegis 方案，中转打通 RUM 上报监控 API</li>
+                    <li>技术集成 lmlog-aegis 方案，中转打通 RUM 上报监控 API</li>
                     <li>建立业务统一看板，包含业务测速、白屏、性能资源等监控</li>
                   </ul>
                 </div>
@@ -278,7 +278,7 @@ export default function ResumePage() {
                 <div>
                   <h3 className="font-semibold mb-2">公司荣誉</h3>
                   <ul className="list-disc list-inside text-gray-600 dark:text-gray-300 space-y-1">
-                    <li>前端工程化 Teflow Oteam PMC</li>
+                    <li>技术工程化 Teflow Oteam PMC</li>
                     <li>智能代码生成 TIC Oteam PMC</li>
                     <li>获得十二项公司级荣誉，3 项专业级荣誉</li>
                     <li>KM 技术文章 7 级影响力，7 篇技术文章获 KM 总榜</li>
@@ -288,9 +288,9 @@ export default function ResumePage() {
                   <h3 className="font-semibold mb-2">业界影响力</h3>
                   <ul className="list-disc list-inside text-gray-600 dark:text-gray-300 space-y-1">
                     <li>逆向分析 Copilot（Github 已获得上千 star）</li>
-                    <li>GMTC 全球大前端技术大会演讲嘉宾</li>
+                    <li>GMTC 全球大技术大会演讲嘉宾</li>
                     <li>开源书籍《React 源码全解》作者</li>
-                    <li>知乎前端话题高赞回答者</li>
+                    <li>知乎技术话题高赞回答者</li>
                   </ul>
                 </div>
               </div>
@@ -300,4 +300,4 @@ export default function ResumePage() {
       </div>
     </div>
   );
-} 
+}

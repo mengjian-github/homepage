@@ -222,7 +222,7 @@ const ResumeDocument = () => (
         <View style={styles.titleContainer}>
           <View style={styles.nameAndTitle}>
             <Text style={styles.title}>孟健</Text>
-            <Text style={styles.subtitle}>Flow-Parallel 前端团队负责人 | 豆包Marscode官方讲师 | 技术作家</Text>
+            <Text style={styles.subtitle}>技术负责人 | 技术作家</Text>
           </View>
         </View>
         <View style={styles.contactRow}>
@@ -238,7 +238,7 @@ const ResumeDocument = () => (
       <View style={styles.sectionContainer}>
         <Text style={styles.sectionTitle}>技术专长</Text>
         <View style={styles.skillsRow}>
-          <Text style={styles.skillsLabel}>前端开发</Text>
+          <Text style={styles.skillsLabel}>技术开发</Text>
           <View style={styles.skillsContainer}>
             <Text style={{...styles.skillTag, backgroundColor: '#DBEAFE', color: '#2563EB'}}>React</Text>
             <Text style={{...styles.skillTag, backgroundColor: '#DCFCE7', color: '#16A34A'}}>Vue</Text>
@@ -261,29 +261,29 @@ const ResumeDocument = () => (
       {/* 工作经历 */}
       <View style={styles.sectionContainer}>
         <Text style={styles.sectionTitle}>工作经历</Text>
-        
+
         <View style={styles.column}>
-          <Text style={styles.company}>字节跳动</Text>
+          <Text style={styles.company}>大厂</Text>
           <View style={styles.positionRow}>
-            <Text style={styles.position}>Flow-Parallel 前端团队负责人</Text>
+            <Text style={styles.position}>技术负责人</Text>
             <Text style={styles.date}>2024 - 至今</Text>
           </View>
           <View style={styles.bulletList}>
-            <Text style={styles.bullet}>• 负责猫箱AI产品的研发工作</Text>
-            <Text style={styles.bullet}>• 担任豆包Marscode官方讲师</Text>
-            <Text style={styles.bullet}>• 致力于推动 AI 与前端技术融合发展</Text>
+            <Text style={styles.bullet}>• 负责AI产品的研发工作</Text>
+            <Text style={styles.bullet}>• 专注AI技术教学</Text>
+            <Text style={styles.bullet}>• 致力于推动 AI 与技术融合发展</Text>
           </View>
         </View>
 
         <View style={styles.column}>
           <Text style={styles.company}>腾讯</Text>
           <View style={styles.positionRow}>
-            <Text style={styles.position}>QQ 大前端五组负责人（T11）</Text>
+            <Text style={styles.position}>QQ 大技术五组负责人（T11）</Text>
             <Text style={styles.date}>2022.12 - 2023</Text>
           </View>
           <View style={styles.bulletList}>
             <Text style={styles.bullet}>• 负责 QQ 群基础、QQ 群视频等多个核心业务</Text>
-            <Text style={styles.bullet}>• 负责大前端 AI 方向建设落地，整体提效 30%以上</Text>
+            <Text style={styles.bullet}>• 负责大技术 AI 方向建设落地，整体提效 30%以上</Text>
             <Text style={styles.bullet}>• 建设智能代码生成平台 Ultron Smartcode</Text>
           </View>
         </View>
@@ -291,24 +291,24 @@ const ResumeDocument = () => (
         <View style={styles.column}>
           <Text style={styles.company}>腾讯</Text>
           <View style={styles.positionRow}>
-            <Text style={styles.position}>腾讯课堂运营前端负责人</Text>
+            <Text style={styles.position}>腾讯课堂运营技术负责人</Text>
             <Text style={styles.date}>2018.03 - 2022.11</Text>
           </View>
           <View style={styles.bulletList}>
-            <Text style={styles.bullet}>• 负责课堂 C 侧业务的前端预审、技术方案</Text>
+            <Text style={styles.bullet}>• 负责课堂 C 侧业务的技术预审、技术方案</Text>
             <Text style={styles.bullet}>• 多端实现拉通优化，涉及 PC、H5、APP 等</Text>
             <Text style={styles.bullet}>• 负责部门研发效能建设</Text>
           </View>
         </View>
-        
+
         <View style={{...styles.column, marginBottom: 0}}>
           <Text style={styles.company}>腾讯</Text>
           <View style={styles.positionRow}>
-            <Text style={styles.position}>厘米秀前端开发</Text>
+            <Text style={styles.position}>厘米秀技术开发</Text>
             <Text style={styles.date}>2016.07 - 2018.03</Text>
           </View>
           <View style={styles.bulletList}>
-            <Text style={styles.bullet}>• 负责厘米秀团队前端开发工作</Text>
+            <Text style={styles.bullet}>• 负责厘米秀团队技术开发工作</Text>
             <Text style={styles.bullet}>• 转岗腾讯课堂，离开团队时绩效考核 4 星</Text>
           </View>
         </View>
@@ -323,9 +323,9 @@ const ResumeDocument = () => (
       {/* 重点项目 */}
       <View style={styles.sectionContainer}>
         <Text style={styles.sectionTitle}>重点项目</Text>
-        
+
         <View style={styles.column}>
-          <Text style={styles.company}>AI 大前端落地专项</Text>
+          <Text style={styles.company}>AI 大技术落地专项</Text>
           <View style={styles.positionRow}>
             <View style={{ flexDirection: 'row', gap: 8 }}>
               <Text style={styles.infoTag}>AI技术</Text>
@@ -376,7 +376,7 @@ const ResumeDocument = () => (
           <View style={{marginBottom: 8}}>
             <Text style={styles.company}>公司荣誉</Text>
             <View style={styles.bulletList}>
-              <Text style={styles.bullet}>• 前端工程化 Teflow Oteam PMC</Text>
+              <Text style={styles.bullet}>• 技术工程化 Teflow Oteam PMC</Text>
               <Text style={styles.bullet}>• 智能代码生成 TIC Oteam PMC</Text>
               <Text style={styles.bullet}>• 获得十二项公司级荣誉</Text>
             </View>
@@ -385,7 +385,7 @@ const ResumeDocument = () => (
             <Text style={styles.company}>业界影响力</Text>
             <View style={styles.bulletList}>
               <Text style={styles.bullet}>• 逆向分析 Copilot（Github 上千star）</Text>
-              <Text style={styles.bullet}>• GMTC 全球大前端技术大会演讲嘉宾</Text>
+              <Text style={styles.bullet}>• GMTC 全球大技术大会演讲嘉宾</Text>
               <Text style={styles.bullet}>• GIAC 全球互联网架构大会出品人</Text>
             </View>
           </View>
@@ -421,4 +421,4 @@ const ResumePDFPreview = () => (
 export const ResumeDocumentOnly = ResumeDocument;
 
 // 默认导出预览组件
-export default ResumePDFPreview; 
+export default ResumePDFPreview;

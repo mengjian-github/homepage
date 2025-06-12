@@ -7,7 +7,7 @@ import { motion } from 'framer-motion';
 
 const Footer = () => {
   const year = new Date().getFullYear();
-  
+
   const footerLinks = [
     { label: '主页', href: '/' },
     { label: '关于我', href: '/about' },
@@ -15,30 +15,30 @@ const Footer = () => {
     { label: '博客文章', href: '/blog' },
     { label: '联系方式', href: '/contact' },
   ];
-  
+
   const socialLinks = [
-    { 
-      icon: <FiGithub className="w-5 h-5" />, 
+    {
+      icon: <FiGithub className="w-5 h-5" />,
       href: 'https://github.com/mengjian-github',
       label: 'GitHub'
     },
-    { 
-      icon: <SiZhihu className="w-5 h-5" />, 
+    {
+      icon: <SiZhihu className="w-5 h-5" />,
       href: 'https://www.zhihu.com/people/meng-jian-39-32',
       label: '知乎'
     },
-    { 
-      icon: <SiJuejin className="w-5 h-5" />, 
+    {
+      icon: <SiJuejin className="w-5 h-5" />,
       href: 'https://juejin.cn/user/4212984287073895',
       label: '掘金'
     },
-    { 
-      icon: <FiMessageCircle className="w-5 h-5" />, 
+    {
+      icon: <FiMessageCircle className="w-5 h-5" />,
       href: 'https://mp.weixin.qq.com/s/Z4k_5_waWJbRRo5lZBZmog',
       label: '微信公众号'
     },
   ];
-  
+
   return (
     <footer className="bg-gradient-to-r from-gray-50 to-gray-100 dark:from-gray-900 dark:to-gray-800 border-t border-gray-200 dark:border-gray-800">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -55,7 +55,7 @@ const Footer = () => {
                   孟健
                 </Link>
                 <p className="text-gray-600 dark:text-gray-300 mb-6 max-w-md">
-                  10年+前端开发经验，Flow-Parallel前端团队负责人，致力于推动 AI 与前端技术融合发展。
+                  10年+技术开发经验，技术负责人，致力于推动 AI 与技术融合发展。
                 </p>
                 <div className="flex space-x-4">
                   {socialLinks.map((link, index) => (
@@ -78,7 +78,7 @@ const Footer = () => {
                 </div>
               </motion.div>
             </div>
-            
+
             <div>
               <motion.div
                 initial={{ opacity: 0, y: 20 }}
@@ -89,13 +89,13 @@ const Footer = () => {
                 <h3 className="text-lg font-semibold text-gray-900 dark:text-white mb-4">快速导航</h3>
                 <ul className="space-y-2">
                   {footerLinks.map((link, index) => (
-                    <motion.li 
+                    <motion.li
                       key={link.href}
                       initial={{ opacity: 0, x: -10 }}
                       animate={{ opacity: 1, x: 0 }}
                       transition={{ delay: 0.1 * index }}
                     >
-                      <Link 
+                      <Link
                         href={link.href}
                         className="text-gray-600 hover:text-blue-600 dark:text-gray-300 dark:hover:text-blue-400 transition-colors"
                       >
@@ -106,7 +106,7 @@ const Footer = () => {
                 </ul>
               </motion.div>
             </div>
-            
+
             <div>
               <motion.div
                 initial={{ opacity: 0, y: 20 }}
@@ -124,7 +124,7 @@ const Footer = () => {
                   384709054@qq.com
                 </a>
                 <p className="text-gray-600 dark:text-gray-300 mt-4 mb-2">或者扫描我的微信二维码</p>
-                <Link 
+                <Link
                   href="/contact"
                   className="text-blue-600 dark:text-blue-400 hover:underline transition-colors"
                 >
@@ -133,8 +133,8 @@ const Footer = () => {
               </motion.div>
             </div>
           </div>
-          
-          <motion.div 
+
+          <motion.div
             className="pt-8 mt-8 border-t border-gray-200 dark:border-gray-800 text-center text-gray-500 dark:text-gray-400 text-sm"
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
@@ -150,4 +150,4 @@ const Footer = () => {
   );
 };
 
-export default Footer; 
+export default Footer;
