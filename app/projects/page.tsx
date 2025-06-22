@@ -1,5 +1,5 @@
 import Image from "next/image";
-import { FiExternalLink, FiGithub, FiCode, FiBook, FiCpu, FiPackage, FiLayout, FiMessageSquare } from "react-icons/fi";
+import { FiExternalLink, FiGithub, FiCode, FiBook, FiCpu, FiPackage, FiLayout, FiMessageSquare, FiTool, FiTrendingUp } from "react-icons/fi";
 
 export const metadata = {
   title: "项目经验 - 孟健的个人网站",
@@ -7,6 +7,28 @@ export const metadata = {
 };
 
 const projects = [
+  {
+    title: "MCP Hub 中国",
+    description: "精选优质 MCP 服务的综合平台，包含 Web 应用、CLI 工具和 MCP 服务器。支持 Cursor 一键安装，为 AI 开发者提供便捷的工具生态系统。",
+    link: "https://mcp-cn.com",
+    github: "https://github.com/mengjian-github/mcp-cn",
+    image: null,
+    color: "from-purple-500 to-indigo-500",
+    icon: <FiTool className="w-12 h-12" />,
+    tags: ["MCP", "TypeScript", "Next.js", "CLI", "Monorepo", "AI 工具"],
+    featured: true
+  },
+  {
+    title: "AI Daily Generator",
+    description: "智能 AI 资讯日报生成工具，自动抓取最新 AI 动态，支持多平台格式化输出。现代化界面设计，一键生成微信群、朋友圈等分享格式。",
+    link: null,
+    github: "https://github.com/mengjian-github/ai-daily-generator",
+    image: null,
+    color: "from-orange-500 to-red-500",
+    icon: <FiTrendingUp className="w-12 h-12" />,
+    tags: ["Next.js", "React 19", "AI", "Playwright", "shadcn/ui", "内容生成"],
+    featured: true
+  },
   {
     title: "微信群聊日报生成器",
     description: "基于 AI 的微信群聊分析工具，自动提取话题精华、群友金句和跟进事项，一键生成美观的图片日报。支持 macOS、Windows、Linux 三大平台。",
@@ -96,14 +118,14 @@ export default function ProjectsPage() {
             我的开源项目和技术作品
           </p>
         </div>
-        
+
         {/* 精选项目 */}
         <div className="mb-16">
           <h2 className="text-2xl font-bold text-gray-900 dark:text-white mb-8 text-center">🌟 精选项目</h2>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
             {featuredProjects.map((project, index) => (
-              <div 
-                key={index} 
+              <div
+                key={index}
                 className="bg-white dark:bg-gray-800 rounded-xl shadow-lg overflow-hidden flex flex-col border-2 border-yellow-200 dark:border-yellow-600"
               >
                 <div className="relative h-48 w-full bg-gray-200 dark:bg-gray-700">
@@ -122,7 +144,7 @@ export default function ProjectsPage() {
                     </div>
                   )}
                 </div>
-                
+
                 <div className="p-6 flex-grow">
                   <h3 className="text-xl font-bold text-gray-900 dark:text-white mb-2">
                     {project.title}
@@ -130,10 +152,10 @@ export default function ProjectsPage() {
                   <p className="text-gray-600 dark:text-gray-300 mb-4">
                     {project.description}
                   </p>
-                  
+
                   <div className="flex flex-wrap gap-2 mb-4">
                     {project.tags.map((tag, tagIndex) => (
-                      <span 
+                      <span
                         key={tagIndex}
                         className="px-2 py-1 bg-blue-100 dark:bg-blue-900/30 text-blue-800 dark:text-blue-300 rounded-full text-xs font-medium"
                       >
@@ -142,31 +164,31 @@ export default function ProjectsPage() {
                     ))}
                   </div>
                 </div>
-                
+
                 <div className="px-6 pb-6 pt-2 mt-auto border-t border-gray-100 dark:border-gray-700">
                   <div className="flex justify-between">
                     {project.link && (
-                      <a 
-                        href={project.link} 
-                        target="_blank" 
+                      <a
+                        href={project.link}
+                        target="_blank"
                         rel="noopener noreferrer"
                         className="text-blue-600 dark:text-blue-400 hover:underline inline-flex items-center text-sm font-medium"
                       >
                         <FiExternalLink className="mr-1" /> 访问项目
                       </a>
                     )}
-                    
+
                     {project.github && (
-                      <a 
-                        href={project.github} 
-                        target="_blank" 
+                      <a
+                        href={project.github}
+                        target="_blank"
                         rel="noopener noreferrer"
                         className="text-gray-600 dark:text-gray-300 hover:text-gray-900 dark:hover:text-white inline-flex items-center text-sm font-medium"
                       >
                         <FiGithub className="mr-1" /> GitHub
                       </a>
                     )}
-                    
+
                     {!project.link && !project.github && (
                       <span className="text-gray-500 dark:text-gray-400 text-sm">
                         项目进行中
@@ -184,8 +206,8 @@ export default function ProjectsPage() {
           <h2 className="text-2xl font-bold text-gray-900 dark:text-white mb-8 text-center">📚 其他项目</h2>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
             {otherProjects.map((project, index) => (
-              <div 
-                key={index} 
+              <div
+                key={index}
                 className="bg-white dark:bg-gray-800 rounded-xl shadow-lg overflow-hidden flex flex-col"
               >
                 <div className="relative h-48 w-full bg-gray-200 dark:bg-gray-700">
@@ -204,7 +226,7 @@ export default function ProjectsPage() {
                     </div>
                   )}
                 </div>
-                
+
                 <div className="p-6 flex-grow">
                   <h3 className="text-xl font-bold text-gray-900 dark:text-white mb-2">
                     {project.title}
@@ -212,10 +234,10 @@ export default function ProjectsPage() {
                   <p className="text-gray-600 dark:text-gray-300 mb-4">
                     {project.description}
                   </p>
-                  
+
                   <div className="flex flex-wrap gap-2 mb-4">
                     {project.tags.map((tag, tagIndex) => (
-                      <span 
+                      <span
                         key={tagIndex}
                         className="px-2 py-1 bg-blue-100 dark:bg-blue-900/30 text-blue-800 dark:text-blue-300 rounded-full text-xs font-medium"
                       >
@@ -224,31 +246,31 @@ export default function ProjectsPage() {
                     ))}
                   </div>
                 </div>
-                
+
                 <div className="px-6 pb-6 pt-2 mt-auto border-t border-gray-100 dark:border-gray-700">
                   <div className="flex justify-between">
                     {project.link && (
-                      <a 
-                        href={project.link} 
-                        target="_blank" 
+                      <a
+                        href={project.link}
+                        target="_blank"
                         rel="noopener noreferrer"
                         className="text-blue-600 dark:text-blue-400 hover:underline inline-flex items-center text-sm font-medium"
                       >
                         <FiExternalLink className="mr-1" /> 访问项目
                       </a>
                     )}
-                    
+
                     {project.github && (
-                      <a 
-                        href={project.github} 
-                        target="_blank" 
+                      <a
+                        href={project.github}
+                        target="_blank"
                         rel="noopener noreferrer"
                         className="text-gray-600 dark:text-gray-300 hover:text-gray-900 dark:hover:text-white inline-flex items-center text-sm font-medium"
                       >
                         <FiGithub className="mr-1" /> GitHub
                       </a>
                     )}
-                    
+
                     {!project.link && !project.github && (
                       <span className="text-gray-500 dark:text-gray-400 text-sm">
                         项目进行中
@@ -260,7 +282,7 @@ export default function ProjectsPage() {
             ))}
           </div>
         </div>
-        
+
         <div className="mt-16 text-center">
           <h2 className="text-2xl font-bold text-gray-900 dark:text-white mb-6">更多项目</h2>
           <p className="text-gray-600 dark:text-gray-300 max-w-2xl mx-auto">
@@ -271,4 +293,4 @@ export default function ProjectsPage() {
       </div>
     </div>
   );
-} 
+}
