@@ -10,16 +10,17 @@ export default {
   darkMode: 'class',
   safelist: [
     'antialiased', 'min-h-screen', 'flex', 'flex-col', 'flex-row', 'flex-grow', 'pt-16',
-    'bg-blue-600', 'dark:bg-gray-800', 'bg-gray-50', 'dark:bg-gray-900', 
+    'bg-blue-600', 'dark:bg-gray-800', 'bg-gray-50', 'dark:bg-gray-900',
     'text-gray-900', 'dark:text-white', 'bg-white', 'dark:bg-gray-800',
     'text-gray-600', 'dark:text-gray-300', 'text-blue-600', 'dark:text-blue-400',
     'container', 'mx-auto', 'px-4', 'py-8', 'my-8', 'gap-4',
-    'grid', 'grid-cols-1', 'md:grid-cols-2', 'lg:grid-cols-3',
+    'grid', 'grid-cols-1', 'md:grid-cols-2', 'lg:grid-cols-3', 'lg:grid-cols-5',
     'rounded-lg', 'shadow-md', 'shadow-lg', 'shadow-xl', 'p-6',
     'hover:scale-105', 'transform', 'transition-all', 'duration-300',
     'from-blue-600', 'to-purple-600', 'bg-gradient-to-r', 'bg-clip-text', 'text-transparent',
     'gradient-text', 'gradient-btn', 'hover-card',
-    'animate-pulse-slow'
+    'animate-pulse-slow', 'animate-float', 'animate-spin-slow', 'animate-shimmer',
+    'text-shadow-lg', 'delay-1000', 'delay-2000'
   ],
   theme: {
     extend: {
@@ -43,11 +44,21 @@ export default {
         'float': 'float 6s ease-in-out infinite',
         'float-slow': 'float 8s ease-in-out infinite',
         'pulse-slow': 'pulse 4s cubic-bezier(0.4, 0, 0.6, 1) infinite',
+        'spin-slow': 'spin-slow 20s linear infinite',
+        'shimmer': 'shimmer 2s infinite',
       },
       keyframes: {
         float: {
           '0%, 100%': { transform: 'translateY(0)' },
           '50%': { transform: 'translateY(-10px)' },
+        },
+        'spin-slow': {
+          'from': { transform: 'rotate(0deg)' },
+          'to': { transform: 'rotate(360deg)' },
+        },
+        shimmer: {
+          '0%': { transform: 'translateX(-100%)' },
+          '100%': { transform: 'translateX(100%)' },
         },
       },
       backgroundImage: {

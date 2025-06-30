@@ -5,13 +5,13 @@
 :root {
   --background: #ffffff;
   --foreground: #171717;
-  
+
   /* 主题色 */
   --primary: #3b82f6;
   --primary-dark: #2563eb;
   --secondary: #a855f7;
   --secondary-dark: #9333ea;
-  
+
   /* 字体 */
   --font-sans: var(--font-sans), system-ui, sans-serif;
   --font-heading: var(--font-poppins), var(--font-sans), system-ui, sans-serif;
@@ -75,4 +75,60 @@ html {
   opacity: 0;
   transform: translateY(-10px);
   transition: opacity 300ms, transform 300ms;
+}
+
+/* AI路线图页面自定义动画 */
+@keyframes float {
+  0%, 100% {
+    transform: translateY(0px);
+  }
+  50% {
+    transform: translateY(-10px);
+  }
+}
+
+@keyframes spin-slow {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+@keyframes shimmer {
+  0% {
+    transform: translateX(-100%);
+  }
+  100% {
+    transform: translateX(100%);
+  }
+}
+
+.animate-float {
+  animation: float 6s ease-in-out infinite;
+}
+
+.animate-spin-slow {
+  animation: spin-slow 20s linear infinite;
+}
+
+.animate-shimmer {
+  animation: shimmer 2s infinite;
+}
+
+/* 文本阴影 */
+.text-shadow-lg {
+  text-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
+}
+
+/* 响应式延迟动画 */
+@media (min-width: 1024px) {
+  .delay-1000 {
+    animation-delay: 1s;
+  }
+
+  .delay-2000 {
+    animation-delay: 2s;
+  }
 }

@@ -518,19 +518,32 @@ export default function Home() {
             <p className="text-xl text-blue-100 mb-8 max-w-3xl mx-auto">
               与志同道合的开发者一起学习，交流前沿技术，共同成长。
             </p>
-            <motion.a
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true }}
-              transition={{ duration: 0.5, delay: 0.2 }}
-              whileHover={{ scale: 1.05 }}
-              href="https://mp.weixin.qq.com/s/Z4k_5_waWJbRRo5lZBZmog"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="inline-block px-8 py-4 bg-white text-blue-600 font-bold rounded-full shadow-lg hover:shadow-xl transition-all duration-300"
-            >
-              立即加入
-            </motion.a>
+            <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
+              <motion.a
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true }}
+                transition={{ duration: 0.5, delay: 0.2 }}
+                whileHover={{ scale: 1.05 }}
+                href="https://mp.weixin.qq.com/s/Z4k_5_waWJbRRo5lZBZmog"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="inline-block px-8 py-4 bg-white text-blue-600 font-bold rounded-full shadow-lg hover:shadow-xl transition-all duration-300"
+              >
+                立即加入
+              </motion.a>
+              <motion.a
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true }}
+                transition={{ duration: 0.5, delay: 0.3 }}
+                whileHover={{ scale: 1.05 }}
+                href="/ai-roadmap"
+                className="inline-block px-8 py-4 bg-transparent border-2 border-white text-white font-bold rounded-full shadow-lg hover:shadow-xl hover:bg-white hover:text-blue-600 transition-all duration-300"
+              >
+                查看AI路线图
+              </motion.a>
+            </div>
           </motion.div>
         </div>
       </motion.section>

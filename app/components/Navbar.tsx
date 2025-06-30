@@ -14,14 +14,14 @@ const Navbar = () => {
   const [scrolled, setScrolled] = useState(false);
   const { theme, setTheme } = useTheme();
   const pathname = usePathname();
-  
+
   useEffect(() => {
     setMounted(true);
-    
+
     const handleScroll = () => {
       setScrolled(window.scrollY > 10);
     };
-    
+
     window.addEventListener('scroll', handleScroll);
     return () => window.removeEventListener('scroll', handleScroll);
   }, []);
@@ -35,6 +35,7 @@ const Navbar = () => {
     { href: '/about', label: '关于我' },
     { href: '/resume', label: '在线简历' },
     { href: '/projects', label: '项目经验' },
+    { href: '/ai-roadmap', label: 'AI路线图' },
     { href: '/blog', label: '博客文章' },
     { href: '/contact', label: '联系方式' },
   ];
@@ -56,10 +57,10 @@ const Navbar = () => {
   };
 
   return (
-    <motion.nav 
+    <motion.nav
       className={`fixed w-full z-50 transition-all duration-300 ${
-        scrolled 
-          ? 'bg-white/90 dark:bg-gray-900/90 backdrop-blur-md shadow-md' 
+        scrolled
+          ? 'bg-white/90 dark:bg-gray-900/90 backdrop-blur-md shadow-md'
           : 'bg-white/50 dark:bg-gray-900/50 backdrop-blur-sm'
       }`}
       initial="hidden"
@@ -69,7 +70,7 @@ const Navbar = () => {
     >
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex items-center justify-between h-16">
-          <motion.div 
+          <motion.div
             className="flex items-center"
             variants={menuItemVariants}
             transition={{ duration: 0.3, delay: 0.1 }}
@@ -78,7 +79,7 @@ const Navbar = () => {
               孟健
             </Link>
           </motion.div>
-          
+
           <div className="hidden md:block">
             <div className="ml-10 flex items-center space-x-4">
               {navLinks.map((link, index) => (
@@ -90,8 +91,8 @@ const Navbar = () => {
                   <Link
                     href={link.href}
                     className={`relative px-3 py-2 rounded-md text-sm font-medium transition group
-                      ${pathname === link.href 
-                        ? 'text-blue-600 dark:text-blue-400 bg-blue-50 dark:bg-blue-900/20' 
+                      ${pathname === link.href
+                        ? 'text-blue-600 dark:text-blue-400 bg-blue-50 dark:bg-blue-900/20'
                         : 'text-gray-700 hover:text-gray-900 dark:text-gray-300 dark:hover:text-white hover:bg-gray-100 dark:hover:bg-gray-800'
                       }`}
                   >
@@ -101,8 +102,8 @@ const Navbar = () => {
                   </Link>
                 </motion.div>
               ))}
-              <motion.button 
-                onClick={toggleTheme} 
+              <motion.button
+                onClick={toggleTheme}
                 className="p-2 rounded-md text-gray-700 hover:text-gray-900 dark:text-gray-300 dark:hover:text-white hover:bg-gray-100 dark:hover:bg-gray-800 transition-colors"
                 aria-label="Toggle theme"
                 variants={menuItemVariants}
@@ -116,14 +117,14 @@ const Navbar = () => {
               </motion.button>
             </div>
           </div>
-          
-          <motion.div 
+
+          <motion.div
             className="md:hidden flex items-center"
             variants={menuItemVariants}
             transition={{ duration: 0.3, delay: 0.2 }}
           >
-            <button 
-              onClick={toggleTheme} 
+            <button
+              onClick={toggleTheme}
               className="p-2 mr-2 rounded-md text-gray-700 hover:text-gray-900 dark:text-gray-300 dark:hover:text-white transition-colors"
               aria-label="Toggle theme"
             >
@@ -150,7 +151,7 @@ const Navbar = () => {
       {/* 移动端菜单 */}
       <AnimatePresence>
         {isOpen && (
-          <motion.div 
+          <motion.div
             className="md:hidden"
             initial={{ opacity: 0, height: 0 }}
             animate={{ opacity: 1, height: 'auto' }}
@@ -186,4 +187,4 @@ const Navbar = () => {
   );
 };
 
-export default Navbar; 
+export default Navbar;
