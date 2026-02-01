@@ -19,8 +19,8 @@ export default function Home() {
     "@context": "https://schema.org",
     "@type": "Person",
     "name": "孟健",
-    "jobTitle": "技术开发专家，技术作家",
-    "description": "10年+技术开发经验，技术负责人，《DeepSeek极简入门与应用》作者（销量突破70万册）",
+    "jobTitle": "AI 编程与出海创业者", 
+    "description": "前腾讯 T11｜AI 编程与出海创业者｜字流 ziliu.online｜公众号：孟健AI编程｜DeepSeek 相关书籍累计销量 80+ 万册", 
     "url": "https://mengjian.site",
     "sameAs": [
       "https://github.com/mengjian-github",
@@ -80,10 +80,9 @@ export default function Home() {
                 transition={{ delay: 0.4 }}
                 className="text-xl text-gray-600 dark:text-gray-300 max-w-2xl"
               >
-                10年+技术开发经验，专注于大型互联网产品研发与技术。
-                目前担任技术负责人，致力于推动 AI 与技术融合发展。
-                同时致力于
-                AI技术教学，以及《DeepSeek极简入门与应用》一书的作者（销量已突破70万册）。
+                前腾讯 T11，现全职创业：AI 编程 + 出海。
+                在做字流 ziliu.online（14 平台一键发布）与一系列 SEO 驱动的小产品矩阵。
+                公众号「孟健AI编程」全网约 3 万粉；DeepSeek 相关书籍累计销量 80+ 万册。
               </motion.p>
 
               <motion.div

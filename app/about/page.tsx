@@ -13,7 +13,7 @@ export default function AboutPage() {
         <div className="text-center mb-16">
           <h1 className="text-4xl font-bold text-gray-900 dark:text-white">关于我</h1>
           <p className="mt-4 text-xl text-gray-600 dark:text-gray-300 max-w-3xl mx-auto">
-            10 年+技术开发经验，专注于大型互联网产品研发与技术
+            前腾讯 T11，现全职创业：AI 编程 + 出海（小产品矩阵 / SEO 增长）
           </p>
         </div>
 
@@ -36,16 +36,16 @@ export default function AboutPage() {
                   个人简介
                 </div>
                 <h2 className="text-2xl font-bold text-gray-900 dark:text-white mb-4">
-                  全栈开发工程师 / 技术管理者
+                  创业者 / 全栈工程师
                 </h2>
                 <p className="mt-2 text-gray-600 dark:text-gray-300 mb-6 leading-relaxed">
-                  目前担任大厂技术负责人，致力于推动 AI 与技术融合发展。拥有丰富的大型互联网产品研发经验，曾在腾讯负责过 QQ、腾讯课堂等多个核心产品的技术开发工作。
+                  前腾讯 8 年（T9 → T11），做过 QQ 厘米秀、腾讯课堂运营技术、QQ 桌面端跨端重构、鸿蒙项目等。2025 年 10 月正式离职，开始全职创业，专注 AI 编程与出海增长。
                 </p>
                 <p className="text-gray-600 dark:text-gray-300 mb-4 leading-relaxed">
-                  专注于 AI 领域深耕 D2C（Design To Code）、Github Copilot 等前沿技术研究。具备全栈开发能力，包括设计、后台、客户端等全栈研发经验。致力于AI技术教学，以及《DeepSeek极简入门与应用》一书的作者。
+                  我擅长用工程能力把想法快速落地：前端/全栈、自动化、AI 编程（Cursor / Claude Code / Codex 等）以及 SEO/SEM/Affiliate/EDM 等海外增长手段。
                 </p>
                 <p className="text-gray-600 dark:text-gray-300 leading-relaxed">
-                  近期开发了多个备受关注的开源项目，包括<a href="https://www.wechatdaily.online/" target="_blank" rel="noopener noreferrer" className="text-blue-600 dark:text-blue-400 hover:underline">微信群聊日报生成器</a>（基于AI的群聊分析工具）和<a href="https://www.larkmd.online/" target="_blank" rel="noopener noreferrer" className="text-blue-600 dark:text-blue-400 hover:underline">飞书文档转公众号排版工具</a>（专业的内容创作工具），致力于用技术提升工作效率。
+                  目前在做 <a href="https://ziliu.online/" target="_blank" rel="noopener noreferrer" className="text-blue-600 dark:text-blue-400 hover:underline">字流 ziliu.online</a>（14 平台一键发布工具）以及一系列 SEO 驱动的小产品。公众号「孟健AI编程」全网约 3 万粉，DeepSeek 相关书籍累计销量 80+ 万册。
                 </p>
               </div>
             </div>
@@ -99,20 +99,17 @@ export default function AboutPage() {
             <div className="bg-white dark:bg-gray-800 rounded-xl shadow-lg overflow-hidden p-8">
               <div className="flex flex-col md:flex-row md:justify-between md:items-center mb-6">
                 <div>
-                  <h3 className="text-xl font-bold text-gray-900 dark:text-white">大厂</h3>
-                  <p className="text-lg text-gray-600 dark:text-gray-300">技术负责人</p>
+                  <h3 className="text-xl font-bold text-gray-900 dark:text-white">Nextfield Labs LLC（Wyoming）</h3>
+                  <p className="text-lg text-gray-600 dark:text-gray-300">创始人 / 全栈工程师</p>
                 </div>
-                <span className="text-gray-500 dark:text-gray-400 mt-2 md:mt-0">2024年至今</span>
+                <span className="text-gray-500 dark:text-gray-400 mt-2 md:mt-0">2025.10 - 至今</span>
               </div>
               <ul className="list-disc pl-5 text-gray-600 dark:text-gray-300 space-y-2">
-                <li>负责推动 AI 与技术融合发展，探索前沿技术在实际业务中的应用</li>
-                <li>全栈开发设计、后台、客户端等全栈研发，具备完整的产品开发能力</li>
-                <li>AI 领域深耕 D2C（Design To Code）、Github Copilot 等前沿技术研究</li>
-                <li>专注AI技术教学，分享AI编程相关知识</li>
-                <li>出版《DeepSeek极简入门与应用》技术书籍，销量突破70万册，成为AI领域畅销书</li>
-                <li>开发<a href="https://www.wechatdaily.online/" target="_blank" rel="noopener noreferrer" className="text-blue-600 dark:text-blue-400 hover:underline">微信群聊日报生成器</a>，基于AI技术的群聊分析工具，支持跨平台使用</li>
-                <li>开发<a href="https://www.larkmd.online/" target="_blank" rel="noopener noreferrer" className="text-blue-600 dark:text-blue-400 hover:underline">飞书文档转公众号排版工具</a>，专业的内容创作工具，显著提升创作效率</li>
-                <li>开源项目<a href="https://github.com/mengjian-github/copilot-analysis" target="_blank" rel="noopener noreferrer" className="text-blue-600 dark:text-blue-400 hover:underline">逆向分析Copilot</a>获得GitHub 1000+ stars，在技术社区产生广泛影响</li>
+                <li>全职创业：AI 编程 + 出海增长，小产品矩阵</li>
+                <li>主产品：<a href="https://ziliu.online/" target="_blank" rel="noopener noreferrer" className="text-blue-600 dark:text-blue-400 hover:underline">字流 ziliu.online</a>（14 平台一键发布工具）</li>
+                <li>增长手段：SEO / SEM / Affiliate / EDM 等海外运营组合</li>
+                <li>内容输出：公众号「孟健AI编程」（全网约 3 万粉）</li>
+                <li>出版：DeepSeek 相关书籍累计销量 80+ 万册</li>
               </ul>
             </div>
 
