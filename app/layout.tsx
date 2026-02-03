@@ -73,6 +73,8 @@ export default function RootLayout({
         />
         <meta name="theme-color" content="#0a0a0a" />
         <link rel="icon" href="/favicon.ico" />
+        <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+        <link rel="apple-touch-icon" href="/apple-touch-icon.png" />
       </head>
       <body
         className={`${inter.variable} ${poppins.variable} antialiased min-h-screen flex flex-col font-sans bg-white dark:bg-[#0a0a0a] text-neutral-900 dark:text-neutral-100 transition-colors duration-300`}
