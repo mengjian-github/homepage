@@ -25,7 +25,7 @@ const DownloadResumeButton = () => {
   return (
     <Button 
       variant="outline" 
-      className="flex items-center gap-2"
+      className="flex items-center gap-2 w-full border-neutral-700 bg-neutral-900 text-neutral-200 hover:bg-neutral-800 hover:text-amber-400 hover:border-amber-400/50 transition-colors"
       onClick={handleDownload}
     >
       <FiDownload className="w-4 h-4" />
