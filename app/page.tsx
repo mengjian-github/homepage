@@ -60,7 +60,7 @@ export default function Home() {
     name: "孟健",
     jobTitle: "AI 编程实战专家 / 出海创业者",
     description:
-      "前腾讯 T11 | Nextfield Labs LLC 创始人 | 公众号「孟健AI编程」3万+ 粉丝 | 《DeepSeek极简入门与应用》累计销量 93 万册",
+      "前腾讯 T11 | 前字节跳动 3-1 | Nextfield Labs LLC 创始人 | 公众号「孟健AI编程」3万+ 粉丝 | 《DeepSeek极简入门与应用》累计销量 93 万册",
     url: "https://mengjian.site",
     sameAs: [
       "https://github.com/mengjian-github",
@@ -104,7 +104,7 @@ export default function Home() {
             transition={{ duration: 0.6, delay: 0.2 }}
             className="text-xs sm:text-sm tracking-[0.2em] uppercase text-neutral-400 dark:text-neutral-500 font-mono mb-8"
           >
-            Ex-Tencent T11 · Nextfield Labs LLC · Est. 2025
+            Ex-Tencent T11 · Ex-ByteDance 3-1 · Nextfield Labs LLC · Est. 2025
           </motion.p>
 
           {/* Name — massive editorial type */}
@@ -307,10 +307,11 @@ export default function Home() {
             <div className="space-y-0">
               {[
                 { year: "2025.10", text: "全职创业，创办 Nextfield Labs LLC" },
+                { year: "2024 – 2025.10", text: "字节跳动 Flow 部门 · 前端技术 Leader（3-1），负责猫箱 BagelBell —— AI 角色创建与互动平台，日活 59 万" },
                 { year: "2025", text: "《DeepSeek极简入门与应用》出版，累计销量 93 万册" },
                 { year: "2025", text: "GIAC 全球互联网架构大会 2025 深圳站讲师" },
                 { year: "2025", text: "破局AI行动家大会 2025 主会场分享嘉宾" },
-                { year: "2015 – 2025", text: "腾讯 T11 · QQ 大技术五组负责人" },
+                { year: "2015 – 2024", text: "腾讯 T11 · QQ 大技术五组负责人" },
                 { year: "", text: "GMTC 全球大前端技术大会演讲嘉宾" },
                 { year: "", text: "盖洛普优势：战略思考、责任感、成就导向" },
                 { year: "本科", text: "西安交通大学 · 自动化科学与技术" },
