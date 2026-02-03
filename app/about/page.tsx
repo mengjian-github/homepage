@@ -42,7 +42,7 @@ export default function AboutPage() {
               variants={fadeIn}
               className="text-lg sm:text-xl text-neutral-500 dark:text-neutral-400 max-w-2xl leading-relaxed"
             >
-              前腾讯 T11，现全职创业：AI 编程 + 出海（小产品矩阵 / SEO 增长）
+              前腾讯 T11 · 前字节跳动 3-1，现全职创业：AI 编程 + 出海（小产品矩阵 / SEO 增长）
             </motion.p>
           </motion.div>
         </div>
@@ -80,7 +80,7 @@ export default function AboutPage() {
 
               <motion.div variants={fadeIn} className="md:col-span-2 space-y-5">
                 <p className="text-neutral-600 dark:text-neutral-400 leading-relaxed">
-                  前腾讯 8 年（T9 → T11），做过 QQ 厘米秀、腾讯课堂运营技术、QQ 桌面端跨端重构、鸿蒙项目等。2025 年 10 月正式离职，开始全职创业，专注 AI 编程与出海增长。
+                  前腾讯 8 年（T9 → T11）、前字节跳动前端技术 Leader（3-1）。腾讯期间做过 QQ 厘米秀、腾讯课堂运营技术、QQ 桌面端跨端重构等；字节期间负责猫箱（BagelBell）AI 角色互动平台。2025 年 10 月正式离职，开始全职创业，专注 AI 编程与出海增长。
                 </p>
                 <p className="text-neutral-600 dark:text-neutral-400 leading-relaxed">
                   我擅长用工程能力把想法快速落地：前端/全栈、自动化、AI 编程（Cursor / Claude Code / Codex 等）以及 SEO/SEM/Affiliate/EDM 等海外增长手段。
@@ -179,6 +179,16 @@ export default function AboutPage() {
                     "增长手段：SEO / SEM / Affiliate / EDM 等海外运营组合",
                     "内容输出：公众号「孟健AI编程」（全网约 3 万粉）",
                     "出版：DeepSeek 相关书籍累计销量 93 万册",
+                  ],
+                },
+                {
+                  company: "字节跳动",
+                  role: "Flow 部门 · 前端技术 Leader（3-1）",
+                  period: "2024 - 2025.10",
+                  items: [
+                    "负责猫箱（BagelBell）—— AI 角色创建与互动平台，日活 59 万",
+                    "融合 AI 角色互动、情感陪伴、故事创作、图像生成等能力",
+                    "隶属豆包所在的 Flow 大部门",
                   ],
                 },
                 {

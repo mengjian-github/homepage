@@ -70,7 +70,7 @@ export default function ResumePage() {
                 孟健
               </h2>
               <p className="text-neutral-500 dark:text-neutral-400 mb-4">
-                技术负责人 · 技术作家 · 出海创业者
+                Ex-Tencent T11 · Ex-ByteDance 3-1 · 技术作家 · 出海创业者
               </p>
               <div className="flex flex-wrap items-center gap-4 text-sm">
                 {[
@@ -264,6 +264,15 @@ export default function ResumePage() {
                       "全职创业：AI 编程 + 出海增长",
                       "主产品：字流 ziliu.online（14 平台一键发布工具）",
                       "《DeepSeek极简入门与应用》累计销量 93 万册",
+                    ],
+                  },
+                  {
+                    company: "字节跳动",
+                    role: "Flow 部门 · 前端技术 Leader（3-1）",
+                    period: "2024 - 2025.10",
+                    items: [
+                      "负责猫箱（BagelBell）—— AI 角色创建与互动平台，日活 59 万",
+                      "融合 AI 角色互动、情感陪伴、故事创作、图像生成等能力",
                     ],
                   },
                   {
