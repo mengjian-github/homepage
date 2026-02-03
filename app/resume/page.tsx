@@ -271,7 +271,7 @@ export default function ResumePage() {
                     role: "Flow 部门 · 前端技术 Leader（3-1）",
                     period: "2024 - 2025.10",
                     items: [
-                      "负责猫箱（BagelBell）—— AI 角色创建与互动平台，日活 59 万",
+                      "负责猫箱（BagelBell）—— AI 角色创建与互动平台",
                       "融合 AI 角色互动、情感陪伴、故事创作、图像生成等能力",
                     ],
                   },

@@ -307,7 +307,7 @@ export default function Home() {
             <div className="space-y-0">
               {[
                 { year: "2025.10", text: "全职创业，创办 Nextfield Labs LLC" },
-                { year: "2024 – 2025.10", text: "字节跳动 Flow 部门 · 前端技术 Leader（3-1），负责猫箱 BagelBell —— AI 角色创建与互动平台，日活 59 万" },
+                { year: "2024 – 2025.10", text: "字节跳动 Flow 部门 · 前端技术 Leader（3-1），负责猫箱 BagelBell —— AI 角色创建与互动平台" },
                 { year: "2025", text: "《DeepSeek极简入门与应用》出版，累计销量 93 万册" },
                 { year: "2025", text: "GIAC 全球互联网架构大会 2025 深圳站讲师" },
                 { year: "2025", text: "破局AI行动家大会 2025 主会场分享嘉宾" },
