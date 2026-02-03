@@ -1,7 +1,6 @@
 "use client";
 
 import { motion } from "framer-motion";
-import Image from "next/image";
 import { useEffect, useState } from "react";
 
 interface GitHubStatsProps {
@@ -14,80 +13,69 @@ const GitHubStats: React.FC<GitHubStatsProps> = ({ username }) => {
 
   useEffect(() => {
     setMounted(true);
-    // 仅用于触发加载状态动画
-    const timer = setTimeout(() => {
-      setLoading(false);
-    }, 800);
-
+    const timer = setTimeout(() => setLoading(false), 800);
     return () => clearTimeout(timer);
   }, []);
 
   if (!mounted) {
     return (
-      <div className="rounded-lg overflow-hidden shadow-md border border-gray-100 dark:border-gray-700">
-        <div className="flex items-center justify-center h-32 bg-gray-50 dark:bg-gray-800">
-          <div className="w-8 h-8 border-t-2 border-b-2 border-blue-500 rounded-full animate-spin"></div>
+      <div className="rounded-lg overflow-hidden border border-neutral-200 dark:border-neutral-800">
+        <div className="flex items-center justify-center h-32 bg-neutral-50 dark:bg-white/[0.02]">
+          <div className="w-6 h-6 border-t-2 border-b-2 border-amber-500 dark:border-amber-400 rounded-full animate-spin" />
         </div>
       </div>
     );
   }
 
   return (
-    <motion.div 
+    <motion.div
       initial={{ opacity: 0 }}
       animate={{ opacity: 1 }}
       transition={{ duration: 0.5 }}
-      className="rounded-lg overflow-hidden shadow-md border border-gray-100 dark:border-gray-700"
+      className="rounded-lg overflow-hidden border border-neutral-200 dark:border-neutral-800"
     >
       {loading ? (
-        <div className="flex items-center justify-center h-32 bg-gray-50 dark:bg-gray-800">
-          <div className="w-8 h-8 border-t-2 border-b-2 border-blue-500 rounded-full animate-spin"></div>
+        <div className="flex items-center justify-center h-32 bg-neutral-50 dark:bg-white/[0.02]">
+          <div className="w-6 h-6 border-t-2 border-b-2 border-amber-500 dark:border-amber-400 rounded-full animate-spin" />
         </div>
       ) : (
         <div className="w-full">
-          {/* GitHub贡献图 */}
-          <div className="p-4 bg-white dark:bg-gray-800">
-            <h3 className="text-lg font-semibold text-gray-900 dark:text-white mb-2">贡献活动</h3>
-            <div className="overflow-hidden rounded-lg bg-white dark:bg-gray-900 p-1">
-              <img 
-                src={`https://ghchart.rshah.org/${username}`} 
-                alt="GitHub贡献图" 
+          {/* Contribution chart */}
+          <div className="p-4 bg-white dark:bg-white/[0.02]">
+            <h3 className="text-sm font-semibold text-neutral-900 dark:text-white mb-3">
+              贡献活动
+            </h3>
+            <div className="overflow-hidden rounded bg-white dark:bg-[#0a0a0a] p-1">
+              <img
+                src={`https://ghchart.rshah.org/${username}`}
+                alt="GitHub贡献图"
                 className="w-full dark:invert dark:hue-rotate-180"
               />
             </div>
           </div>
-          
-          {/* GitHub统计 */}
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-4 p-4 bg-gray-50 dark:bg-gray-700">
-            <a 
-              href={`https://github.com/${username}?tab=repositories`}
-              target="_blank"
-              rel="noopener noreferrer"
-              className="flex flex-col items-center p-3 bg-white dark:bg-gray-800 rounded-lg shadow-sm hover:shadow-md transition-all duration-300 hover:-translate-y-1"
-            >
-              <span className="text-2xl font-bold text-blue-600 dark:text-blue-400">Repos</span>
-              <span className="text-gray-600 dark:text-gray-300">开源项目</span>
-            </a>
-            
-            <a 
-              href={`https://github.com/${username}?tab=followers`}
-              target="_blank"
-              rel="noopener noreferrer"
-              className="flex flex-col items-center p-3 bg-white dark:bg-gray-800 rounded-lg shadow-sm hover:shadow-md transition-all duration-300 hover:-translate-y-1"
-            >
-              <span className="text-2xl font-bold text-purple-600 dark:text-purple-400">关注者</span>
-              <span className="text-gray-600 dark:text-gray-300">开发者社区</span>
-            </a>
-            
-            <a 
-              href={`https://github.com/${username}`}
-              target="_blank"
-              rel="noopener noreferrer"
-              className="flex flex-col items-center p-3 bg-white dark:bg-gray-800 rounded-lg shadow-sm hover:shadow-md transition-all duration-300 hover:-translate-y-1"
-            >
-              <span className="text-2xl font-bold text-green-600 dark:text-green-400">Stars</span>
-              <span className="text-gray-600 dark:text-gray-300">获得认可</span>
-            </a>
+
+          {/* Stats */}
+          <div className="grid grid-cols-3 gap-px bg-neutral-200 dark:bg-neutral-800">
+            {[
+              { label: "开源项目", stat: "Repos", href: `https://github.com/${username}?tab=repositories` },
+              { label: "开发者社区", stat: "关注者", href: `https://github.com/${username}?tab=followers` },
+              { label: "获得认可", stat: "Stars", href: `https://github.com/${username}` },
+            ].map((item) => (
+              <a
+                key={item.stat}
+                href={item.href}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="flex flex-col items-center p-4 bg-neutral-50 dark:bg-white/[0.02] hover:bg-neutral-100 dark:hover:bg-white/[0.04] transition-colors"
+              >
+                <span className="text-base font-bold font-mono text-amber-600 dark:text-amber-400">
+                  {item.stat}
+                </span>
+                <span className="text-xs text-neutral-500 dark:text-neutral-500 mt-1">
+                  {item.label}
+                </span>
+              </a>
+            ))}
           </div>
         </div>
       )}
@@ -95,4 +83,4 @@ const GitHubStats: React.FC<GitHubStatsProps> = ({ username }) => {
   );
 };
 
-export default GitHubStats; 
+export default GitHubStats;

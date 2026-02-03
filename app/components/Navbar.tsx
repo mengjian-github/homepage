@@ -1,12 +1,12 @@
 "use client";
 
-import Link from 'next/link';
-import { useState, useEffect } from 'react';
-import { FiMenu, FiX } from 'react-icons/fi';
-import { motion, AnimatePresence } from 'framer-motion';
-import { useTheme } from 'next-themes';
-import { FiSun, FiMoon } from 'react-icons/fi';
-import { usePathname } from 'next/navigation';
+import Link from "next/link";
+import { useState, useEffect } from "react";
+import { FiMenu, FiX } from "react-icons/fi";
+import { motion, AnimatePresence } from "framer-motion";
+import { useTheme } from "next-themes";
+import { FiSun, FiMoon } from "react-icons/fi";
+import { usePathname } from "next/navigation";
 
 const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
@@ -17,162 +17,133 @@ const Navbar = () => {
 
   useEffect(() => {
     setMounted(true);
-
-    const handleScroll = () => {
-      setScrolled(window.scrollY > 10);
-    };
-
-    window.addEventListener('scroll', handleScroll);
-    return () => window.removeEventListener('scroll', handleScroll);
+    const handleScroll = () => setScrolled(window.scrollY > 10);
+    window.addEventListener("scroll", handleScroll);
+    return () => window.removeEventListener("scroll", handleScroll);
   }, []);
 
-  const toggleMenu = () => {
-    setIsOpen(!isOpen);
-  };
-
   const navLinks = [
-    { href: '/', label: '主页' },
-    { href: '/about', label: '关于我' },
-    { href: '/resume', label: '在线简历' },
-    { href: '/projects', label: '项目经验' },
-    { href: '/ai-roadmap', label: 'AI路线图' },
-    { href: '/blog', label: '博客文章' },
-    { href: '/contact', label: '联系方式' },
+    { href: "/", label: "主页" },
+    { href: "/about", label: "关于我" },
+    { href: "/resume", label: "在线简历" },
+    { href: "/projects", label: "项目经验" },
+    { href: "/ai-roadmap", label: "AI路线图" },
+    { href: "/blog", label: "博客文章" },
+    { href: "/contact", label: "联系方式" },
   ];
 
   const toggleTheme = () => {
-    if (mounted) {
-      setTheme(theme === 'dark' ? 'light' : 'dark');
-    }
-  };
-
-  const navBarVariants = {
-    hidden: { opacity: 0, y: -20 },
-    visible: { opacity: 1, y: 0 },
-  };
-
-  const menuItemVariants = {
-    hidden: { opacity: 0, y: -5 },
-    visible: { opacity: 1, y: 0 },
+    if (mounted) setTheme(theme === "dark" ? "light" : "dark");
   };
 
   return (
     <motion.nav
       className={`fixed w-full z-50 transition-all duration-300 ${
         scrolled
-          ? 'bg-white/90 dark:bg-gray-900/90 backdrop-blur-md shadow-md'
-          : 'bg-white/50 dark:bg-gray-900/50 backdrop-blur-sm'
+          ? "bg-white/80 dark:bg-[#0a0a0a]/80 backdrop-blur-md border-b border-neutral-200 dark:border-neutral-800"
+          : "bg-white/40 dark:bg-[#0a0a0a]/40 backdrop-blur-sm"
       }`}
-      initial="hidden"
-      animate="visible"
-      variants={navBarVariants}
+      initial={{ opacity: 0, y: -20 }}
+      animate={{ opacity: 1, y: 0 }}
       transition={{ duration: 0.5 }}
     >
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div className="max-w-6xl mx-auto px-6 sm:px-8">
         <div className="flex items-center justify-between h-16">
-          <motion.div
-            className="flex items-center"
-            variants={menuItemVariants}
-            transition={{ duration: 0.3, delay: 0.1 }}
+          {/* Logo */}
+          <Link
+            href="/"
+            className="text-lg font-bold text-neutral-900 dark:text-white hover:text-amber-600 dark:hover:text-amber-400 transition-colors"
           >
-            <Link href="/" className="text-xl font-bold bg-gradient-to-r from-blue-600 to-purple-600 bg-clip-text text-transparent">
-              孟健
-            </Link>
-          </motion.div>
+            孟健
+          </Link>
 
-          <div className="hidden md:block">
-            <div className="ml-10 flex items-center space-x-4">
-              {navLinks.map((link, index) => (
-                <motion.div
-                  key={link.href}
-                  variants={menuItemVariants}
-                  transition={{ duration: 0.3, delay: 0.1 + index * 0.1 }}
-                >
-                  <Link
-                    href={link.href}
-                    className={`relative px-3 py-2 rounded-md text-sm font-medium transition group
-                      ${pathname === link.href
-                        ? 'text-blue-600 dark:text-blue-400 bg-blue-50 dark:bg-blue-900/20'
-                        : 'text-gray-700 hover:text-gray-900 dark:text-gray-300 dark:hover:text-white hover:bg-gray-100 dark:hover:bg-gray-800'
-                      }`}
-                  >
-                    {link.label}
-                    <span className={`absolute inset-x-0 bottom-0 h-0.5 bg-gradient-to-r from-blue-600 to-purple-600 transform transition-transform
-                      ${pathname === link.href ? 'scale-x-100' : 'scale-x-0 origin-left group-hover:scale-x-100'}`} />
-                  </Link>
-                </motion.div>
-              ))}
-              <motion.button
-                onClick={toggleTheme}
-                className="p-2 rounded-md text-gray-700 hover:text-gray-900 dark:text-gray-300 dark:hover:text-white hover:bg-gray-100 dark:hover:bg-gray-800 transition-colors"
-                aria-label="Toggle theme"
-                variants={menuItemVariants}
-                transition={{ duration: 0.3, delay: 0.6 }}
-                whileHover={{ scale: 1.1 }}
-                whileTap={{ scale: 0.95 }}
+          {/* Desktop Nav */}
+          <div className="hidden md:flex items-center gap-1">
+            {navLinks.map((link) => (
+              <Link
+                key={link.href}
+                href={link.href}
+                className={`relative px-3 py-2 text-sm font-medium transition-colors ${
+                  pathname === link.href
+                    ? "text-amber-600 dark:text-amber-400"
+                    : "text-neutral-500 dark:text-neutral-400 hover:text-neutral-900 dark:hover:text-white"
+                }`}
               >
-                {mounted && (
-                  theme === 'dark' ? <FiSun className="h-5 w-5" /> : <FiMoon className="h-5 w-5" />
+                {link.label}
+                {pathname === link.href && (
+                  <span className="absolute inset-x-2 -bottom-px h-px bg-amber-500 dark:bg-amber-400" />
                 )}
-              </motion.button>
-            </div>
-          </div>
-
-          <motion.div
-            className="md:hidden flex items-center"
-            variants={menuItemVariants}
-            transition={{ duration: 0.3, delay: 0.2 }}
-          >
+              </Link>
+            ))}
             <button
               onClick={toggleTheme}
-              className="p-2 mr-2 rounded-md text-gray-700 hover:text-gray-900 dark:text-gray-300 dark:hover:text-white transition-colors"
+              className="ml-2 p-2 rounded-md text-neutral-500 dark:text-neutral-400 hover:text-neutral-900 dark:hover:text-white hover:bg-neutral-100 dark:hover:bg-white/[0.05] transition-colors"
               aria-label="Toggle theme"
             >
-              {mounted && (
-                theme === 'dark' ? <FiSun className="h-5 w-5" /> : <FiMoon className="h-5 w-5" />
-              )}
+              {mounted &&
+                (theme === "dark" ? (
+                  <FiSun className="h-4 w-4" />
+                ) : (
+                  <FiMoon className="h-4 w-4" />
+                ))}
+            </button>
+          </div>
+
+          {/* Mobile Controls */}
+          <div className="md:hidden flex items-center gap-1">
+            <button
+              onClick={toggleTheme}
+              className="p-2 text-neutral-500 dark:text-neutral-400 hover:text-neutral-900 dark:hover:text-white transition-colors"
+              aria-label="Toggle theme"
+            >
+              {mounted &&
+                (theme === "dark" ? (
+                  <FiSun className="h-5 w-5" />
+                ) : (
+                  <FiMoon className="h-5 w-5" />
+                ))}
             </button>
             <button
-              onClick={toggleMenu}
-              className="inline-flex items-center justify-center p-2 rounded-md text-gray-700 hover:text-gray-900 dark:text-gray-300 dark:hover:text-white hover:bg-gray-100 dark:hover:bg-gray-800 focus:outline-none transition-colors"
-              aria-expanded="false"
+              onClick={() => setIsOpen(!isOpen)}
+              className="p-2 text-neutral-500 dark:text-neutral-400 hover:text-neutral-900 dark:hover:text-white transition-colors"
+              aria-expanded={isOpen}
             >
               <span className="sr-only">打开主菜单</span>
               {isOpen ? (
-                <FiX className="block h-6 w-6" aria-hidden="true" />
+                <FiX className="h-6 w-6" />
               ) : (
-                <FiMenu className="block h-6 w-6" aria-hidden="true" />
+                <FiMenu className="h-6 w-6" />
               )}
             </button>
-          </motion.div>
+          </div>
         </div>
       </div>
 
-      {/* 移动端菜单 */}
+      {/* Mobile Menu */}
       <AnimatePresence>
         {isOpen && (
           <motion.div
             className="md:hidden"
             initial={{ opacity: 0, height: 0 }}
-            animate={{ opacity: 1, height: 'auto' }}
+            animate={{ opacity: 1, height: "auto" }}
             exit={{ opacity: 0, height: 0 }}
-            transition={{ duration: 0.3 }}
+            transition={{ duration: 0.25 }}
           >
-            <div className="px-2 pt-2 pb-3 space-y-1 sm:px-3 bg-white dark:bg-gray-900 shadow-lg">
-              {navLinks.map((link, index) => (
+            <div className="px-4 pt-2 pb-4 space-y-1 bg-white dark:bg-[#0a0a0a] border-b border-neutral-200 dark:border-neutral-800">
+              {navLinks.map((link, i) => (
                 <motion.div
                   key={link.href}
                   initial={{ opacity: 0, x: -10 }}
                   animate={{ opacity: 1, x: 0 }}
-                  transition={{ duration: 0.2, delay: index * 0.1 }}
+                  transition={{ duration: 0.15, delay: i * 0.05 }}
                 >
                   <Link
                     href={link.href}
-                    className={`block px-3 py-2 rounded-md text-base font-medium transition-colors
-                      ${pathname === link.href
-                        ? 'text-blue-600 dark:text-blue-400 bg-blue-50 dark:bg-blue-900/20'
-                        : 'text-gray-700 hover:text-gray-900 dark:text-gray-300 dark:hover:text-white hover:bg-gray-100 dark:hover:bg-gray-800'
-                      }`}
+                    className={`block px-3 py-2 text-sm font-medium transition-colors rounded-md ${
+                      pathname === link.href
+                        ? "text-amber-600 dark:text-amber-400 bg-amber-50 dark:bg-amber-400/[0.08]"
+                        : "text-neutral-600 dark:text-neutral-400 hover:text-neutral-900 dark:hover:text-white hover:bg-neutral-100 dark:hover:bg-white/[0.03]"
+                    }`}
                     onClick={() => setIsOpen(false)}
                   >
                     {link.label}

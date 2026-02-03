@@ -6,11 +6,10 @@
   --background: #ffffff;
   --foreground: #171717;
 
-  /* 主题色 */
-  --primary: #3b82f6;
-  --primary-dark: #2563eb;
-  --secondary: #a855f7;
-  --secondary-dark: #9333ea;
+  /* 深色 editorial 主题色板 */
+  --accent: #fbbf24;
+  --surface: rgba(255, 255, 255, 0.03);
+  --border: rgba(255, 255, 255, 0.08);
 
   /* 字体 */
   --font-sans: var(--font-sans), system-ui, sans-serif;
@@ -39,21 +38,6 @@ html {
   scroll-behavior: smooth;
 }
 
-/* 渐变文本 */
-.gradient-text {
-  @apply bg-gradient-to-r from-blue-600 to-purple-600 bg-clip-text text-transparent;
-}
-
-/* 渐变按钮 */
-.gradient-btn {
-  @apply bg-gradient-to-r from-blue-600 to-purple-600 hover:from-blue-700 hover:to-purple-700 text-white transform transition-all duration-300 hover:scale-105 shadow-md hover:shadow-lg;
-}
-
-/* 卡片悬停效果 */
-.hover-card {
-  @apply transform transition-all duration-300 hover:shadow-xl hover:-translate-y-1;
-}
-
 /* 页面过渡动画 */
 .page-enter {
   opacity: 0;
@@ -75,60 +59,4 @@ html {
   opacity: 0;
   transform: translateY(-10px);
   transition: opacity 300ms, transform 300ms;
-}
-
-/* AI路线图页面自定义动画 */
-@keyframes float {
-  0%, 100% {
-    transform: translateY(0px);
-  }
-  50% {
-    transform: translateY(-10px);
-  }
-}
-
-@keyframes spin-slow {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
-}
-
-@keyframes shimmer {
-  0% {
-    transform: translateX(-100%);
-  }
-  100% {
-    transform: translateX(100%);
-  }
-}
-
-.animate-float {
-  animation: float 6s ease-in-out infinite;
-}
-
-.animate-spin-slow {
-  animation: spin-slow 20s linear infinite;
-}
-
-.animate-shimmer {
-  animation: shimmer 2s infinite;
-}
-
-/* 文本阴影 */
-.text-shadow-lg {
-  text-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
-}
-
-/* 响应式延迟动画 */
-@media (min-width: 1024px) {
-  .delay-1000 {
-    animation-delay: 1s;
-  }
-
-  .delay-2000 {
-    animation-delay: 2s;
-  }
 }
