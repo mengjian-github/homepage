@@ -505,6 +505,7 @@ export default function Home() {
                     { label: "掘金", href: "https://juejin.cn/user/4212984287073895", icon: <SiJuejin className="w-4 h-4" /> },
                     { label: "公众号文章", href: "https://mp.weixin.qq.com/s/Z4k_5_waWJbRRo5lZBZmog", icon: <FiMessageCircle className="w-4 h-4" /> },
                     { label: "京东购书", href: "https://item.jd.com/14960026.html", icon: <FiExternalLink className="w-4 h-4" /> },
+                    { label: "友链 · 吴少峰", href: "https://www.wushaofengai.com", icon: <FiExternalLink className="w-4 h-4" /> },
                   ].map((link) => (
                     <a
                       key={link.label}
