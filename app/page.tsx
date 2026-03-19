@@ -433,53 +433,6 @@ export default function Home() {
       </section>
 
       {/* ————————————————————————————————————————————
-          04 — BOOK MATERIALS
-      ———————————————————————————————————————————— */}
-      <section className="py-24 bg-neutral-50 dark:bg-[#0d0d0d] border-t border-neutral-200 dark:border-neutral-800">
-        <div className="max-w-6xl mx-auto px-6 sm:px-8">
-          <motion.div
-            initial="hidden"
-            whileInView="visible"
-            viewport={{ once: true, margin: "-80px" }}
-            variants={staggerContainer}
-          >
-            <motion.div variants={fadeIn} className="mb-12 flex items-baseline gap-4">
-              <span className="text-xs tracking-[0.3em] uppercase text-amber-600/60 dark:text-amber-400/40 font-mono">
-                04
-              </span>
-              <h2 className="text-3xl sm:text-4xl font-bold text-neutral-900 dark:text-white">
-                出版 / 宣传物料
-              </h2>
-            </motion.div>
-
-            <motion.p
-              variants={fadeIn}
-              className="text-neutral-500 dark:text-neutral-400 max-w-3xl mb-10 leading-relaxed"
-            >
-              除了产品与开源项目，个人品牌也开始形成更完整的“书籍 + 课程 + AI 工具 + 工作流方法论”组合。这些物料会用于主页、社媒、分享和后续合作承接。
-            </motion.p>
-
-            <div className="grid grid-cols-2 lg:grid-cols-4 gap-4">
-              {[1, 2, 3, 4].map((n) => (
-                <motion.div
-                  key={n}
-                  variants={fadeIn}
-                  className="relative aspect-[3/4] rounded-lg overflow-hidden ring-1 ring-neutral-200 dark:ring-neutral-800 bg-white dark:bg-white/[0.02]"
-                >
-                  <Image
-                    src={`/images/book-material-${n}.jpg`}
-                    alt={`出版宣传物料 ${n}`}
-                    fill
-                    className="object-cover object-top"
-                  />
-                </motion.div>
-              ))}
-            </div>
-          </motion.div>
-        </div>
-      </section>
-
-      {/* ————————————————————————————————————————————
           05 — OPEN SOURCE
       ———————————————————————————————————————————— */}
       <section className="py-24 bg-neutral-50 dark:bg-[#0d0d0d] border-t border-neutral-200 dark:border-neutral-800">
@@ -492,7 +445,7 @@ export default function Home() {
           >
             <motion.div variants={fadeIn} className="mb-12 flex items-baseline gap-4">
               <span className="text-xs tracking-[0.3em] uppercase text-amber-600/60 dark:text-amber-400/40 font-mono">
-                05
+                04
               </span>
               <h2 className="text-3xl sm:text-4xl font-bold text-neutral-900 dark:text-white">
                 开源贡献
@@ -543,7 +496,7 @@ export default function Home() {
           >
             <motion.div variants={fadeIn} className="mb-16 flex items-baseline gap-4">
               <span className="text-xs tracking-[0.3em] uppercase text-amber-600/60 dark:text-amber-400/40 font-mono">
-                06
+                05
               </span>
               <h2 className="text-3xl sm:text-4xl font-bold text-neutral-900 dark:text-white">
                 联系 &amp; 社群
