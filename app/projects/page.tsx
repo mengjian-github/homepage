@@ -16,84 +16,93 @@ const staggerContainer = {
 
 const projects = [
   {
+    title: "字流",
+    description:
+      "AI 驱动的多平台内容发布工具，一次创作，智能适配公众号、知乎、掘金等多个平台，是当前最核心的产品之一。",
+    link: "https://ziliu.online",
+    github: "https://github.com/mengjian-github/ziliu",
+    tags: ["AI", "内容工具", "Next.js", "Cloudflare", "工作流"],
+    featured: true,
+  },
+  {
+    title: "OpenClaw 101",
+    description:
+      "面向中文用户的 AI 私人助理入门导航站，帮助开发者和创作者快速理解并上手 OpenClaw 的实际用法。",
+    link: "https://openclaw101.dev",
+    github: "https://github.com/mengjian-github/openclaw101",
+    tags: ["OpenClaw", "AI 助手", "Next.js", "文档站", "教育内容"],
+    featured: true,
+  },
+  {
     title: "MCP Hub 中国",
     description:
-      "精选优质 MCP 服务的综合平台，包含 Web 应用、CLI 工具和 MCP 服务器。支持 Cursor 一键安装，为 AI 开发者提供便捷的工具生态系统。",
+      "精选优质 MCP 服务的综合平台，包含 Web 应用、CLI 工具和 MCP 服务器，面向中文开发者构建 MCP 生态入口。",
     link: "https://mcp-cn.com",
     github: "https://github.com/mengjian-github/mcp-cn",
-    tags: ["MCP", "TypeScript", "Next.js", "CLI", "Monorepo", "AI 工具"],
+    tags: ["MCP", "TypeScript", "Next.js", "CLI", "AI 工具"],
     featured: true,
   },
   {
-    title: "AI Daily Generator",
+    title: "飞书转公众号",
     description:
-      "智能 AI 资讯日报生成工具，自动抓取最新 AI 动态，支持多平台格式化输出。现代化界面设计，一键生成微信群、朋友圈等分享格式。",
-    link: null,
-    github: "https://github.com/mengjian-github/ai-daily-generator",
-    tags: ["Next.js", "React 19", "AI", "Playwright", "shadcn/ui"],
-    featured: true,
-  },
-  {
-    title: "微信群聊日报生成器",
-    description:
-      "基于 AI 的微信群聊分析工具，自动提取话题精华、群友金句和跟进事项，一键生成美观的图片日报。支持 macOS、Windows、Linux 三大平台。",
-    link: "https://www.wechatdaily.online/",
-    github: "https://github.com/mengjian-github/wechat-daily-report",
-    tags: ["Electron", "React", "TypeScript", "AI", "跨平台"],
-    featured: true,
-  },
-  {
-    title: "飞书文档转公众号排版工具",
-    description:
-      "专业的在线工具，帮助用户快速将飞书文档转换为美观的微信公众号文章，支持一键转换、实时预览和完整样式保留。",
+      "帮助创作者把飞书文档快速转换成可发布的公众号内容，属于典型的内容工作流提效工具。",
     link: "https://www.larkmd.online/",
     github: "https://github.com/mengjian-github/lark-to-markdown",
-    tags: ["Next.js", "TailwindCSS", "React Markdown"],
+    tags: ["内容工作流", "Next.js", "TailwindCSS", "公众号"],
     featured: true,
   },
   {
     title: "逆向分析 Copilot",
     description:
-      "深入剖析 GitHub Copilot 的工作原理，研究其实现机制和功能设计，GitHub 上已获得上千 star，在技术社区产生广泛影响。",
+      "深入剖析 GitHub Copilot 的工作原理与实现机制，在技术社区获得较强传播，是个人技术影响力代表作之一。",
     link: null,
     github: "https://github.com/mengjian-github/copilot-analysis",
     tags: ["GitHub Copilot", "逆向工程", "AI", "VSCode 插件"],
     featured: true,
   },
   {
-    title: "React 学习指南",
+    title: "出海产品矩阵",
     description:
-      "一个面向初学者和进阶开发者的 React 教程网站，涵盖从基础到高级的 React 知识点和最佳实践。",
-    link: "https://r-learn.vercel.app/",
-    github: null,
-    tags: ["React", "教程", "Next.js", "MDX"],
+      "围绕 SEO、内容、工具与轻量应用持续做实验，形成多个站点并行验证的产品矩阵。",
+    link: null,
+    github: "https://github.com/mengjian-github/mengjian",
+    tags: ["SEO", "出海", "增长", "站群", "产品实验"],
+    featured: true,
+  },
+  {
+    title: "AI Daily Generator",
+    description:
+      "智能 AI 资讯日报生成工具，支持自动抓取、整合和格式化输出，服务内容创作与信息分发场景。",
+    link: null,
+    github: "https://github.com/mengjian-github/ai-daily-generator",
+    tags: ["Next.js", "AI", "内容生成", "自动化"],
     featured: false,
   },
   {
-    title: "开源书籍《React 源码全解》",
+    title: "微信群聊日报生成器",
     description:
-      "深入解析 React 源码的开源电子书，从源码角度解析 React 的设计思想和实现细节。",
+      "基于 AI 的微信群聊分析工具，自动提取话题精华、群友金句和跟进事项，并生成美观日报。",
+    link: "https://www.wechatdaily.online/",
+    github: null,
+    tags: ["Electron", "React", "TypeScript", "AI", "跨平台"],
+    featured: false,
+  },
+  {
+    title: "React 源码全解",
+    description:
+      "从源码角度解析 React 的设计思想和实现细节，是长期内容沉淀与技术写作能力的代表作品。",
     link: "https://meng-jian.gitbook.io/react-yuan-ma-quan-jie/",
     github: null,
     tags: ["React", "源码分析", "电子书", "开源"],
     featured: false,
   },
   {
-    title: "DeepSeek R1 最佳实践指南",
+    title: "个人主页 / GitHub 品牌承接",
     description:
-      "提供 DeepSeek R1 大模型的最佳实践指南，包括如何有效使用 AI 大模型进行编程和日常助手工作。",
-    link: "https://wvehg9sdj2q.feishu.cn/wiki/Rq0EwcY4WiWp0ok1lh3cqohsngf?fromScene=spaceOverview",
-    github: null,
-    tags: ["DeepSeek", "AI", "大模型", "实践指南"],
-    featured: false,
-  },
-  {
-    title: "D2C 智能代码生成平台",
-    description:
-      "基于 AI 的设计稿转代码平台，通过分析设计稿自动生成前端代码，大幅提升开发效率。",
-    link: null,
-    github: null,
-    tags: ["AI", "D2C", "Figma", "前端"],
+      "围绕个人品牌，统一展示个人经历、作品、出版、演讲与产品矩阵，用于承接流量、合作与信任建设。",
+    link: "https://mengjian.site",
+    github: "https://github.com/mengjian-github/homepage",
+    tags: ["个人品牌", "Portfolio", "Next.js", "SEO"],
     featured: false,
   },
 ];
@@ -124,7 +133,7 @@ export default function ProjectsPage() {
               variants={fadeIn}
               className="text-lg text-neutral-500 dark:text-neutral-400 max-w-2xl"
             >
-              我的开源项目和技术作品
+              我的代表产品、开源项目与个人品牌作品
             </motion.p>
           </motion.div>
         </div>

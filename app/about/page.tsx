@@ -42,7 +42,7 @@ export default function AboutPage() {
               variants={fadeIn}
               className="text-lg sm:text-xl text-neutral-500 dark:text-neutral-400 max-w-2xl leading-relaxed"
             >
-              前腾讯 T11 · 前字节跳动 3-1，现全职创业：AI 编程 + 出海（小产品矩阵 / SEO 增长）
+              前腾讯 T11 · 前字节跳动 3-1，现全职创业：AI 编程 + 出海增长 + 技术写作 / 演讲
             </motion.p>
           </motion.div>
         </div>
@@ -95,7 +95,7 @@ export default function AboutPage() {
                   >
                     字流 ziliu.online
                   </a>
-                  （14 平台一键发布工具）以及一系列 SEO 驱动的小产品。公众号「孟健AI编程」全网约 3 万粉，DeepSeek 相关书籍累计销量 93 万册。
+                  （14 平台一键发布工具）、OpenClaw 101、MCP Hub 中国，以及一系列 SEO 驱动的小产品。公众号「孟健AI编程」持续更新，个人品牌也从技术管理者进一步升级为 AI 编程创业者、技术作者与演讲者。
                 </p>
               </motion.div>
             </div>
@@ -177,8 +177,8 @@ export default function AboutPage() {
                     "全职创业：AI 编程 + 出海增长，小产品矩阵",
                     "主产品：字流 ziliu.online（14 平台一键发布工具）",
                     "增长手段：SEO / SEM / Affiliate / EDM 等海外运营组合",
-                    "内容输出：公众号「孟健AI编程」（全网约 3 万粉）",
-                    "出版：DeepSeek 相关书籍累计销量 93 万册",
+                    "内容输出：公众号「孟健AI编程」持续更新，沉淀 AI 编程方法论",
+                    "出版与分享：已出版 AI 主题书籍，并持续做演讲、写作与公开分享",
                   ],
                 },
                 {
@@ -322,17 +322,23 @@ export default function AboutPage() {
               {[
                 {
                   title: "DeepSeek极简入门与应用",
-                  desc: "我的第一本出版书籍，深入浅出地介绍 DeepSeek 大模型的入门知识与实际应用场景。",
+                  desc: "AI 主题出版作品之一，用于承接个人品牌中的技术作者 / 出版作者身份。",
                   link: "https://item.jd.com/14960026.html",
                   linkText: "在京东购买",
-                  hasImage: true,
+                  image: "/images/my-first-book.jpg",
+                },
+                {
+                  title: "OpenClaw 主题新书",
+                  desc: "围绕 AI 助手、自动化工作流与个人 / 小团队 AI 协作的新出版方向，进一步补齐“作者 + 产品实践者”的个人品牌叙事。",
+                  link: "https://openclaw101.dev",
+                  linkText: "查看相关项目",
+                  image: "/images/openclaw-book-poster.jpg",
                 },
                 {
                   title: "React 源码全解",
                   desc: "开源电子书，深入解析 React 源码的核心原理和实现机制，帮助开发者更好地理解 React 框架。",
                   link: "https://github.com/mengjian-github",
                   linkText: "查看项目",
-                  hasImage: false,
                 },
               ].map((book, i) => (
                 <motion.div
@@ -340,13 +346,13 @@ export default function AboutPage() {
                   variants={fadeIn}
                   className="group p-6 rounded-lg border border-neutral-200 dark:border-neutral-800 hover:border-amber-400/50 dark:hover:border-amber-400/30 transition-all"
                 >
-                  {book.hasImage && (
-                    <div className="relative w-24 h-32 rounded overflow-hidden ring-1 ring-neutral-200 dark:ring-neutral-800 mb-4">
+                  {book.image && (
+                    <div className="relative w-24 h-32 rounded overflow-hidden ring-1 ring-neutral-200 dark:ring-neutral-800 mb-4 bg-neutral-50 dark:bg-neutral-900">
                       <Image
-                        src="/images/my-first-book.jpg"
+                        src={book.image}
                         alt={book.title}
                         fill
-                        className="object-cover"
+                        className="object-cover object-top"
                       />
                     </div>
                   )}

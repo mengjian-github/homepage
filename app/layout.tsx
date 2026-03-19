@@ -17,11 +17,11 @@ const poppins = Poppins({
 });
 
 export const metadata: Metadata = {
-  title: "孟健 — AI 编程实战专家 / 出海创业者",
+  title: "孟健 — AI 编程创业者 / 技术作者 / 演讲者",
   description:
-    "前腾讯 T11 | Nextfield Labs LLC 创始人 | 公众号「孟健AI编程」3万+ 粉丝 | 《DeepSeek极简入门与应用》累计销量 93 万册",
+    "前腾讯 T11 | 前字节跳动 3-1 | Nextfield Labs LLC 创始人 | AI 编程、出海产品与技术写作实践者",
   keywords:
-    "孟健, AI编程, DeepSeek, 出海创业, React, Next.js, TypeScript, 腾讯, GitHub Copilot",
+    "孟健, AI编程, OpenClaw, 出海创业, Next.js, TypeScript, Cloudflare, SEO, GitHub Copilot",
   authors: [{ name: "孟健", url: "https://github.com/mengjian-github" }],
   creator: "孟健",
   publisher: "孟健",
@@ -33,9 +33,9 @@ export const metadata: Metadata = {
     type: "website",
     locale: "zh_CN",
     url: "https://mengjian.site",
-    title: "孟健 — AI 编程实战专家 / 出海创业者",
+    title: "孟健 — AI 编程创业者 / 技术作者 / 演讲者",
     description:
-      "前腾讯 T11 | Nextfield Labs LLC 创始人 | 公众号「孟健AI编程」3万+ 粉丝 | 《DeepSeek极简入门与应用》累计销量 93 万册",
+      "前腾讯 T11 | 前字节跳动 3-1 | Nextfield Labs LLC 创始人 | AI 编程、出海产品与技术写作实践者",
     siteName: "孟健的个人网站",
     images: [
       {
@@ -48,9 +48,9 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: "summary_large_image",
-    title: "孟健 — AI 编程实战专家 / 出海创业者",
+    title: "孟健 — AI 编程创业者 / 技术作者 / 演讲者",
     description:
-      "前腾讯 T11 | Nextfield Labs LLC 创始人 | 《DeepSeek极简入门与应用》累计销量 93 万册",
+      "前腾讯 T11 | 前字节跳动 3-1 | Nextfield Labs LLC 创始人 | AI 编程、出海产品与技术写作实践者",
     images: ["/images/og-image.png"],
   },
   robots: {

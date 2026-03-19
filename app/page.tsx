@@ -58,9 +58,9 @@ export default function Home() {
     "@context": "https://schema.org",
     "@type": "Person",
     name: "孟健",
-    jobTitle: "AI 编程实战专家 / 出海创业者",
+    jobTitle: "AI 编程创业者 / 技术作者 / 演讲者",
     description:
-      "前腾讯 T11 | 前字节跳动 3-1 | Nextfield Labs LLC 创始人 | 公众号「孟健AI编程」3万+ 粉丝 | 《DeepSeek极简入门与应用》累计销量 93 万册",
+      "前腾讯 T11 | 前字节跳动 3-1 | Nextfield Labs LLC 创始人 | AI 编程与出海创业 | 公众号「孟健AI编程」作者 | 已出版 AI 主题书籍",
     url: "https://mengjian.site",
     sameAs: [
       "https://github.com/mengjian-github",
@@ -124,9 +124,9 @@ export default function Home() {
             transition={{ duration: 0.6, delay: 0.5 }}
             className="text-lg sm:text-xl md:text-2xl text-neutral-500 dark:text-neutral-400 max-w-2xl mb-14 leading-relaxed"
           >
-            AI 编程实战专家
+            AI 编程创业者
             <span className="text-neutral-300 dark:text-neutral-700 mx-3">/</span>
-            出海创业者
+            出海产品实践者
             <span className="text-neutral-300 dark:text-neutral-700 mx-3">/</span>
             技术作者 &amp; 演讲者
           </motion.p>
@@ -139,9 +139,9 @@ export default function Home() {
             className="grid grid-cols-2 md:grid-cols-4 gap-y-8 gap-x-6 md:gap-x-10 mb-14"
           >
             {[
-              { num: "93万+", unit: "册", label: "书籍累计销量" },
+              { num: "已出版", unit: "", label: "AI 主题书籍" },
               { num: "3万+", unit: "", label: "公众号粉丝" },
-              { num: "1000+", unit: "", label: "GitHub Stars" },
+              { num: "30+", unit: "", label: "产品 / 站点实践" },
               { num: "T11", unit: "", label: "腾讯最高职级" },
             ].map((s, i) => (
               <motion.div
@@ -308,7 +308,7 @@ export default function Home() {
               {[
                 { year: "2025.10", text: "全职创业，创办 Nextfield Labs LLC" },
                 { year: "2024 – 2025.10", text: "字节跳动 Flow 部门 · 前端技术 Leader（3-1），负责猫箱 BagelBell —— AI 角色创建与互动平台" },
-                { year: "2025", text: "《DeepSeek极简入门与应用》出版，累计销量 93 万册" },
+                { year: "2025", text: "AI 主题书籍持续出版，个人品牌从技术负责人升级为技术作者与创业者" },
                 { year: "2025", text: "GIAC 全球互联网架构大会 2025 深圳站讲师" },
                 { year: "2025", text: "破局AI行动家大会 2025 主会场分享嘉宾" },
                 { year: "2015 – 2024", text: "腾讯 T11 · QQ 大技术五组负责人" },
@@ -350,52 +350,82 @@ export default function Home() {
                 03
               </span>
               <h2 className="text-3xl sm:text-4xl font-bold text-neutral-900 dark:text-white">
-                著作
+                著作 / 出版
               </h2>
             </motion.div>
 
             <motion.div
               variants={fadeIn}
-              className="flex flex-col md:flex-row gap-10 md:gap-16 items-start"
+              className="grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-10 items-start"
             >
-              {/* Cover */}
-              <div className="flex-shrink-0">
-                <div className="relative w-48 sm:w-56 md:w-64 aspect-[3/4] rounded-md overflow-hidden shadow-2xl dark:shadow-black/50 ring-1 ring-neutral-200 dark:ring-neutral-800">
-                  <Image
-                    src="/images/my-first-book.jpg"
-                    alt="DeepSeek极简入门与应用"
-                    fill
-                    className="object-cover"
-                  />
+              <div className="rounded-xl border border-neutral-200 dark:border-neutral-800 p-6 bg-white dark:bg-white/[0.02]">
+                <div className="flex flex-col md:flex-row gap-6 items-start">
+                  <div className="flex-shrink-0">
+                    <div className="relative w-40 sm:w-44 aspect-[3/4] rounded-md overflow-hidden shadow-2xl dark:shadow-black/50 ring-1 ring-neutral-200 dark:ring-neutral-800">
+                      <Image
+                        src="/images/my-first-book.jpg"
+                        alt="DeepSeek极简入门与应用"
+                        fill
+                        className="object-cover"
+                      />
+                    </div>
+                  </div>
+                  <div className="flex-1 min-w-0">
+                    <h3 className="text-2xl font-bold text-neutral-900 dark:text-white mb-3 leading-tight">
+                      DeepSeek极简入门与应用
+                    </h3>
+                    <p className="text-neutral-600 dark:text-neutral-400 text-base leading-relaxed mb-6">
+                      围绕 AI 工具与大模型应用的出版作品之一，用来承接个人品牌中的“技术作者 / 出版作者”身份。
+                    </p>
+                    <div className="mb-6 border-l-2 border-amber-500 pl-4">
+                      <span className="block text-4xl sm:text-5xl font-bold font-mono text-neutral-900 dark:text-white tracking-tight leading-none">
+                        已<span className="text-amber-500">出</span><span className="text-2xl sm:text-3xl">版</span>
+                      </span>
+                      <span className="block text-sm text-neutral-500 mt-2">出版作者身份展示 · 京东有售</span>
+                    </div>
+                    <a
+                      href="https://item.jd.com/14960026.html"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="inline-flex items-center gap-2 px-5 py-3 rounded-md font-medium text-sm transition-colors duration-200 bg-neutral-900 text-white hover:bg-neutral-700 dark:bg-white dark:text-neutral-900 dark:hover:bg-neutral-200"
+                    >
+                      京东购买
+                      <FiExternalLink className="w-4 h-4" />
+                    </a>
+                  </div>
                 </div>
               </div>
 
-              {/* Info */}
-              <div className="flex-1 min-w-0">
-                <h3 className="text-2xl sm:text-3xl font-bold text-neutral-900 dark:text-white mb-4 leading-tight">
-                  DeepSeek极简入门与应用
-                </h3>
-                <p className="text-neutral-600 dark:text-neutral-400 text-base sm:text-lg leading-relaxed mb-8 max-w-xl">
-                  深入浅出地介绍 DeepSeek 大模型的入门知识与实际应用场景。面向 AI 爱好者与开发者，从零开始掌握 DeepSeek 的核心能力。
-                </p>
-
-                {/* Sales callout */}
-                <div className="mb-10 border-l-2 border-amber-500 pl-5">
-                  <span className="block text-5xl sm:text-6xl md:text-7xl font-bold font-mono text-neutral-900 dark:text-white tracking-tight leading-none">
-                    93<span className="text-amber-500">万</span><span className="text-3xl sm:text-4xl md:text-5xl">册</span>
-                  </span>
-                  <span className="block text-sm text-neutral-500 mt-2">累计销量 · 京东有售</span>
+              <div className="rounded-xl border border-neutral-200 dark:border-neutral-800 p-6 bg-white dark:bg-white/[0.02]">
+                <div className="flex flex-col md:flex-row gap-6 items-start">
+                  <div className="flex-shrink-0">
+                    <div className="relative w-40 sm:w-44 aspect-[153/1280] rounded-md overflow-hidden shadow-xl dark:shadow-black/40 ring-1 ring-neutral-200 dark:ring-neutral-800 bg-neutral-50 dark:bg-neutral-900">
+                      <Image
+                        src="/images/openclaw-book-poster.jpg"
+                        alt="OpenClaw 新书海报"
+                        fill
+                        className="object-cover object-top"
+                      />
+                    </div>
+                  </div>
+                  <div className="flex-1 min-w-0">
+                    <h3 className="text-2xl font-bold text-neutral-900 dark:text-white mb-3 leading-tight">
+                      OpenClaw 主题新书
+                    </h3>
+                    <p className="text-neutral-600 dark:text-neutral-400 text-base leading-relaxed mb-6">
+                      最新出版方向进一步延伸到 AI 助手与个人智能工作流：帮助更多一线开发者和创作者，用更低门槛的方式搭建自己的 AI 协作系统。
+                    </p>
+                    <div className="mb-6 border-l-2 border-amber-500 pl-4">
+                      <span className="block text-4xl sm:text-5xl font-bold font-mono text-neutral-900 dark:text-white tracking-tight leading-none">
+                        新<span className="text-amber-500">书</span><span className="text-2xl sm:text-3xl">已出</span>
+                      </span>
+                      <span className="block text-sm text-neutral-500 mt-2">AI 助手 / 工作流 / 团队协作主题</span>
+                    </div>
+                    <p className="text-sm text-neutral-500 dark:text-neutral-500 leading-relaxed">
+                      这本书会让你的个人品牌叙事更完整：从 AI 大模型应用，延伸到 AI 助手、自动化工作流和个人 / 小团队的生产力升级。
+                    </p>
+                  </div>
                 </div>
-
-                <a
-                  href="https://item.jd.com/14960026.html"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="inline-flex items-center gap-2 px-6 py-3 rounded-md font-medium text-sm transition-colors duration-200 bg-neutral-900 text-white hover:bg-neutral-700 dark:bg-white dark:text-neutral-900 dark:hover:bg-neutral-200"
-                >
-                  京东购买
-                  <FiExternalLink className="w-4 h-4" />
-                </a>
               </div>
             </motion.div>
           </motion.div>
@@ -403,7 +433,7 @@ export default function Home() {
       </section>
 
       {/* ————————————————————————————————————————————
-          04 — OPEN SOURCE
+          04 — BOOK MATERIALS
       ———————————————————————————————————————————— */}
       <section className="py-24 bg-neutral-50 dark:bg-[#0d0d0d] border-t border-neutral-200 dark:border-neutral-800">
         <div className="max-w-6xl mx-auto px-6 sm:px-8">
@@ -416,6 +446,53 @@ export default function Home() {
             <motion.div variants={fadeIn} className="mb-12 flex items-baseline gap-4">
               <span className="text-xs tracking-[0.3em] uppercase text-amber-600/60 dark:text-amber-400/40 font-mono">
                 04
+              </span>
+              <h2 className="text-3xl sm:text-4xl font-bold text-neutral-900 dark:text-white">
+                出版 / 宣传物料
+              </h2>
+            </motion.div>
+
+            <motion.p
+              variants={fadeIn}
+              className="text-neutral-500 dark:text-neutral-400 max-w-3xl mb-10 leading-relaxed"
+            >
+              除了产品与开源项目，个人品牌也开始形成更完整的“书籍 + 课程 + AI 工具 + 工作流方法论”组合。这些物料会用于主页、社媒、分享和后续合作承接。
+            </motion.p>
+
+            <div className="grid grid-cols-2 lg:grid-cols-4 gap-4">
+              {[1, 2, 3, 4].map((n) => (
+                <motion.div
+                  key={n}
+                  variants={fadeIn}
+                  className="relative aspect-[3/4] rounded-lg overflow-hidden ring-1 ring-neutral-200 dark:ring-neutral-800 bg-white dark:bg-white/[0.02]"
+                >
+                  <Image
+                    src={`/images/book-material-${n}.jpg`}
+                    alt={`出版宣传物料 ${n}`}
+                    fill
+                    className="object-cover object-top"
+                  />
+                </motion.div>
+              ))}
+            </div>
+          </motion.div>
+        </div>
+      </section>
+
+      {/* ————————————————————————————————————————————
+          05 — OPEN SOURCE
+      ———————————————————————————————————————————— */}
+      <section className="py-24 bg-neutral-50 dark:bg-[#0d0d0d] border-t border-neutral-200 dark:border-neutral-800">
+        <div className="max-w-6xl mx-auto px-6 sm:px-8">
+          <motion.div
+            initial="hidden"
+            whileInView="visible"
+            viewport={{ once: true, margin: "-80px" }}
+            variants={staggerContainer}
+          >
+            <motion.div variants={fadeIn} className="mb-12 flex items-baseline gap-4">
+              <span className="text-xs tracking-[0.3em] uppercase text-amber-600/60 dark:text-amber-400/40 font-mono">
+                05
               </span>
               <h2 className="text-3xl sm:text-4xl font-bold text-neutral-900 dark:text-white">
                 开源贡献
@@ -466,7 +543,7 @@ export default function Home() {
           >
             <motion.div variants={fadeIn} className="mb-16 flex items-baseline gap-4">
               <span className="text-xs tracking-[0.3em] uppercase text-amber-600/60 dark:text-amber-400/40 font-mono">
-                05
+                06
               </span>
               <h2 className="text-3xl sm:text-4xl font-bold text-neutral-900 dark:text-white">
                 联系 &amp; 社群
