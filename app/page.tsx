@@ -399,10 +399,10 @@ export default function Home() {
               <div className="rounded-xl border border-neutral-200 dark:border-neutral-800 p-6 bg-white dark:bg-white/[0.02]">
                 <div className="flex flex-col md:flex-row gap-6 items-start">
                   <div className="flex-shrink-0">
-                    <div className="relative w-40 sm:w-44 aspect-[153/1280] rounded-md overflow-hidden shadow-xl dark:shadow-black/40 ring-1 ring-neutral-200 dark:ring-neutral-800 bg-neutral-50 dark:bg-neutral-900">
+                    <div className="relative w-40 sm:w-44 aspect-[3/4] rounded-md overflow-hidden shadow-xl dark:shadow-black/40 ring-1 ring-neutral-200 dark:ring-neutral-800 bg-neutral-50 dark:bg-neutral-900">
                       <Image
                         src="/images/openclaw-book-poster.jpg"
-                        alt="OpenClaw 新书海报"
+                        alt="OpenClaw 新书封面"
                         fill
                         className="object-cover object-top"
                       />
