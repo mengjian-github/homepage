@@ -7,15 +7,52 @@ interface GitHubStatsProps {
   username: string;
 }
 
+interface StatsData {
+  repos: number;
+  followers: number;
+  totalStars: number;
+}
+
+const FALLBACK: StatsData = { repos: 56, followers: 363, totalStars: 5100 };
+
 const GitHubStats: React.FC<GitHubStatsProps> = ({ username }) => {
   const [loading, setLoading] = useState(true);
   const [mounted, setMounted] = useState(false);
+  const [stats, setStats] = useState<StatsData>(FALLBACK);
 
   useEffect(() => {
     setMounted(true);
-    const timer = setTimeout(() => setLoading(false), 800);
-    return () => clearTimeout(timer);
-  }, []);
+
+    async function fetchStats() {
+      try {
+        const [userRes, reposRes] = await Promise.all([
+          fetch(`https://api.github.com/users/${username}`),
+          fetch(`https://api.github.com/users/${username}/repos?per_page=100&sort=stars`),
+        ]);
+
+        if (!userRes.ok || !reposRes.ok) throw new Error("API error");
+
+        const user = await userRes.json();
+        const repos = await reposRes.json();
+
+        const totalStars = Array.isArray(repos)
+          ? repos.reduce((sum: number, r: { stargazers_count?: number }) => sum + (r.stargazers_count || 0), 0)
+          : FALLBACK.totalStars;
+
+        setStats({
+          repos: user.public_repos || FALLBACK.repos,
+          followers: user.followers || FALLBACK.followers,
+          totalStars,
+        });
+      } catch {
+        setStats(FALLBACK);
+      } finally {
+        setLoading(false);
+      }
+    }
+
+    fetchStats();
+  }, [username]);
 
   if (!mounted) {
     return (
@@ -57,19 +94,19 @@ const GitHubStats: React.FC<GitHubStatsProps> = ({ username }) => {
           {/* Stats */}
           <div className="grid grid-cols-3 gap-px bg-neutral-200 dark:bg-neutral-800">
             {[
-              { label: "开源项目", stat: "Repos", href: `https://github.com/${username}?tab=repositories` },
-              { label: "开发者社区", stat: "关注者", href: `https://github.com/${username}?tab=followers` },
-              { label: "获得认可", stat: "Stars", href: `https://github.com/${username}` },
+              { label: "开源项目", value: `${stats.repos}`, href: `https://github.com/${username}?tab=repositories` },
+              { label: "开发者关注", value: `${stats.followers}`, href: `https://github.com/${username}?tab=followers` },
+              { label: "获得 Stars", value: `${stats.totalStars.toLocaleString()}`, href: `https://github.com/${username}` },
             ].map((item) => (
               <a
-                key={item.stat}
+                key={item.label}
                 href={item.href}
                 target="_blank"
                 rel="noopener noreferrer"
                 className="flex flex-col items-center p-4 bg-neutral-50 dark:bg-white/[0.02] hover:bg-neutral-100 dark:hover:bg-white/[0.04] transition-colors"
               >
-                <span className="text-base font-bold font-mono text-amber-600 dark:text-amber-400">
-                  {item.stat}
+                <span className="text-2xl font-bold font-mono text-amber-600 dark:text-amber-400">
+                  {item.value}
                 </span>
                 <span className="text-xs text-neutral-500 dark:text-neutral-500 mt-1">
                   {item.label}

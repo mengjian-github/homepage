@@ -472,7 +472,55 @@ export default function Home() {
                 </p>
               </div>
               <div className="flex items-center gap-2 text-amber-600 dark:text-amber-400 font-mono font-bold text-2xl flex-shrink-0">
-                ★ 1000+
+                ★ 2200+
+              </div>
+            </motion.a>
+
+            {/* OpenClaw 101 */}
+            <motion.a
+              variants={fadeIn}
+              href="https://github.com/mengjian-github/openclaw101"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="group flex flex-col sm:flex-row sm:items-center gap-4 p-6 mb-4 rounded-lg border border-neutral-200 dark:border-neutral-800 hover:border-amber-400/50 dark:hover:border-amber-400/30 transition-all bg-white dark:bg-white/[0.02]"
+            >
+              <div className="flex-1 min-w-0">
+                <div className="flex items-center gap-3 mb-2">
+                  <FiGithub className="w-5 h-5 text-neutral-400 dark:text-neutral-500" />
+                  <span className="text-lg font-semibold text-neutral-900 dark:text-white group-hover:text-amber-700 dark:group-hover:text-amber-400 transition-colors">
+                    OpenClaw 101
+                  </span>
+                </div>
+                <p className="text-sm text-neutral-500 dark:text-neutral-400">
+                  从零开始 7 天掌握 AI 私人助理，全网资源聚合站
+                </p>
+              </div>
+              <div className="flex items-center gap-2 text-amber-600 dark:text-amber-400 font-mono font-bold text-2xl flex-shrink-0">
+                ★ 2500+
+              </div>
+            </motion.a>
+
+            {/* 小墨 Starter Kit */}
+            <motion.a
+              variants={fadeIn}
+              href="https://github.com/mengjian-github/xiaomo-starter-kit"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="group flex flex-col sm:flex-row sm:items-center gap-4 p-6 mb-8 rounded-lg border border-neutral-200 dark:border-neutral-800 hover:border-amber-400/50 dark:hover:border-amber-400/30 transition-all bg-white dark:bg-white/[0.02]"
+            >
+              <div className="flex-1 min-w-0">
+                <div className="flex items-center gap-3 mb-2">
+                  <FiGithub className="w-5 h-5 text-neutral-400 dark:text-neutral-500" />
+                  <span className="text-lg font-semibold text-neutral-900 dark:text-white group-hover:text-amber-700 dark:group-hover:text-amber-400 transition-colors">
+                    小墨 Starter Kit
+                  </span>
+                </div>
+                <p className="text-sm text-neutral-500 dark:text-neutral-400">
+                  OpenClaw 中文 AI 助手模板，5 分钟拥有你的 AI 私人助手
+                </p>
+              </div>
+              <div className="flex items-center gap-2 text-amber-600 dark:text-amber-400 font-mono font-bold text-2xl flex-shrink-0">
+                ★ 340+
               </div>
             </motion.a>
 
