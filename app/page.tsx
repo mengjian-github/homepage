@@ -139,7 +139,7 @@ export default function Home() {
             className="grid grid-cols-2 md:grid-cols-4 gap-y-8 gap-x-6 md:gap-x-10 mb-14"
           >
             {[
-              { num: "已出版", unit: "", label: "AI 主题书籍" },
+              { num: "94万", unit: "册", label: "《DeepSeek极简入门与应用》发行" },
               { num: "3万+", unit: "", label: "公众号粉丝" },
               { num: "30+", unit: "", label: "产品 / 站点实践" },
               { num: "T11", unit: "", label: "腾讯最高职级" },
@@ -186,6 +186,39 @@ export default function Home() {
                 {l.icon}
               </a>
             ))}
+          </motion.div>
+          {/* Lead magnet — X / 各平台主页链接点进来的人，第一屏就能领资料、加微信 */}
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.6, delay: 1.1 }}
+            className="mt-12 max-w-3xl rounded-2xl border border-amber-500/30 bg-amber-50/60 dark:bg-amber-400/5 p-6 sm:p-8 flex flex-col sm:flex-row gap-6 sm:items-center"
+          >
+            <img
+              src="/images/wechat-qr.png"
+              alt="孟健的微信二维码 mjcoding3"
+              width={140}
+              height={140}
+              className="w-32 h-32 sm:w-36 sm:h-36 rounded-lg bg-white p-1 shrink-0 self-center"
+            />
+            <div className="space-y-3">
+              <p className="text-xs tracking-[0.2em] uppercase text-amber-700 dark:text-amber-400 font-mono">Free · 免费领取</p>
+              <h2 className="text-xl sm:text-2xl font-bold text-neutral-900 dark:text-white">AI 入门三件套</h2>
+              <p className="text-sm text-neutral-600 dark:text-neutral-400 leading-relaxed">
+                01 2026 年 AI 小白入门学习路线图 · 02 OpenClaw 私人助理资料包（152 页） · 03 Hermes Agent 实战资料包（160 页）
+              </p>
+              <p className="text-sm text-neutral-800 dark:text-neutral-200">
+                扫码加微信 <span className="font-mono font-semibold">mjcoding3</span>，备注「资料」，三份 PDF 直接发你；学 AI 卡住了也可以直接问我。
+              </p>
+              <a
+                href="https://pan.baidu.com/s/1G23yr-9LX3R6kRwPtSXWKw?pwd=r7xz"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="inline-flex items-center gap-1 text-sm text-amber-700 dark:text-amber-400 hover:underline"
+              >
+                不想加微信？网盘直接下载（提取码 r7xz） <FiArrowRight />
+              </a>
+            </div>
           </motion.div>
         </div>
 
