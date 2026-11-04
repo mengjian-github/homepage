@@ -45,6 +45,7 @@ export const pressProducts = [
   { name: "个人网站", href: "https://mengjian.site", note: "mengjian.site" },
   { name: "字流", href: "https://ziliu.online", note: "ziliu.online · 真人 IP 内容操作系统" },
   { name: "ShipSolo", href: "https://shipsolo.cn", note: "shipsolo.cn · AI 编程出海领航" },
+  { name: "Shipsite", href: "https://shipsite.ai", note: "shipsite.ai · 山海司 · 从关键词到可上线站点" },
 ];
 
 /** 可邀约讲题：每个都对应讲过的场次，不写没讲过的。 */
@@ -62,7 +63,7 @@ export const talks = [
   {
     title: "AI 时代技术人的个人 IP",
     text: "技术人怎么写、怎么发、怎么把内容变成产品和收入。",
-    past: "破局上海站",
+    past: "破局行动家交流会上海站",
   },
   {
     title: "养一个 AI 私人助理",
@@ -184,6 +185,7 @@ export type HonorItem = {
   href?: string;
   linkLabel?: string;
   image?: PressImage;
+  images?: PressImage[];
 };
 
 /** 从新到旧。日期统一 YYYY-MM-DD / YYYY-MM / YYYY。 */
@@ -196,8 +198,8 @@ export const honors: HonorItem[] = [
     href: "https://juejin.cn/activity/hangzhouxlab01",
     linkLabel: "活动页",
     image: {
-      src: "/assets/influence/juejin-coffee-talk.jpg",
-      alt: "稀土掘金 X-Lab Coffee Talk 杭州场海报",
+      src: "/assets/influence/poster-juejin-hangzhou.jpg",
+      alt: "稀土掘金 X-Lab Coffee Talk 杭州 #001 邀请海报：诚邀孟健",
     },
   },
   {
@@ -215,22 +217,36 @@ export const honors: HonorItem[] = [
     kicker: "荣誉",
     title: "哥飞的朋友们 2025 年度网站比赛",
     text: "第 15 名，荣誉称号「中流砥柱·坚实力量」。",
+    image: {
+      src: "/assets/influence/cert-gefei-15.jpg",
+      alt: "哥飞的朋友们 2025 年度网站比赛荣誉证书，孟健第 15 名，称号中流砥柱·坚实力量",
+    },
   },
   {
     date: "2026-01",
     kicker: "教练",
     title: "破局精英教练",
     text: "破局行动第 09 期精英教练。",
+    image: {
+      src: "/assets/influence/cert-elite-coach.jpg",
+      alt: "破局行动第 09 期授予孟健精英教练的荣誉证书",
+    },
   },
   {
     date: "2025-12-27",
     kicker: "演讲",
-    title: "AI 破局行动家大会 · 上海 / 深圳",
-    text: "上海站分享 AI 时代的个人 IP 与副业；深圳主会场登台，讲 AI 编程出海。",
+    title: "AI 破局行动家大会 · 深圳主会场",
+    text: "深圳主会场登台，讲 AI 编程出海；席卡身份是 AI 编程出海创业者。",
     image: {
       src: "/assets/influence/speaking-shenzhen.jpg",
-      alt: "孟健在 AI 破局行动家大会主会场演讲",
+      alt: "孟健在 AI 破局行动家大会深圳主会场，席卡身份是 AI 编程出海创业者",
     },
+    images: [
+      {
+        src: "/assets/influence/speaking-shenzhen-2.jpg",
+        alt: "孟健在 AI 破局行动家大会深圳主会场演讲",
+      },
+    ],
   },
   {
     date: "2025-12-28",
@@ -251,6 +267,12 @@ export const honors: HonorItem[] = [
       src: "/assets/influence/cert-gdec-judge.jpg",
       alt: "2025 GDEC · CSDN 代码生成分赛道评委聘书",
     },
+    images: [
+      {
+        src: "/assets/influence/cert-gdec-panel.jpg",
+        alt: "2025 GDEC 代码生成赛道大赛评审团，孟健与蒋涛等并列",
+      },
+    ],
   },
   {
     date: "2025-09-06",
@@ -260,8 +282,8 @@ export const honors: HonorItem[] = [
     href: "https://luma.com/5unk5h45",
     linkLabel: "活动页",
     image: {
-      src: "/assets/influence/trae-meetup-shanghai.jpg",
-      alt: "TRAE Meetup 上海活动封面",
+      src: "/assets/influence/poster-trae-shanghai.jpg",
+      alt: "TRAE Meetup 上海海报：孟健分享 MCP 深度实践",
     },
   },
   {
@@ -273,20 +295,34 @@ export const honors: HonorItem[] = [
     linkLabel: "大会介绍",
   },
   {
-    date: "2025",
-    kicker: "奖项",
-    title: "首批 TRAE Expert · 年度社区影响力奖",
-    text: "受邀成为首批 TRAE Expert，获 TRAE Achievement Award 2025 年度社区影响力奖。",
+    date: "2025-05-24",
+    kicker: "分享",
+    title: "破局行动家交流会 · 上海站",
+    text: "直播分享「AI 时代如何打造个人 IP 与副业」。",
     image: {
-      src: "/assets/influence/award-trae-bowen.jpg",
-      alt: "TRAE 年度社区影响力奖与博文视点 2025 年度优秀作者奖杯",
+      src: "/assets/influence/poster-poju-shanghai.jpg",
+      alt: "破局行动家交流会上海站海报，孟健分享 AI 时代如何打造个人 IP 与副业",
     },
   },
   {
     date: "2025",
-    kicker: "出版",
-    title: "博文视点 2025 年度优秀作者",
-    text: "电子工业出版社博文视点颁发。",
+    kicker: "奖项",
+    title: "首批 TRAE Expert",
+    text: "TRAE 团队正式邀请加入首批 TRAE Expert。",
+    image: {
+      src: "/assets/influence/invite-trae-expert.jpg",
+      alt: "TRAE 团队邀请孟健成为首批 TRAE Expert 的邀请函",
+    },
+  },
+  {
+    date: "2025",
+    kicker: "奖项",
+    title: "TRAE 年度社区影响力奖 · 博文视点年度优秀作者",
+    text: "TRAE Achievement Award 2025 年度社区影响力奖；电子工业出版社博文视点 2025 年度优秀作者。",
+    image: {
+      src: "/assets/influence/award-trae-bowen.jpg",
+      alt: "TRAE 年度社区影响力奖与博文视点 2025 年度优秀作者奖杯",
+    },
   },
   {
     date: "腾讯期间",

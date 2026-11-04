@@ -34,6 +34,12 @@ const products = [
     desc: "AI 编程出海领航",
   },
   {
+    name: "Shipsite",
+    domain: "shipsite.ai",
+    url: "https://shipsite.ai",
+    desc: "山海司 · 从关键词到可上线的 Next.js 站点",
+  },
+  {
     name: "MCP Hub 中国",
     domain: "mcp-cn.com",
     url: "https://mcp-cn.com",
@@ -518,15 +524,18 @@ export default function Home() {
                 <motion.li key={`${item.date}-${item.title}`} variants={fadeIn} className="relative pl-8">
                   <span className="absolute -left-[7px] top-1.5 h-3.5 w-3.5 rounded-full bg-amber-500 ring-4 ring-white dark:ring-[#0a0a0a]" />
                   <div className="flex flex-col sm:flex-row gap-4 sm:items-start">
-                    {item.image && (
-                      <div className="relative w-full sm:w-44 aspect-[3/2] shrink-0 overflow-hidden rounded-lg ring-1 ring-neutral-200 dark:ring-neutral-800 bg-neutral-100 dark:bg-neutral-900">
-                        <Image
-                          src={item.image.src}
-                          alt={item.image.alt}
-                          fill
-                          sizes="180px"
-                          className="object-cover"
-                        />
+                    {(item.image || item.images?.length) && (
+                      <div className="flex gap-3 shrink-0">
+                        {[...(item.image ? [item.image] : []), ...(item.images ?? [])].map((shot, i, all) => (
+                          <div
+                            key={shot.src}
+                            className={`relative aspect-[3/4] overflow-hidden rounded-lg ring-1 ring-neutral-200 dark:ring-neutral-800 bg-neutral-100 dark:bg-neutral-900 ${
+                              all.length > 1 ? "w-[calc(50%-0.375rem)] sm:w-32" : "w-40 sm:w-40"
+                            }`}
+                          >
+                            <Image src={shot.src} alt={shot.alt} fill sizes="160px" className="object-contain" />
+                          </div>
+                        ))}
                       </div>
                     )}
                     <div className="min-w-0">
