@@ -117,6 +117,13 @@ const influenceItems: InfluenceItem[] = [
     linkLabel: "阅读原文",
   },
   {
+    kicker: "专访",
+    title: "程序员客栈《开发者说》",
+    text: "长篇专访，谈从山村到腾讯再到 AI 创业的三次跨越，以及 AI 编程、出海与 OpenClaw。",
+    href: "https://mp.weixin.qq.com/s/PzEF9hm4rB5I75r9TuVDrQ",
+    linkLabel: "阅读原文",
+  },
+  {
     kicker: "播客",
     title: "小宇宙《浪说》",
     text: "嘉宾对谈，主题是「腾讯到字节：AI 时代前端工程师孟健的突围」。",
@@ -217,6 +224,19 @@ export default function Home() {
           "@type": "Organization",
           name: "每日经济新闻",
           alternateName: "每经头条",
+        },
+      },
+      {
+        "@type": "Article",
+        headline: "从新疆山村到腾讯技术专家，再到AI创业：一个技术人的三次跨越",
+        url: "https://mp.weixin.qq.com/s/PzEF9hm4rB5I75r9TuVDrQ",
+        author: {
+          "@type": "Person",
+          name: "拾星河",
+        },
+        isPartOf: {
+          "@type": "CreativeWorkSeries",
+          name: "程序员客栈《开发者说》",
         },
       },
       {
@@ -864,6 +884,7 @@ export default function Home() {
                     { label: "公众号文章", href: "https://mp.weixin.qq.com/s/Z4k_5_waWJbRRo5lZBZmog", icon: <FiMessageCircle className="w-4 h-4" /> },
                     { label: "小宇宙《浪说》", href: "https://www.xiaoyuzhoufm.com/episode/67e2c9b0a3dfefa31f12fbb3", icon: <FiExternalLink className="w-4 h-4" /> },
                     { label: "每日经济新闻专访", href: "https://www.nbd.com.cn/articles/2026-03-12/4289959.html", icon: <FiExternalLink className="w-4 h-4" /> },
+                    { label: "程序员客栈《开发者说》", href: "https://mp.weixin.qq.com/s/PzEF9hm4rB5I75r9TuVDrQ", icon: <FiExternalLink className="w-4 h-4" /> },
                     { label: "京东购书", href: "https://item.jd.com/14960026.html", icon: <FiExternalLink className="w-4 h-4" /> },
                     { label: "友链 · 吴少峰", href: "https://www.wushaofengai.com", icon: <FiExternalLink className="w-4 h-4" /> },
                   ].map((link) => (
