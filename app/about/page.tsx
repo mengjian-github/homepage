@@ -95,7 +95,7 @@ export default function AboutPage() {
                   >
                     字流 ziliu.online
                   </a>
-                  （14 平台一键发布工具）、
+                  （真人 IP 内容操作系统，一次发 26 个平台）、
                   <a
                     href="https://shipsolo.cn"
                     target="_blank"
@@ -104,7 +104,7 @@ export default function AboutPage() {
                   >
                     ShipSolo
                   </a>
-                  （AI 编程出海领航）、OpenClaw 101、MCP Hub 中国，以及一系列 SEO 驱动的小产品。代表作《DeepSeek极简入门与应用》已突破百万册。公众号「孟健AI编程」持续更新，个人品牌也从技术管理者进一步升级为 AI 编程创业者、技术作者与演讲者。
+                  （AI 编程出海领航）、OpenClaw 101、MCP Hub 中国，以及一系列 SEO 驱动的小产品。代表作《DeepSeek极简入门与应用》已突破百万册。公众号「孟健AI编程」持续更新 AI 编程与出海实战。
                 </p>
               </motion.div>
             </div>
@@ -184,7 +184,7 @@ export default function AboutPage() {
                   period: "2025.10 - 至今",
                   items: [
                     "全职创业：AI 编程 + 出海增长，小产品矩阵",
-                    "主产品：字流 ziliu.online（14 平台一键发布工具）、ShipSolo shipsolo.cn（AI 编程出海领航）",
+                    "主产品：字流 ziliu.online（真人 IP 内容操作系统）、ShipSolo shipsolo.cn（AI 编程出海领航）",
                     "增长手段：SEO / SEM / Affiliate / EDM 等海外运营组合",
                     "内容输出：公众号「孟健AI编程」持续更新，沉淀 AI 编程方法论",
                     "出版与分享：《DeepSeek极简入门与应用》突破百万册；首批 TRAE Expert，并持续做演讲与公开分享",
@@ -331,7 +331,7 @@ export default function AboutPage() {
               {[
                 {
                   title: "DeepSeek极简入门与应用",
-                  desc: "代表作，发行已突破百万册，用来承接个人品牌中的技术作者身份。",
+                  desc: "代表作，写给普通人的 DeepSeek 入门书，发行突破百万册。",
                   link: "https://item.jd.com/14960026.html",
                   linkText: "在京东购买",
                   image: "/images/my-first-book.jpg",

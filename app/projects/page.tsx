@@ -105,9 +105,9 @@ const projects = [
     featured: false,
   },
   {
-    title: "个人主页 / GitHub 品牌承接",
+    title: "个人网站 mengjian.site",
     description:
-      "围绕个人品牌，统一展示个人经历、作品、出版、演讲与产品矩阵，用于承接流量、合作与信任建设。",
+      "就是你正在看的这个站：经历、作品、出版、演讲和产品矩阵放在一处，Next.js 静态导出。",
     link: "https://mengjian.site",
     github: "https://github.com/mengjian-github/homepage",
     tags: ["个人品牌", "Portfolio", "Next.js", "SEO"],

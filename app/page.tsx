@@ -3,11 +3,11 @@
 import Link from "next/link";
 import Image from "next/image";
 import { FiGithub, FiExternalLink, FiArrowRight, FiMessageCircle } from "react-icons/fi";
-import { SiZhihu, SiJuejin } from "react-icons/si";
+import { SiZhihu, SiJuejin, SiBilibili, SiTiktok, SiX } from "react-icons/si";
 import JsonLd from "./components/JsonLd";
 import GitHubStats from "./components/GitHubStats";
 import { motion } from "framer-motion";
-import { honors, mediaCoverage } from "@/lib/press";
+import { audienceTotal, honors, mediaCoverage, socials, talks } from "@/lib/press";
 
 const fadeIn = {
   hidden: { opacity: 0, y: 24 },
@@ -24,7 +24,7 @@ const products = [
     name: "字流",
     domain: "ziliu.online",
     url: "https://ziliu.online",
-    desc: "14 平台一键发布工具",
+    desc: "真人 IP 内容操作系统：选题、写稿、剪口播，一次发 26 个平台",
     tag: "主产品",
   },
   {
@@ -73,11 +73,8 @@ export default function Home() {
       "@type": "Organization",
       name: "Nextfield Labs LLC",
     },
-    sameAs: [
-      "https://github.com/mengjian-github",
-      "https://www.zhihu.com/people/meng-jian-39-32",
-      "https://juejin.cn/user/4212984287073895",
-    ],
+    alternateName: ["Kian Meng", "孟健AI编程"],
+    sameAs: socials.filter((s) => s.href).map((s) => s.href),
     knowsAbout: [
       "AI编程",
       "出海产品",
@@ -120,7 +117,8 @@ export default function Home() {
           }}
         />
 
-        <div className="max-w-6xl mx-auto px-6 sm:px-8 w-full relative z-10">
+        <div className="max-w-6xl mx-auto px-6 sm:px-8 w-full relative z-10 grid lg:grid-cols-[1fr_280px] gap-x-14 items-start">
+          <div className="min-w-0">
           {/* Kicker */}
           <motion.p
             initial={{ opacity: 0, x: -20 }}
@@ -131,15 +129,20 @@ export default function Home() {
             Ex-Tencent T11 · Ex-ByteDance 3-1 · Nextfield Labs LLC · Est. 2025
           </motion.p>
 
-          {/* Name — massive editorial type */}
-          <motion.h1
+          {/* Name — with a small portrait on narrow screens */}
+          <motion.div
             initial={{ opacity: 0, y: 40 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.7, delay: 0.3 }}
-            className="text-[4rem] sm:text-[6rem] md:text-[8rem] lg:text-[9rem] font-extrabold tracking-tighter text-neutral-900 dark:text-white leading-[0.85] mb-6 select-none"
+            className="flex items-end gap-5 mb-6"
           >
-            孟健
-          </motion.h1>
+            <div className="lg:hidden relative w-20 h-20 sm:w-28 sm:h-28 shrink-0 overflow-hidden rounded-full ring-2 ring-amber-500/60">
+              <Image src="/images/avatar.png" alt="孟健" fill sizes="112px" className="object-cover object-[50%_35%] scale-150" priority />
+            </div>
+            <h1 className="text-[4rem] sm:text-[6rem] md:text-[8rem] lg:text-[9rem] font-extrabold tracking-tighter text-neutral-900 dark:text-white leading-[0.85] select-none">
+              孟健
+            </h1>
+          </motion.div>
 
           {/* Tagline */}
           <motion.p
@@ -148,11 +151,11 @@ export default function Home() {
             transition={{ duration: 0.6, delay: 0.5 }}
             className="text-lg sm:text-xl md:text-2xl text-neutral-500 dark:text-neutral-400 max-w-2xl mb-14 leading-relaxed"
           >
-            AI 编程创业者
+            <span className="whitespace-nowrap">AI 编程创业者</span>
             <span className="text-neutral-300 dark:text-neutral-700 mx-3">/</span>
-            出海产品实践者
+            <span className="whitespace-nowrap">出海产品实践者</span>
             <span className="text-neutral-300 dark:text-neutral-700 mx-3">/</span>
-            技术作者 &amp; 演讲者
+            <span className="whitespace-nowrap">技术作者 &amp; 演讲者</span>
           </motion.p>
 
           {/* Key Stats — the "wow" numbers */}
@@ -163,17 +166,17 @@ export default function Home() {
             className="grid grid-cols-2 md:grid-cols-4 gap-y-8 gap-x-6 md:gap-x-10 mb-14"
           >
             {[
-              { num: "100万+", unit: "册", label: "《DeepSeek极简入门与应用》\n突破百万" },
-              { num: "3万+", unit: "", label: "公众号粉丝" },
+              { num: "100万+", unit: "册", label: "著作发行量" },
+              { num: audienceTotal, unit: "", label: "全网关注者" },
               { num: "30+", unit: "", label: "产品 / 站点实践" },
-              { num: "T11", unit: "", label: "腾讯最高职级" },
+              { num: "T11", unit: "", label: "前腾讯技术专家" },
             ].map((s, i) => (
               <motion.div
                 key={i}
                 variants={fadeIn}
                 className="border-l-2 border-amber-500/70 dark:border-amber-400/50 pl-4"
               >
-                <span className="block text-3xl sm:text-4xl md:text-5xl font-bold font-mono tracking-tight text-neutral-900 dark:text-white">
+                <span className="block whitespace-nowrap text-3xl sm:text-4xl font-bold font-mono tracking-tight text-neutral-900 dark:text-white">
                   {s.num}
                   {s.unit && (
                     <span className="text-amber-600 dark:text-amber-400">{s.unit}</span>
@@ -191,32 +194,51 @@ export default function Home() {
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             transition={{ duration: 0.6, delay: 1 }}
-            className="flex items-center gap-5"
+            className="flex flex-wrap items-center gap-x-5 gap-y-4"
           >
+            <Link
+              href="/media-kit"
+              className="inline-flex items-center gap-2 px-5 py-3 rounded-md text-sm font-medium bg-neutral-900 text-white hover:bg-neutral-700 dark:bg-white dark:text-neutral-900 dark:hover:bg-neutral-200 transition-colors"
+            >
+              演讲 / 合作邀约 <FiArrowRight className="w-4 h-4" />
+            </Link>
+            <a
+              href="#free"
+              className="inline-flex items-center gap-2 px-5 py-3 rounded-md text-sm font-medium border border-neutral-300 dark:border-neutral-700 text-neutral-700 dark:text-neutral-300 hover:border-amber-500 hover:text-amber-700 dark:hover:text-amber-400 transition-colors"
+            >
+              免费领 AI 入门资料
+            </a>
+            <span className="flex items-center gap-5 sm:ml-2">
             {[
-              { href: "https://github.com/mengjian-github", icon: <FiGithub className="w-5 h-5" />, label: "GitHub" },
-              { href: "https://www.zhihu.com/people/meng-jian-39-32", icon: <SiZhihu className="w-5 h-5" />, label: "知乎" },
-              { href: "https://juejin.cn/user/4212984287073895", icon: <SiJuejin className="w-5 h-5" />, label: "掘金" },
-              { href: "https://mp.weixin.qq.com/s/Z4k_5_waWJbRRo5lZBZmog", icon: <FiMessageCircle className="w-5 h-5" />, label: "公众号" },
+              { href: "https://github.com/mengjian-github", icon: <FiGithub className="w-5 h-5" />, label: "GitHub", external: true },
+              { href: "https://www.zhihu.com/people/meng-jian-39-32", icon: <SiZhihu className="w-5 h-5" />, label: "知乎", external: true },
+              { href: "https://juejin.cn/user/4212984287073895", icon: <SiJuejin className="w-5 h-5" />, label: "掘金", external: true },
+              { href: "https://www.douyin.com/user/MS4wLjABAAAA9qVty54yvKLBl2TvH2DMmmUDT2rbc5hfANqBswXnNyoPh5mzN3IJukKoUpFKScYP", icon: <SiTiktok className="w-5 h-5" />, label: "抖音", external: true },
+              { href: "https://space.bilibili.com/507808505", icon: <SiBilibili className="w-5 h-5" />, label: "B站", external: true },
+              { href: "https://x.com/xjtumj", icon: <SiX className="w-4 h-4" />, label: "X", external: true },
+              { href: "#contact", icon: <FiMessageCircle className="w-5 h-5" />, label: "公众号「孟健AI编程」", external: false },
             ].map((l) => (
               <a
                 key={l.label}
                 href={l.href}
-                target="_blank"
-                rel="noopener noreferrer"
+                target={l.external ? "_blank" : undefined}
+                rel={l.external ? "noopener noreferrer" : undefined}
                 title={l.label}
+                aria-label={l.label}
                 className="text-neutral-400 hover:text-neutral-900 dark:text-neutral-600 dark:hover:text-white transition-colors duration-200"
               >
                 {l.icon}
               </a>
             ))}
+            </span>
           </motion.div>
           {/* Lead magnet — X / 各平台主页链接点进来的人，第一屏就能领资料、加微信 */}
           <motion.div
+            id="free"
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6, delay: 1.1 }}
-            className="mt-12 max-w-3xl rounded-2xl border border-amber-500/30 bg-amber-50/60 dark:bg-amber-400/5 p-6 sm:p-8 flex flex-col sm:flex-row gap-6 sm:items-center"
+            className="scroll-mt-24 mt-12 max-w-3xl rounded-2xl border border-amber-500/30 bg-amber-50/60 dark:bg-amber-400/5 p-6 sm:p-8 flex flex-col sm:flex-row gap-6 sm:items-center"
           >
             <img
               src="/images/wechat-qr.png"
@@ -244,6 +266,29 @@ export default function Home() {
               </a>
             </div>
           </motion.div>
+          </div>
+
+          {/* Portrait — desktop */}
+          <motion.figure
+            initial={{ opacity: 0, y: 30 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8, delay: 0.4 }}
+            className="hidden lg:block mt-16"
+          >
+            <div className="relative aspect-[4/5] overflow-hidden rounded-2xl ring-1 ring-neutral-200 dark:ring-neutral-800 bg-neutral-100">
+              <Image
+                src="/images/avatar.png"
+                alt="孟健"
+                fill
+                sizes="280px"
+                priority
+                className="object-cover object-[50%_30%]"
+              />
+            </div>
+            <figcaption className="mt-3 text-xs font-mono tracking-wide text-neutral-400 dark:text-neutral-500">
+              孟健 · Kian Meng
+            </figcaption>
+          </motion.figure>
         </div>
 
         {/* Scroll hint sits in flow so it does not cover the lead card */}
@@ -342,7 +387,7 @@ export default function Home() {
               variants={fadeIn}
               className="max-w-3xl text-base sm:text-lg text-neutral-600 dark:text-neutral-400 leading-relaxed mb-12"
             >
-              已经公开的专访、视频和播客。有稳定网址的条目可以直接打开原文。书的销量只记突破百万册 / 100万+。
+              财经媒体、开发者社区和播客的专访与对谈。
             </motion.p>
 
             <motion.div variants={fadeIn} className="grid grid-cols-1 sm:grid-cols-2 gap-4 mb-12">
@@ -439,8 +484,34 @@ export default function Home() {
               variants={fadeIn}
               className="max-w-3xl text-base sm:text-lg text-neutral-600 dark:text-neutral-400 leading-relaxed mb-12"
             >
-              演讲、奖项、评委聘任和播客。有照片的条目用已有凭证，不另编日期。
+              技术大会、创业者社群和开发者活动上的分享，以及奖项与评委聘任。
             </motion.p>
+
+            {/* Talk topics — what an organizer can book */}
+            <motion.div variants={fadeIn} className="mb-14">
+              <h3 className="text-sm font-semibold tracking-wide text-neutral-900 dark:text-white mb-4">
+                可邀约讲题
+              </h3>
+              <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
+                {talks.map((t) => (
+                  <div
+                    key={t.title}
+                    className="p-5 rounded-lg border border-neutral-200 dark:border-neutral-800 bg-white dark:bg-white/[0.03]"
+                  >
+                    <p className="text-base font-semibold text-neutral-900 dark:text-white">{t.title}</p>
+                    <p className="mt-2 text-sm text-neutral-600 dark:text-neutral-400 leading-relaxed">{t.text}</p>
+                    <p className="mt-3 text-xs font-mono text-amber-700 dark:text-amber-400">讲过：{t.past}</p>
+                  </div>
+                ))}
+              </div>
+              <Link
+                href="/media-kit"
+                className="mt-5 inline-flex items-center gap-1 text-sm text-amber-700 dark:text-amber-400 hover:underline"
+              >
+                邀约与媒体资料
+                <FiArrowRight className="w-3.5 h-3.5" />
+              </Link>
+            </motion.div>
 
             <ol className="relative border-l border-neutral-200 dark:border-neutral-800 ml-3 space-y-8">
               {honors.map((item) => (
@@ -513,9 +584,10 @@ export default function Home() {
             <div className="grid grid-cols-2 lg:grid-cols-4 gap-6 mb-16">
               {[
                 { num: "10", suffix: "年", desc: "腾讯技术管理经验" },
-                { num: "15", suffix: "项", desc: "荣誉奖项（含 12 项公司级）" },
-                { num: "3+", suffix: "", desc: "大会演讲" },
-                { num: "KM 7", suffix: "级", desc: "知识影响力" },
+                // 公开演讲：OpenClaw 分享、破局上海、破局深圳、TRAE Meetup 上海、GMTC 深圳、腾讯云专场（GIAC 是出品人，不算）
+                { num: "6+", suffix: "场", desc: "大会演讲与分享" },
+                { num: String(mediaCoverage.length), suffix: "篇", desc: "媒体专访与播客" },
+                { num: "2", suffix: "本", desc: "出版著作" },
               ].map((a, i) => (
                 <motion.div
                   key={i}
@@ -538,12 +610,8 @@ export default function Home() {
               {[
                 { year: "2025.10", text: "全职创业，创办 Nextfield Labs LLC" },
                 { year: "2024 – 2025.10", text: "字节跳动 Flow 部门 · 前端技术 Leader（3-1），负责猫箱 BagelBell —— AI 角色创建与互动平台" },
-                { year: "2025", text: "《DeepSeek极简入门与应用》突破百万册，个人品牌从技术负责人升级为技术作者与创业者" },
-                { year: "2025", text: "GIAC 全球互联网架构大会 2025 深圳站讲师" },
-                { year: "2025", text: "破局AI行动家大会 2025 主会场分享嘉宾" },
+                { year: "2025", text: "《DeepSeek极简入门与应用》出版，发行突破百万册" },
                 { year: "2015 – 2024", text: "腾讯 T11 · QQ 大技术五组负责人" },
-                { year: "", text: "GMTC 全球大前端技术大会演讲嘉宾" },
-                { year: "", text: "盖洛普优势：战略思考、责任感、成就导向" },
                 { year: "本科", text: "西安交通大学 · 自动化科学与技术" },
               ].map((m, i) => (
                 <motion.div
@@ -605,7 +673,7 @@ export default function Home() {
                       DeepSeek极简入门与应用
                     </h3>
                     <p className="text-neutral-600 dark:text-neutral-400 text-base leading-relaxed mb-6">
-                      代表作。围绕 AI 工具与大模型应用，发行已突破百万册，用来承接个人品牌里的技术作者身份。
+                      写给普通人的 DeepSeek 入门书：从会用到在工作和学习里真正用起来。
                     </p>
                     <div className="mb-6 border-l-2 border-amber-500 pl-4">
                       <span className="block text-4xl sm:text-5xl font-bold font-mono text-neutral-900 dark:text-white tracking-tight leading-none">
@@ -643,17 +711,14 @@ export default function Home() {
                       OpenClaw极简入门与应用
                     </h3>
                     <p className="text-neutral-600 dark:text-neutral-400 text-base leading-relaxed mb-6">
-                      出版方向延伸到 AI 助手与个人智能工作流，帮助一线开发者和创作者用更低门槛搭建自己的 AI 协作系统。
+                      零基础搭一支自己的 AI 团队：用 OpenClaw 养一个能记事、能干活的私人助理，接进日常工作流。
                     </p>
                     <div className="mb-6 border-l-2 border-amber-500 pl-4">
-                      <span className="block text-4xl sm:text-5xl font-bold font-mono text-neutral-900 dark:text-white tracking-tight leading-none">
-                        新<span className="text-amber-500">书</span><span className="text-2xl sm:text-3xl">已出</span>
+                      <span className="block text-4xl sm:text-5xl font-bold text-neutral-900 dark:text-white tracking-tight leading-none">
+                        新书
                       </span>
-                      <span className="block text-sm text-neutral-500 mt-2">AI 助手 / 工作流 / 团队协作主题</span>
+                      <span className="block text-sm text-neutral-500 mt-2">AI 私人助理 · 自动化工作流</span>
                     </div>
-                    <p className="text-sm text-neutral-500 dark:text-neutral-500 leading-relaxed">
-                      这本书会让你的个人品牌叙事更完整：从 AI 大模型应用，延伸到 AI 助手、自动化工作流和个人 / 小团队的生产力升级。
-                    </p>
                   </div>
                 </div>
               </div>
@@ -764,7 +829,7 @@ export default function Home() {
       {/* ————————————————————————————————————————————
           07 — CONTACT & COMMUNITY
       ———————————————————————————————————————————— */}
-      <section className="py-24 border-t border-neutral-200 dark:border-neutral-800">
+      <section id="contact" className="scroll-mt-16 py-24 border-t border-neutral-200 dark:border-neutral-800">
         <div className="max-w-6xl mx-auto px-6 sm:px-8">
           <motion.div
             initial="hidden"
@@ -788,7 +853,7 @@ export default function Home() {
                   公众号「孟健AI编程」
                 </h3>
                 <p className="text-sm text-neutral-500 dark:text-neutral-400 mb-6">
-                  3 万+ 粉丝 · 关注获取 AI 编程最新动态
+                  2.4 万关注 · AI 编程与出海实战，持续更新
                 </p>
                 <div className="inline-block rounded-lg overflow-hidden ring-1 ring-neutral-200 dark:ring-neutral-800">
                   <Image
@@ -803,15 +868,40 @@ export default function Home() {
 
               {/* Links */}
               <motion.div variants={fadeIn}>
+                <h3 className="text-lg font-semibold text-neutral-900 dark:text-white mb-1">
+                  各平台
+                </h3>
+                <p className="text-sm text-neutral-500 dark:text-neutral-400 mb-5">
+                  全网 {audienceTotal} 关注者，国内平台搜「孟健AI编程」
+                </p>
+                <ul className="grid grid-cols-2 gap-x-6 gap-y-3 mb-10">
+                  {socials.map((s) => (
+                    <li key={s.name} className="min-w-0">
+                      {s.href ? (
+                        <a
+                          href={s.href}
+                          target="_blank"
+                          rel="noopener noreferrer"
+                          className="group flex items-baseline justify-between gap-2 text-sm text-neutral-700 dark:text-neutral-300 hover:text-amber-700 dark:hover:text-amber-400 transition-colors"
+                        >
+                          <span className="truncate">{s.name}</span>
+                          <span className="shrink-0 font-mono text-xs text-neutral-400 group-hover:text-amber-600">{s.followers}</span>
+                        </a>
+                      ) : (
+                        <span className="flex items-baseline justify-between gap-2 text-sm text-neutral-700 dark:text-neutral-300" title={s.note}>
+                          <span className="truncate">{s.name}</span>
+                          <span className="shrink-0 font-mono text-xs text-neutral-400">{s.followers}</span>
+                        </span>
+                      )}
+                    </li>
+                  ))}
+                </ul>
+
                 <h3 className="text-lg font-semibold text-neutral-900 dark:text-white mb-6">
                   更多链接
                 </h3>
                 <nav className="space-y-4 mb-10">
                   {[
-                    { label: "GitHub @mengjian-github", href: "https://github.com/mengjian-github", icon: <FiGithub className="w-4 h-4" /> },
-                    { label: "知乎", href: "https://www.zhihu.com/people/meng-jian-39-32", icon: <SiZhihu className="w-4 h-4" /> },
-                    { label: "掘金", href: "https://juejin.cn/user/4212984287073895", icon: <SiJuejin className="w-4 h-4" /> },
-                    { label: "公众号文章", href: "https://mp.weixin.qq.com/s/Z4k_5_waWJbRRo5lZBZmog", icon: <FiMessageCircle className="w-4 h-4" /> },
                     { label: "小宇宙《浪说》", href: "https://www.xiaoyuzhoufm.com/episode/67e2c9b0a3dfefa31f12fbb3", icon: <FiExternalLink className="w-4 h-4" /> },
                     { label: "每日经济新闻专访", href: "https://www.nbd.com.cn/articles/2026-03-12/4289959.html", icon: <FiExternalLink className="w-4 h-4" /> },
                     { label: "程序员客栈《开发者说》", href: "https://mp.weixin.qq.com/s/PzEF9hm4rB5I75r9TuVDrQ", icon: <FiExternalLink className="w-4 h-4" /> },
