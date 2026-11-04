@@ -448,20 +448,36 @@ export default function Home() {
             </motion.p>
 
             <ol className="relative border-l border-neutral-200 dark:border-neutral-800 ml-3 space-y-8">
-              {honors.map((item) => (
+              {honors.map((item) => {
+                const shots = [
+                  ...(item.image ? [item.image] : []),
+                  ...(item.images ?? []),
+                ];
+                return (
                 <motion.li key={`${item.date}-${item.title}`} variants={fadeIn} className="relative pl-8">
                   <span className="absolute -left-[7px] top-1.5 h-3.5 w-3.5 rounded-full bg-amber-500 ring-4 ring-white dark:ring-[#0a0a0a]" />
                   <div className="flex flex-col sm:flex-row gap-4 sm:items-start">
-                    {item.image && (
-                      <div className="relative w-full sm:w-44 aspect-[3/2] shrink-0 overflow-hidden rounded-lg ring-1 ring-neutral-200 dark:ring-neutral-800 bg-neutral-100 dark:bg-neutral-900">
-                        <Image
-                          src={item.image.src}
-                          alt={item.image.alt}
-                          fill
-                          sizes="180px"
-                          className="object-cover"
-                        />
-                      </div>
+                    {shots.length > 0 && (
+                        <div className="flex flex-wrap gap-3 shrink-0">
+                          {shots.map((shot) => (
+                            <div
+                              key={shot.src}
+                              className={`relative aspect-[3/4] overflow-hidden rounded-lg ring-1 ring-neutral-200 dark:ring-neutral-800 bg-neutral-100 dark:bg-neutral-900 ${
+                                shots.length > 1
+                                  ? "w-[calc(50%-0.375rem)] sm:w-40"
+                                  : "w-full sm:w-52"
+                              }`}
+                            >
+                              <Image
+                                src={shot.src}
+                                alt={shot.alt}
+                                fill
+                                sizes="(min-width: 640px) 208px, 90vw"
+                                className="object-contain"
+                              />
+                            </div>
+                          ))}
+                        </div>
                     )}
                     <div className="min-w-0">
                       <p className="text-[10px] uppercase tracking-[0.22em] font-mono text-amber-700 dark:text-amber-400">
@@ -488,7 +504,8 @@ export default function Home() {
                     </div>
                   </div>
                 </motion.li>
-              ))}
+                );
+              })}
             </ol>
           </motion.div>
         </div>

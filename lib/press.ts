@@ -133,6 +133,7 @@ export type HonorItem = {
   href?: string;
   linkLabel?: string;
   image?: PressImage;
+  images?: PressImage[];
 };
 
 export const honors: HonorItem[] = [
@@ -143,18 +144,30 @@ export const honors: HonorItem[] = [
     text: "稀土掘金 X-Lab Coffee Talk 诚邀嘉宾。西湖科学咖啡。",
     href: "https://juejin.cn/activity/hangzhouxlab01",
     linkLabel: "活动页",
+    image: {
+      src: "/assets/influence/poster-juejin-hangzhou.jpg",
+      alt: "稀土掘金 X-Lab Coffee Talk 杭州 #001 海报，诚邀孟健",
+    },
   },
   {
     date: "2026-01",
     kicker: "教练",
     title: "破局精英教练",
     text: "破局行动第 09 期授予精英教练。破局俱乐部。",
+    image: {
+      src: "/assets/influence/cert-elite-coach.jpg",
+      alt: "破局行动第 09 期授予孟健精英教练的荣誉证书",
+    },
   },
   {
     date: "2026-01-07",
     kicker: "荣誉",
     title: "哥飞的朋友们 2025 年度网站比赛",
     text: "第 15 名，荣誉称号「中流砥柱·坚实力量」。",
+    image: {
+      src: "/assets/influence/cert-gefei-15.jpg",
+      alt: "哥飞的朋友们 2025 年度网站比赛荣誉证书，孟健第 15 名，称号中流砥柱·坚实力量",
+    },
   },
   {
     date: "3月5日",
@@ -167,14 +180,30 @@ export const honors: HonorItem[] = [
     },
   },
   {
+    date: "05月24日",
+    kicker: "演讲",
+    title: "破局上海站",
+    text: "AI 破局行动家交流会上海站嘉宾，分享 AI 时代的个人 IP 与副业。",
+    image: {
+      src: "/assets/influence/poster-poju-shanghai.jpg",
+      alt: "破局行动家交流会上海站海报，孟健分享 AI 时代的个人 IP 与副业",
+    },
+  },
+  {
     date: "2025.12.27–28",
     kicker: "演讲",
-    title: "破局上海 / 深圳",
-    text: "AI 破局行动家交流会上海站嘉宾，分享 AI 时代的个人 IP 与副业；深圳主会场登台，席卡身份是 AI 编程出海创业者。",
+    title: "破局深圳",
+    text: "AI 破局行动家大会深圳主会场登台，席卡身份是 AI 编程出海创业者。",
     image: {
       src: "/assets/influence/speaking-shenzhen.jpg",
-      alt: "孟健在 AI 破局行动家大会主会场演讲",
+      alt: "孟健在 AI 破局行动家大会深圳主会场，席卡身份是 AI 编程出海创业者",
     },
+    images: [
+      {
+        src: "/assets/influence/speaking-shenzhen-2.jpg",
+        alt: "孟健在 AI 破局行动家大会深圳主会场演讲",
+      },
+    ],
   },
   {
     date: "2025.12.27–28",
@@ -195,28 +224,42 @@ export const honors: HonorItem[] = [
       src: "/assets/influence/cert-gdec-judge.jpg",
       alt: "2025 GDEC · CSDN 代码生成分赛道评委聘书",
     },
+    images: [
+      {
+        src: "/assets/influence/cert-gdec-panel.jpg",
+        alt: "2025 GDEC 代码生成赛道大赛评审团，孟健与蒋涛等并列",
+      },
+    ],
   },
   {
     date: "2025-09-06",
     kicker: "演讲",
     title: "TRAE Shanghai · MCP 深度实践",
     text: "嘉宾分享「MCP 深度实践：解锁沉浸式 AI 编程体验」。上海杨浦。",
+    image: {
+      src: "/assets/influence/poster-trae-shanghai.jpg",
+      alt: "TRAE Shanghai 海报：孟健分享 MCP 深度实践",
+    },
   },
   {
     date: "2025",
     kicker: "奖项",
     title: "首批 TRAE Expert",
-    text: "TRAE 团队正式邀请加入首批 TRAE Expert，并获得 TRAE Achievement Award 2025 年度社区影响力奖。同一张照片里还有博文视点 2025 年度优秀作者。",
+    text: "TRAE 团队正式邀请加入首批 TRAE Expert。",
     image: {
-      src: "/assets/influence/award-trae-bowen.jpg",
-      alt: "TRAE 年度社区影响力奖与博文视点 2025 年度优秀作者",
+      src: "/assets/influence/invite-trae-expert.jpg",
+      alt: "TRAE 团队邀请孟健成为首批 TRAE Expert 的邀请函",
     },
   },
   {
     date: "2025",
-    kicker: "出版",
-    title: "博文视点 2025 优秀作者",
-    text: "电子工业出版社博文视点授予 2025 年度优秀作者。《DeepSeek极简入门与应用》突破百万册。",
+    kicker: "奖项",
+    title: "TRAE 年度社区影响力奖与博文视点优秀作者",
+    text: "TRAE Achievement Award 2025 年度社区影响力奖，以及电子工业出版社博文视点 2025 年度优秀作者。《DeepSeek极简入门与应用》突破百万册。",
+    image: {
+      src: "/assets/influence/award-trae-bowen.jpg",
+      alt: "TRAE 年度社区影响力奖与博文视点 2025 年度优秀作者",
+    },
   },
   {
     date: "2025",
