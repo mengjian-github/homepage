@@ -29,6 +29,7 @@ const Navbar = () => {
     { href: "/projects", label: "项目经验" },
     { href: "/ai-roadmap", label: "AI路线图" },
     { href: "/blog", label: "博客文章" },
+    { href: "/media-kit", label: "媒体资料" },
     { href: "/contact", label: "联系方式" },
   ];
 
@@ -58,7 +59,7 @@ const Navbar = () => {
           </Link>
 
           {/* Desktop Nav */}
-          <div className="hidden md:flex items-center gap-1">
+          <div className="hidden lg:flex items-center gap-1">
             {navLinks.map((link) => (
               <Link
                 key={link.href}
@@ -90,7 +91,7 @@ const Navbar = () => {
           </div>
 
           {/* Mobile Controls */}
-          <div className="md:hidden flex items-center gap-1">
+          <div className="lg:hidden flex items-center gap-1">
             <button
               onClick={toggleTheme}
               className="p-2 text-neutral-500 dark:text-neutral-400 hover:text-neutral-900 dark:hover:text-white transition-colors"
@@ -123,7 +124,7 @@ const Navbar = () => {
       <AnimatePresence>
         {isOpen && (
           <motion.div
-            className="md:hidden"
+            className="lg:hidden"
             initial={{ opacity: 0, height: 0 }}
             animate={{ opacity: 1, height: "auto" }}
             exit={{ opacity: 0, height: 0 }}

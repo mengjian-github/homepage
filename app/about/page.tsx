@@ -42,7 +42,7 @@ export default function AboutPage() {
               variants={fadeIn}
               className="text-lg sm:text-xl text-neutral-500 dark:text-neutral-400 max-w-2xl leading-relaxed"
             >
-              前腾讯 T11 · 前字节跳动 3-1。AI 编程创业者、出海产品实践者，《DeepSeek极简入门与应用》突破百万册，首批 TRAE Expert。
+              前腾讯 T11 · 前字节跳动 3-1，Nextfield Labs LLC 创始人。AI 编程与出海产品实践者（ShipSolo、字流），《DeepSeek极简入门与应用》突破百万册，首批 TRAE Expert。
             </motion.p>
           </motion.div>
         </div>
@@ -474,6 +474,15 @@ export default function AboutPage() {
                 </motion.div>
               ))}
             </div>
+            <motion.div variants={fadeIn} className="mt-8">
+              <Link
+                href="/media-kit"
+                className="inline-flex items-center gap-1 text-sm text-neutral-600 dark:text-neutral-400 hover:text-amber-700 dark:hover:text-amber-400"
+              >
+                媒体资料
+                <FiArrowRight className="w-3.5 h-3.5" />
+              </Link>
+            </motion.div>
           </motion.div>
         </div>
       </section>

@@ -19,7 +19,7 @@ const poppins = Poppins({
 export const metadata: Metadata = {
   title: "孟健 — AI 编程创业者 / 百万册作者 / 演讲者",
   description:
-    "前腾讯 T11、前字节跳动 3-1，Nextfield Labs LLC 创始人。AI 编程与出海产品实践者，《DeepSeek极简入门与应用》突破百万册，首批 TRAE Expert。",
+    "前腾讯 T11、前字节跳动 3-1，Nextfield Labs LLC 创始人。AI 编程与出海产品实践者（ShipSolo），《DeepSeek极简入门与应用》突破百万册，首批 TRAE Expert。",
   keywords:
     "孟健, AI编程, DeepSeek, TRAE Expert, OpenClaw, ShipSolo, 出海创业, Next.js, 技术作者, 演讲",
   authors: [{ name: "孟健", url: "https://github.com/mengjian-github" }],
@@ -35,7 +35,7 @@ export const metadata: Metadata = {
     url: "https://mengjian.site",
     title: "孟健 — AI 编程创业者 / 百万册作者 / 演讲者",
     description:
-      "前腾讯 T11、前字节跳动 3-1，Nextfield Labs LLC 创始人。AI 编程与出海产品实践者，《DeepSeek极简入门与应用》突破百万册，首批 TRAE Expert。",
+      "前腾讯 T11、前字节跳动 3-1，Nextfield Labs LLC 创始人。AI 编程与出海产品实践者（ShipSolo），《DeepSeek极简入门与应用》突破百万册，首批 TRAE Expert。",
     siteName: "孟健的个人网站",
     images: [
       {
@@ -50,7 +50,7 @@ export const metadata: Metadata = {
     card: "summary_large_image",
     title: "孟健 — AI 编程创业者 / 百万册作者 / 演讲者",
     description:
-      "前腾讯 T11、前字节跳动 3-1，Nextfield Labs LLC 创始人。AI 编程与出海产品实践者，《DeepSeek极简入门与应用》突破百万册，首批 TRAE Expert。",
+      "前腾讯 T11、前字节跳动 3-1，Nextfield Labs LLC 创始人。AI 编程与出海产品实践者（ShipSolo），《DeepSeek极简入门与应用》突破百万册，首批 TRAE Expert。",
     images: ["/images/og-image.png"],
   },
   robots: {
