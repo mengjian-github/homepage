@@ -12,6 +12,7 @@ const Footer = () => {
     { label: "关于我", href: "/about" },
     { label: "项目经验", href: "/projects" },
     { label: "博客文章", href: "/blog" },
+    { label: "媒体资料", href: "/media-kit" },
     { label: "联系方式", href: "/contact" },
   ];
 

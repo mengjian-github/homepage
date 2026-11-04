@@ -42,7 +42,7 @@ export default function AboutPage() {
               variants={fadeIn}
               className="text-lg sm:text-xl text-neutral-500 dark:text-neutral-400 max-w-2xl leading-relaxed"
             >
-              前腾讯 T11 · 前字节跳动 3-1。AI 编程创业者、出海产品实践者，《DeepSeek极简入门与应用》突破百万册，首批 TRAE Expert。
+              前腾讯 T11 · 前字节跳动 3-1，Nextfield Labs LLC 创始人。AI 编程与出海产品实践者（ShipSolo、字流），《DeepSeek极简入门与应用》突破百万册，首批 TRAE Expert。
             </motion.p>
           </motion.div>
         </div>
@@ -425,7 +425,7 @@ export default function AboutPage() {
                 },
                 {
                   label: "媒体",
-                  text: "小宇宙《浪说播客》嘉宾：腾讯到字节——AI 时代前端工程师孟健的突围。",
+                  text: "小宇宙《浪说播客》嘉宾：腾讯到字节——AI 时代前端工程师孟健的突围。另被《每日经济新闻》/ 每经头条专访引用（2026-03-12），谈 OpenClaw「龙虾」的 Token 成本与安全风险。程序员客栈《开发者说》长篇专访（拾星河）：从山村到腾讯再到 AI 创业的三次跨越。AI破局视频号短片专访（2026-10-25，广州）：走出大厂后重新学习做生意。程前朋友圈 Vol.18「AI编程出海」（新火社区，2026-06-24）。",
                 },
                 {
                   label: "演讲",
@@ -474,6 +474,15 @@ export default function AboutPage() {
                 </motion.div>
               ))}
             </div>
+            <motion.div variants={fadeIn} className="mt-8">
+              <Link
+                href="/media-kit"
+                className="inline-flex items-center gap-1 text-sm text-neutral-600 dark:text-neutral-400 hover:text-amber-700 dark:hover:text-amber-400"
+              >
+                媒体资料
+                <FiArrowRight className="w-3.5 h-3.5" />
+              </Link>
+            </motion.div>
           </motion.div>
         </div>
       </section>
