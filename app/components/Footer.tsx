@@ -51,7 +51,7 @@ const Footer = () => {
               孟健
             </Link>
             <p className="text-sm text-neutral-500 dark:text-neutral-500 mt-3 max-w-sm leading-relaxed">
-              AI 编程实战专家 / 出海创业者。前腾讯 T11，Nextfield Labs LLC 创始人。
+              AI 编程创业者 / 出海产品实践者 / 技术作者与演讲者。前腾讯 T11，Nextfield Labs LLC 创始人。《DeepSeek极简入门与应用》突破百万册。
             </p>
             <div className="flex items-center gap-4 mt-6">
               {socialLinks.map((link) => (

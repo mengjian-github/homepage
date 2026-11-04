@@ -222,7 +222,7 @@ const ResumeDocument = () => (
         <View style={styles.titleContainer}>
           <View style={styles.nameAndTitle}>
             <Text style={styles.title}>孟健</Text>
-            <Text style={styles.subtitle}>技术负责人 | 技术作家</Text>
+            <Text style={styles.subtitle}>AI 编程创业者 | 百万册作者 | 演讲者</Text>
           </View>
         </View>
         <View style={styles.contactRow}>
@@ -361,7 +361,11 @@ const ResumeDocument = () => (
         <Text style={styles.sectionTitle}>著作与出版</Text>
         <View style={{marginLeft: 8, marginBottom: 8}}>
           <Text style={styles.company}>《DeepSeek极简入门与应用》</Text>
-          <Text style={styles.bullet}>出版书籍，全网销量突破50万册</Text>
+          <Text style={styles.bullet}>出版书籍，发行突破百万册</Text>
+        </View>
+        <View style={{marginLeft: 8, marginBottom: 8}}>
+          <Text style={styles.company}>《OpenClaw极简入门与应用》</Text>
+          <Text style={styles.bullet}>出版书籍，AI 助手与工作流</Text>
         </View>
         <View style={{marginLeft: 8}}>
           <Text style={styles.company}>《React 源码全解》</Text>
@@ -384,6 +388,10 @@ const ResumeDocument = () => (
           <View>
             <Text style={styles.company}>业界影响力</Text>
             <View style={styles.bulletList}>
+              <Text style={styles.bullet}>• 首批 TRAE Expert，TRAE 2025 年度社区影响力奖</Text>
+              <Text style={styles.bullet}>• 博文视点 2025 优秀作者；破局文曲星；破局精英教练</Text>
+              <Text style={styles.bullet}>• GDEC / CSDN 代码生成赛道评委</Text>
+              <Text style={styles.bullet}>• 小宇宙《浪说》嘉宾；破局、TRAE、OpenClaw 分享</Text>
               <Text style={styles.bullet}>• 逆向分析 Copilot（Github 上千star）</Text>
               <Text style={styles.bullet}>• GMTC 全球大技术大会演讲嘉宾</Text>
               <Text style={styles.bullet}>• GIAC 全球互联网架构大会出品人</Text>

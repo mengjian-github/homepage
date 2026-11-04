@@ -25,6 +25,14 @@ const projects = [
     featured: true,
   },
   {
+    title: "ShipSolo",
+    description: "AI 编程出海领航。和字流、OpenClaw 101 一起，构成当前对外的产品矩阵。",
+    link: "https://shipsolo.cn",
+    github: null,
+    tags: ["AI 编程", "出海", "产品"],
+    featured: true,
+  },
+  {
     title: "OpenClaw 101",
     description:
       "面向中文用户的 AI 私人助理入门导航站，帮助开发者和创作者快速理解并上手 OpenClaw 的实际用法。",
