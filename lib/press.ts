@@ -5,7 +5,7 @@ export const bio150 =
   "孟健，前腾讯T11、前字节跳动3-1，Nextfield Labs LLC创始人。AI编程创业者、出海产品实践者与技术作者。代表作《DeepSeek极简入门与应用》突破百万册。产品有字流与ShipSolo。首批TRAE Expert，并持续演讲、写作与公开分享。媒体合作请联系微信mjcoding3。";
 
 export const bioEn =
-  "Meng Jian founded Nextfield Labs LLC after Tencent (T11) and ByteDance (3-1). He builds AI-programming products for overseas users, including ShipSolo and Ziliu. His book, DeepSeek极简入门与应用, is listed at 100万+ copies (突破百万册).";
+  "Meng Jian founded Nextfield Labs LLC after Tencent (T11) and ByteDance (3-1). He builds AI-programming products for overseas users, including ShipSolo and Ziliu. His book, DeepSeek极简入门与应用, has surpassed one million copies (突破百万册).";
 
 export const wechatId = "mjcoding3";
 
@@ -18,13 +18,13 @@ export const pressProducts = [
   { name: "个人网站", href: "https://mengjian.site", note: "mengjian.site" },
   { name: "字流", href: "https://ziliu.online", note: "ziliu.online" },
   { name: "ShipSolo", href: "https://shipsolo.cn", note: "shipsolo.cn · AI 编程出海领航" },
+  { name: "Shipsite", href: "https://shipsite.ai", note: "shipsite.ai · 山海司 · 从关键词到可上线站点" },
 ];
 
 export type PressImage = {
   src: string;
   alt: string;
   caption?: string;
-  objectPosition?: string;
 };
 
 export type MediaItem = {
@@ -48,7 +48,6 @@ export const mediaCoverage: MediaItem[] = [
       src: "/assets/influence/media-nbd-lobster.jpg",
       alt: "每经头条卡片：每日经济新闻引用孟健谈 OpenClaw「龙虾」记忆膨胀与 Token 成本",
       caption: "每经头条 · 养虾调查专访",
-      objectPosition: "center 68%",
     },
     schema: {
       "@type": "NewsArticle",

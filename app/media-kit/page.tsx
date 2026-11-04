@@ -31,7 +31,7 @@ export default function MediaKitPage() {
             媒体资料
           </h1>
           <p className="text-lg sm:text-xl text-neutral-500 dark:text-neutral-400 max-w-2xl leading-relaxed">
-            前腾讯 T11 · 前字节跳动 3-1 · Nextfield Labs LLC 创始人。书的销量只记突破百万册 / 100万+。
+            前腾讯 T11 · 前字节跳动 3-1 · Nextfield Labs LLC 创始人。《DeepSeek极简入门与应用》突破百万册。
           </p>
         </div>
       </section>
