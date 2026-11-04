@@ -27,6 +27,12 @@ const products = [
     tag: "主产品",
   },
   {
+    name: "ShipSolo",
+    domain: "shipsolo.cn",
+    url: "https://shipsolo.cn",
+    desc: "AI 编程出海领航",
+  },
+  {
     name: "MCP Hub 中国",
     domain: "mcp-cn.com",
     url: "https://mcp-cn.com",
@@ -53,14 +59,107 @@ const products = [
   },
 ];
 
+const influenceShots = [
+  {
+    src: "/assets/influence/speaking-shenzhen.jpg",
+    alt: "孟健在 AI 破局行动家大会主会场演讲",
+    caption: "破局行动家大会 · 主会场",
+  },
+  {
+    src: "/assets/influence/award-wenquxing.jpg",
+    alt: "AI 破局行动家大会授予孟健AI编程破局文曲星",
+    caption: "破局文曲星 · 深圳 2025.12",
+  },
+  {
+    src: "/assets/influence/award-trae-bowen.jpg",
+    alt: "TRAE 年度社区影响力奖与博文视点 2025 年度优秀作者",
+    caption: "TRAE 影响力奖 · 博文视点",
+  },
+  {
+    src: "/assets/influence/cert-gdec-judge.jpg",
+    alt: "2025 GDEC · CSDN 代码生成分赛道评委聘书",
+    caption: "GDEC / CSDN 评委聘书 · 2025.10",
+  },
+  {
+    src: "/assets/influence/poster-openclaw-share.jpg",
+    alt: "OpenClaw 华语区实战分享会嘉宾海报，孟健的身份是 AI 出海创业者",
+    caption: "OpenClaw 华语区 · 实战分享",
+  },
+];
+
+type InfluenceItem = {
+  kicker: string;
+  title: string;
+  text: string;
+  href?: string;
+  linkLabel?: string;
+};
+
+const influenceItems: InfluenceItem[] = [
+  {
+    kicker: "播客",
+    title: "小宇宙《浪说》",
+    text: "嘉宾对谈，主题是「腾讯到字节：AI 时代前端工程师孟健的突围」。",
+    href: "https://www.xiaoyuzhoufm.com/episode/67e2c9b0a3dfefa31f12fbb3",
+    linkLabel: "收听这期",
+  },
+  {
+    kicker: "社区",
+    title: "首批 TRAE Expert",
+    text: "TRAE 团队正式邀请加入首批 TRAE Expert，并获得 TRAE Achievement Award 2025 年度社区影响力奖。",
+  },
+  {
+    kicker: "出版",
+    title: "博文视点 2025 优秀作者",
+    text: "电子工业出版社博文视点授予 2025 年度优秀作者。",
+  },
+  {
+    kicker: "奖项",
+    title: "破局文曲星",
+    text: "AI 破局行动家大会把「破局文曲星」授予「孟健AI编程」。深圳，2025.12.27–28。",
+  },
+  {
+    kicker: "评委",
+    title: "CSDN / GDEC 代码生成赛道评委",
+    text: "2025 全球数字经济创新大赛 · AIGC 创作大赛 · 代码生成-CSDN 分赛道评委（GDEC / CSDN）。2025 年 10 月获聘，评审团与蒋涛等并列。",
+  },
+  {
+    kicker: "教练",
+    title: "破局精英教练",
+    text: "破局行动第 09 期授予精英教练。破局俱乐部，2026 年 1 月。",
+  },
+  {
+    kicker: "演讲",
+    title: "破局上海 / 深圳",
+    text: "AI 破局行动家交流会上海站嘉宾，分享 AI 时代的个人 IP 与副业；深圳主会场登台，席卡身份是 AI 编程出海创业者（2025.12.27–28）。",
+  },
+  {
+    kicker: "演讲",
+    title: "TRAE Shanghai · MCP 深度实践",
+    text: "嘉宾分享「MCP 深度实践：解锁沉浸式 AI 编程体验」。2025-09-06，上海杨浦。",
+  },
+  {
+    kicker: "分享",
+    title: "OpenClaw 华语区实战分享",
+    text: "「龙虾养殖手册」实战分享会嘉宾，身份为 AI 出海创业者。北京时间 3 月 5 日晚 8 点。",
+  },
+  {
+    kicker: "邀约",
+    title: "掘金 Coffee Talk 杭州 #001",
+    text: "稀土掘金 X-Lab Coffee Talk 诚邀嘉宾。2026-11-07，西湖科学咖啡。",
+    href: "https://juejin.cn/activity/hangzhouxlab01",
+    linkLabel: "活动页",
+  },
+];
+
 export default function Home() {
   const personSchema = {
     "@context": "https://schema.org",
     "@type": "Person",
     name: "孟健",
-    jobTitle: "AI 编程创业者 / 技术作者 / 演讲者",
+    jobTitle: "AI 编程创业者 / 出海产品实践者 / 技术作者与演讲者",
     description:
-      "前腾讯 T11 | 前字节跳动 3-1 | Nextfield Labs LLC 创始人 | AI 编程与出海创业 | 公众号「孟健AI编程」作者 | 已出版 AI 主题书籍",
+      "前腾讯 T11 | 前字节跳动 3-1 | Nextfield Labs LLC 创始人 | 《DeepSeek极简入门与应用》突破百万册 | 首批 TRAE Expert | 公众号「孟健AI编程」",
     url: "https://mengjian.site",
     sameAs: [
       "https://github.com/mengjian-github",
@@ -69,13 +168,33 @@ export default function Home() {
     ],
     knowsAbout: [
       "AI编程",
+      "出海产品",
       "React",
       "Next.js",
       "TypeScript",
       "SEO",
-      "出海创业",
+      "MCP",
       "DeepSeek",
+      "技术写作",
     ],
+    award: [
+      "《DeepSeek极简入门与应用》突破百万册",
+      "首批 TRAE Expert",
+      "TRAE Achievement Award 2025 年度社区影响力奖",
+      "电子工业出版社博文视点 2025 年度优秀作者",
+      "AI破局行动家大会 破局文曲星",
+      "2025 GDEC · AIGC 代码生成-CSDN 分赛道评委",
+      "破局行动第09期精英教练",
+    ],
+    subjectOf: {
+      "@type": "PodcastEpisode",
+      name: "腾讯到字节:AI时代前端工程师孟健的突围",
+      url: "https://www.xiaoyuzhoufm.com/episode/67e2c9b0a3dfefa31f12fbb3",
+      partOfSeries: {
+        "@type": "PodcastSeries",
+        name: "浪说播客",
+      },
+    },
   };
 
   return (
@@ -139,7 +258,7 @@ export default function Home() {
             className="grid grid-cols-2 md:grid-cols-4 gap-y-8 gap-x-6 md:gap-x-10 mb-14"
           >
             {[
-              { num: "94万", unit: "册", label: "《DeepSeek极简入门与应用》发行" },
+              { num: "100万+", unit: "册", label: "《DeepSeek极简入门与应用》\n突破百万" },
               { num: "3万+", unit: "", label: "公众号粉丝" },
               { num: "30+", unit: "", label: "产品 / 站点实践" },
               { num: "T11", unit: "", label: "腾讯最高职级" },
@@ -155,7 +274,7 @@ export default function Home() {
                     <span className="text-amber-600 dark:text-amber-400">{s.unit}</span>
                   )}
                 </span>
-                <span className="block text-xs sm:text-sm text-neutral-400 dark:text-neutral-500 mt-1 tracking-wide">
+                <span className="block text-xs sm:text-sm text-neutral-400 dark:text-neutral-500 mt-1 tracking-wide whitespace-pre-line">
                   {s.label}
                 </span>
               </motion.div>
@@ -222,12 +341,12 @@ export default function Home() {
           </motion.div>
         </div>
 
-        {/* Scroll hint */}
+        {/* Scroll hint sits in flow so it does not cover the lead card */}
         <motion.div
           initial={{ opacity: 0 }}
           animate={{ opacity: 0.4 }}
           transition={{ delay: 1.8 }}
-          className="absolute bottom-8 left-1/2 -translate-x-1/2"
+          className="relative z-10 pb-10 pt-6"
         >
           <div className="flex flex-col items-center gap-2">
             <span className="text-[10px] tracking-[0.3em] uppercase text-neutral-400 dark:text-neutral-600 font-mono">
@@ -293,9 +412,102 @@ export default function Home() {
       </section>
 
       {/* ————————————————————————————————————————————
-          02 — ACHIEVEMENTS & CAREER
+          02 — SPEAKING & HONORS
       ———————————————————————————————————————————— */}
-      <section className="py-24 bg-neutral-50 dark:bg-[#0d0d0d] border-t border-neutral-200 dark:border-neutral-800">
+      <section
+        id="influence"
+        className="py-24 bg-neutral-50 dark:bg-[#0d0d0d] border-t border-neutral-200 dark:border-neutral-800"
+      >
+        <div className="max-w-6xl mx-auto px-6 sm:px-8">
+          <motion.div
+            initial="hidden"
+            whileInView="visible"
+            viewport={{ once: true, margin: "-80px" }}
+            variants={staggerContainer}
+          >
+            <motion.div variants={fadeIn} className="mb-6 flex items-baseline gap-4">
+              <span className="text-xs tracking-[0.3em] uppercase text-amber-600/60 dark:text-amber-400/40 font-mono">
+                02
+              </span>
+              <h2 className="text-3xl sm:text-4xl font-bold text-neutral-900 dark:text-white">
+                演讲与荣誉
+              </h2>
+            </motion.div>
+
+            <motion.p
+              variants={fadeIn}
+              className="max-w-3xl text-base sm:text-lg text-neutral-600 dark:text-neutral-400 leading-relaxed mb-12"
+            >
+              出版、社区和台上的公开记录。书的销量只记突破百万册；其余是播客、奖项、评委聘任，以及已经发生或已经确认的分享。
+            </motion.p>
+
+            <motion.div
+              variants={fadeIn}
+              className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-4 mb-12"
+            >
+              {influenceShots.map((shot) => (
+                <figure key={shot.src} className="min-w-0">
+                  <div className="relative aspect-[3/2] overflow-hidden rounded-lg ring-1 ring-neutral-200 dark:ring-neutral-800 bg-neutral-100 dark:bg-neutral-900">
+                    <Image
+                      src={shot.src}
+                      alt={shot.alt}
+                      fill
+                      sizes="(min-width: 1024px) 18vw, (min-width: 768px) 30vw, 45vw"
+                      className="object-cover"
+                    />
+                  </div>
+                  <figcaption className="mt-2 text-xs text-neutral-500 dark:text-neutral-500 leading-snug">
+                    {shot.caption}
+                  </figcaption>
+                </figure>
+              ))}
+            </motion.div>
+
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+              {influenceItems.map((item) => (
+                <motion.article
+                  key={item.title}
+                  variants={fadeIn}
+                  className="p-6 rounded-lg border border-neutral-200 dark:border-neutral-800 bg-white dark:bg-white/[0.03]"
+                >
+                  <p className="text-[10px] uppercase tracking-[0.22em] font-mono text-amber-700 dark:text-amber-400">
+                    {item.kicker}
+                  </p>
+                  <h3 className="mt-2 text-lg font-semibold text-neutral-900 dark:text-white">
+                    {item.title}
+                  </h3>
+                  <p className="mt-2 text-sm text-neutral-600 dark:text-neutral-400 leading-relaxed">
+                    {item.text}
+                  </p>
+                  {item.href && (
+                    <a
+                      href={item.href}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="mt-4 inline-flex items-center gap-1 text-sm text-amber-700 dark:text-amber-400 hover:underline"
+                    >
+                      {item.linkLabel}
+                      <FiArrowRight className="w-3.5 h-3.5" />
+                    </a>
+                  )}
+                </motion.article>
+              ))}
+            </div>
+
+            <motion.p
+              variants={fadeIn}
+              className="mt-8 text-sm text-neutral-500 dark:text-neutral-500 leading-relaxed"
+            >
+              另：哥飞的朋友们 2025 年度网站比赛第 15 名，荣誉称号「中流砥柱·坚实力量」（2026-01-07）。
+            </motion.p>
+          </motion.div>
+        </div>
+      </section>
+
+      {/* ————————————————————————————————————————————
+          03 — ACHIEVEMENTS & CAREER
+      ———————————————————————————————————————————— */}
+      <section className="py-24 border-t border-neutral-200 dark:border-neutral-800">
         <div className="max-w-6xl mx-auto px-6 sm:px-8">
           <motion.div
             initial="hidden"
@@ -305,7 +517,7 @@ export default function Home() {
           >
             <motion.div variants={fadeIn} className="mb-16 flex items-baseline gap-4">
               <span className="text-xs tracking-[0.3em] uppercase text-amber-600/60 dark:text-amber-400/40 font-mono">
-                02
+                03
               </span>
               <h2 className="text-3xl sm:text-4xl font-bold text-neutral-900 dark:text-white">
                 里程碑
@@ -341,7 +553,7 @@ export default function Home() {
               {[
                 { year: "2025.10", text: "全职创业，创办 Nextfield Labs LLC" },
                 { year: "2024 – 2025.10", text: "字节跳动 Flow 部门 · 前端技术 Leader（3-1），负责猫箱 BagelBell —— AI 角色创建与互动平台" },
-                { year: "2025", text: "AI 主题书籍持续出版，个人品牌从技术负责人升级为技术作者与创业者" },
+                { year: "2025", text: "《DeepSeek极简入门与应用》突破百万册，个人品牌从技术负责人升级为技术作者与创业者" },
                 { year: "2025", text: "GIAC 全球互联网架构大会 2025 深圳站讲师" },
                 { year: "2025", text: "破局AI行动家大会 2025 主会场分享嘉宾" },
                 { year: "2015 – 2024", text: "腾讯 T11 · QQ 大技术五组负责人" },
@@ -368,7 +580,7 @@ export default function Home() {
       </section>
 
       {/* ————————————————————————————————————————————
-          03 — BOOK
+          04 — BOOK
       ———————————————————————————————————————————— */}
       <section className="py-24 border-t border-neutral-200 dark:border-neutral-800">
         <div className="max-w-6xl mx-auto px-6 sm:px-8">
@@ -380,7 +592,7 @@ export default function Home() {
           >
             <motion.div variants={fadeIn} className="mb-16 flex items-baseline gap-4">
               <span className="text-xs tracking-[0.3em] uppercase text-amber-600/60 dark:text-amber-400/40 font-mono">
-                03
+                04
               </span>
               <h2 className="text-3xl sm:text-4xl font-bold text-neutral-900 dark:text-white">
                 著作 / 出版
@@ -408,13 +620,13 @@ export default function Home() {
                       DeepSeek极简入门与应用
                     </h3>
                     <p className="text-neutral-600 dark:text-neutral-400 text-base leading-relaxed mb-6">
-                      围绕 AI 工具与大模型应用的出版作品之一，用来承接个人品牌中的“技术作者 / 出版作者”身份。
+                      代表作。围绕 AI 工具与大模型应用，发行已突破百万册，用来承接个人品牌里的技术作者身份。
                     </p>
                     <div className="mb-6 border-l-2 border-amber-500 pl-4">
                       <span className="block text-4xl sm:text-5xl font-bold font-mono text-neutral-900 dark:text-white tracking-tight leading-none">
-                        已<span className="text-amber-500">出</span><span className="text-2xl sm:text-3xl">版</span>
+                        100万<span className="text-amber-500">+</span>
                       </span>
-                      <span className="block text-sm text-neutral-500 mt-2">出版作者身份展示 · 京东有售</span>
+                      <span className="block text-sm text-neutral-500 mt-2">突破百万册 · 京东有售</span>
                     </div>
                     <a
                       href="https://item.jd.com/14960026.html"
@@ -435,7 +647,7 @@ export default function Home() {
                     <div className="relative w-40 sm:w-44 aspect-[3/4] rounded-md overflow-hidden shadow-xl dark:shadow-black/40 ring-1 ring-neutral-200 dark:ring-neutral-800 bg-neutral-50 dark:bg-neutral-900">
                       <Image
                         src="/images/openclaw-book-poster.jpg"
-                        alt="OpenClaw 新书封面"
+                        alt="OpenClaw极简入门与应用"
                         fill
                         className="object-cover object-top"
                       />
@@ -443,10 +655,10 @@ export default function Home() {
                   </div>
                   <div className="flex-1 min-w-0">
                     <h3 className="text-2xl font-bold text-neutral-900 dark:text-white mb-3 leading-tight">
-                      OpenClaw 主题新书
+                      OpenClaw极简入门与应用
                     </h3>
                     <p className="text-neutral-600 dark:text-neutral-400 text-base leading-relaxed mb-6">
-                      最新出版方向进一步延伸到 AI 助手与个人智能工作流：帮助更多一线开发者和创作者，用更低门槛的方式搭建自己的 AI 协作系统。
+                      出版方向延伸到 AI 助手与个人智能工作流，帮助一线开发者和创作者用更低门槛搭建自己的 AI 协作系统。
                     </p>
                     <div className="mb-6 border-l-2 border-amber-500 pl-4">
                       <span className="block text-4xl sm:text-5xl font-bold font-mono text-neutral-900 dark:text-white tracking-tight leading-none">
@@ -478,7 +690,7 @@ export default function Home() {
           >
             <motion.div variants={fadeIn} className="mb-12 flex items-baseline gap-4">
               <span className="text-xs tracking-[0.3em] uppercase text-amber-600/60 dark:text-amber-400/40 font-mono">
-                04
+                05
               </span>
               <h2 className="text-3xl sm:text-4xl font-bold text-neutral-900 dark:text-white">
                 开源贡献
@@ -565,7 +777,7 @@ export default function Home() {
       </section>
 
       {/* ————————————————————————————————————————————
-          05 — CONTACT & COMMUNITY
+          06 — CONTACT & COMMUNITY
       ———————————————————————————————————————————— */}
       <section className="py-24 border-t border-neutral-200 dark:border-neutral-800">
         <div className="max-w-6xl mx-auto px-6 sm:px-8">
@@ -577,7 +789,7 @@ export default function Home() {
           >
             <motion.div variants={fadeIn} className="mb-16 flex items-baseline gap-4">
               <span className="text-xs tracking-[0.3em] uppercase text-amber-600/60 dark:text-amber-400/40 font-mono">
-                05
+                06
               </span>
               <h2 className="text-3xl sm:text-4xl font-bold text-neutral-900 dark:text-white">
                 联系 &amp; 社群
@@ -615,6 +827,7 @@ export default function Home() {
                     { label: "知乎", href: "https://www.zhihu.com/people/meng-jian-39-32", icon: <SiZhihu className="w-4 h-4" /> },
                     { label: "掘金", href: "https://juejin.cn/user/4212984287073895", icon: <SiJuejin className="w-4 h-4" /> },
                     { label: "公众号文章", href: "https://mp.weixin.qq.com/s/Z4k_5_waWJbRRo5lZBZmog", icon: <FiMessageCircle className="w-4 h-4" /> },
+                    { label: "小宇宙《浪说》", href: "https://www.xiaoyuzhoufm.com/episode/67e2c9b0a3dfefa31f12fbb3", icon: <FiExternalLink className="w-4 h-4" /> },
                     { label: "京东购书", href: "https://item.jd.com/14960026.html", icon: <FiExternalLink className="w-4 h-4" /> },
                     { label: "友链 · 吴少峰", href: "https://www.wushaofengai.com", icon: <FiExternalLink className="w-4 h-4" /> },
                   ].map((link) => (

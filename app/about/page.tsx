@@ -42,7 +42,7 @@ export default function AboutPage() {
               variants={fadeIn}
               className="text-lg sm:text-xl text-neutral-500 dark:text-neutral-400 max-w-2xl leading-relaxed"
             >
-              前腾讯 T11 · 前字节跳动 3-1，现全职创业：AI 编程 + 出海增长 + 技术写作 / 演讲
+              前腾讯 T11 · 前字节跳动 3-1。AI 编程创业者、出海产品实践者，《DeepSeek极简入门与应用》突破百万册，首批 TRAE Expert。
             </motion.p>
           </motion.div>
         </div>
@@ -95,7 +95,16 @@ export default function AboutPage() {
                   >
                     字流 ziliu.online
                   </a>
-                  （14 平台一键发布工具）、OpenClaw 101、MCP Hub 中国，以及一系列 SEO 驱动的小产品。公众号「孟健AI编程」持续更新，个人品牌也从技术管理者进一步升级为 AI 编程创业者、技术作者与演讲者。
+                  （14 平台一键发布工具）、
+                  <a
+                    href="https://shipsolo.cn"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="text-neutral-900 dark:text-white hover:text-amber-600 dark:hover:text-amber-400 underline underline-offset-2 transition-colors"
+                  >
+                    ShipSolo
+                  </a>
+                  （AI 编程出海领航）、OpenClaw 101、MCP Hub 中国，以及一系列 SEO 驱动的小产品。代表作《DeepSeek极简入门与应用》已突破百万册。公众号「孟健AI编程」持续更新，个人品牌也从技术管理者进一步升级为 AI 编程创业者、技术作者与演讲者。
                 </p>
               </motion.div>
             </div>
@@ -175,10 +184,10 @@ export default function AboutPage() {
                   period: "2025.10 - 至今",
                   items: [
                     "全职创业：AI 编程 + 出海增长，小产品矩阵",
-                    "主产品：字流 ziliu.online（14 平台一键发布工具）",
+                    "主产品：字流 ziliu.online（14 平台一键发布工具）、ShipSolo shipsolo.cn（AI 编程出海领航）",
                     "增长手段：SEO / SEM / Affiliate / EDM 等海外运营组合",
                     "内容输出：公众号「孟健AI编程」持续更新，沉淀 AI 编程方法论",
-                    "出版与分享：已出版 AI 主题书籍，并持续做演讲、写作与公开分享",
+                    "出版与分享：《DeepSeek极简入门与应用》突破百万册；首批 TRAE Expert，并持续做演讲与公开分享",
                   ],
                 },
                 {
@@ -322,14 +331,14 @@ export default function AboutPage() {
               {[
                 {
                   title: "DeepSeek极简入门与应用",
-                  desc: "AI 主题出版作品之一，用于承接个人品牌中的技术作者 / 出版作者身份。",
+                  desc: "代表作，发行已突破百万册，用来承接个人品牌中的技术作者身份。",
                   link: "https://item.jd.com/14960026.html",
                   linkText: "在京东购买",
                   image: "/images/my-first-book.jpg",
                 },
                 {
-                  title: "OpenClaw 主题新书",
-                  desc: "围绕 AI 助手、自动化工作流与个人 / 小团队 AI 协作的新出版方向，进一步补齐“作者 + 产品实践者”的个人品牌叙事。",
+                  title: "OpenClaw极简入门与应用",
+                  desc: "围绕 AI 助手、自动化工作流与个人 / 小团队 AI 协作的出版作品，补齐作者与产品实践者的叙事。",
                   link: "https://openclaw101.dev",
                   linkText: "查看相关项目",
                   image: "/images/openclaw-book-poster.jpg",
@@ -392,12 +401,36 @@ export default function AboutPage() {
                 06
               </span>
               <h2 className="text-2xl sm:text-3xl font-bold text-neutral-900 dark:text-white">
-                荣誉奖项
+                演讲与荣誉
               </h2>
             </motion.div>
 
             <div className="space-y-4">
               {[
+                {
+                  label: "出版",
+                  text: "《DeepSeek极简入门与应用》突破百万册。电子工业出版社博文视点 2025 年度优秀作者。另有《OpenClaw极简入门与应用》。",
+                },
+                {
+                  label: "TRAE",
+                  text: "首批 TRAE Expert，并获 TRAE Achievement Award 2025 年度社区影响力奖。",
+                },
+                {
+                  label: "破局",
+                  text: "AI 破局行动家大会「破局文曲星」（授予「孟健AI编程」，深圳 2025.12.27–28）；破局行动第 09 期精英教练（2026 年 1 月）。上海站与深圳主会场分享嘉宾。",
+                },
+                {
+                  label: "评委",
+                  text: "2025 全球数字经济创新大赛 · AIGC 创作大赛 · 代码生成-CSDN 分赛道评委（GDEC / CSDN），2025 年 10 月获聘。",
+                },
+                {
+                  label: "媒体",
+                  text: "小宇宙《浪说播客》嘉宾：腾讯到字节——AI 时代前端工程师孟健的突围。",
+                },
+                {
+                  label: "演讲",
+                  text: "TRAE Shanghai「MCP 深度实践」（2025-09-06，上海杨浦）；OpenClaw 华语区「龙虾养殖手册」实战分享会嘉宾；稀土掘金 X-Lab Coffee Talk 杭州 #001 邀约（2026-11-07）。另有 GIAC、GMTC 与腾讯云专场分享。",
+                },
                 {
                   label: "公司荣誉",
                   text: "获得十二项公司级荣誉，3 项专业级荣誉。包括优秀员工、开源协同、自研上云等多项公司级奖项。",

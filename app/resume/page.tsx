@@ -70,7 +70,7 @@ export default function ResumePage() {
                 孟健
               </h2>
               <p className="text-neutral-500 dark:text-neutral-400 mb-4">
-                Ex-Tencent T11 · Ex-ByteDance 3-1 · 技术作家 · 出海创业者
+                Ex-Tencent T11 · Ex-ByteDance 3-1 · 百万册作者 · TRAE Expert · 出海创业者
               </p>
               <div className="flex flex-wrap items-center gap-4 text-sm">
                 {[
@@ -219,10 +219,14 @@ export default function ResumePage() {
                   </h4>
                   <ul className="space-y-1">
                     {[
+                      "《DeepSeek极简入门与应用》突破百万册",
+                      "首批 TRAE Expert · TRAE 2025 年度社区影响力奖",
+                      "博文视点 2025 年度优秀作者 · 破局文曲星",
+                      "GDEC / CSDN 代码生成赛道评委 · 破局精英教练",
+                      "小宇宙《浪说》嘉宾 · 破局 / TRAE / OpenClaw 分享",
                       "逆向分析 Copilot（Github 上千 star）",
                       "GMTC 全球大技术大会演讲嘉宾",
                       "开源书籍《React 源码全解》作者",
-                      "知乎技术话题高赞回答者",
                     ].map((item, i) => (
                       <li
                         key={i}
@@ -262,8 +266,8 @@ export default function ResumePage() {
                     period: "2025.10 - 至今",
                     items: [
                       "全职创业：AI 编程 + 出海增长",
-                      "主产品：字流 ziliu.online（14 平台一键发布工具）",
-                      "《DeepSeek极简入门与应用》累计销量 93 万册",
+                      "主产品：字流 ziliu.online；ShipSolo shipsolo.cn（AI 编程出海领航）",
+                      "《DeepSeek极简入门与应用》突破百万册",
                     ],
                   },
                   {
@@ -360,7 +364,12 @@ export default function ResumePage() {
                   {
                     title: "《DeepSeek极简入门与应用》",
                     subtitle: "出版书籍",
-                    highlight: "累计销量 93 万册",
+                    highlight: "突破百万册",
+                  },
+                  {
+                    title: "《OpenClaw极简入门与应用》",
+                    subtitle: "出版书籍",
+                    highlight: "AI 助手与工作流",
                   },
                   {
                     title: "《React 源码全解》",
