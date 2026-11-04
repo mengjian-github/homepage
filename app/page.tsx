@@ -34,6 +34,12 @@ const products = [
     desc: "AI 编程出海领航",
   },
   {
+    name: "Shipsite",
+    domain: "shipsite.ai",
+    url: "https://shipsite.ai",
+    desc: "山海司 · 从关键词到可上线的 Next.js 站点",
+  },
+  {
     name: "MCP Hub 中国",
     domain: "mcp-cn.com",
     url: "https://mcp-cn.com",
@@ -342,7 +348,7 @@ export default function Home() {
               variants={fadeIn}
               className="max-w-3xl text-base sm:text-lg text-neutral-600 dark:text-neutral-400 leading-relaxed mb-12"
             >
-              已经公开的专访、视频和播客。有稳定网址的条目可以直接打开原文。书的销量只记突破百万册 / 100万+。
+              已经公开的专访、视频和播客。有稳定网址的条目可以直接打开原文。
             </motion.p>
 
             <motion.div variants={fadeIn} className="grid grid-cols-1 sm:grid-cols-2 gap-4 mb-12">
@@ -351,14 +357,13 @@ export default function Home() {
                 const image = item.image;
                 return (
                   <figure key={image.src} className="min-w-0">
-                    <div className="relative aspect-[16/9] overflow-hidden rounded-lg ring-1 ring-neutral-200 dark:ring-neutral-800 bg-neutral-100 dark:bg-neutral-900">
+                    <div className="relative aspect-[3/4] overflow-hidden rounded-lg ring-1 ring-neutral-200 dark:ring-neutral-800 bg-neutral-100 dark:bg-neutral-900">
                       <Image
                         src={image.src}
                         alt={image.alt}
                         fill
                         sizes="(min-width: 640px) 45vw, 90vw"
-                        className="object-cover"
-                        style={image.objectPosition ? { objectPosition: image.objectPosition } : undefined}
+                        className="object-contain"
                       />
                     </div>
                     <figcaption className="mt-2 text-xs text-neutral-500 leading-snug">
@@ -439,24 +444,40 @@ export default function Home() {
               variants={fadeIn}
               className="max-w-3xl text-base sm:text-lg text-neutral-600 dark:text-neutral-400 leading-relaxed mb-12"
             >
-              演讲、奖项、评委聘任和播客。有照片的条目用已有凭证，不另编日期。
+              演讲、奖项、评委聘任和播客。
             </motion.p>
 
             <ol className="relative border-l border-neutral-200 dark:border-neutral-800 ml-3 space-y-8">
-              {honors.map((item) => (
+              {honors.map((item) => {
+                const shots = [
+                  ...(item.image ? [item.image] : []),
+                  ...(item.images ?? []),
+                ];
+                return (
                 <motion.li key={`${item.date}-${item.title}`} variants={fadeIn} className="relative pl-8">
                   <span className="absolute -left-[7px] top-1.5 h-3.5 w-3.5 rounded-full bg-amber-500 ring-4 ring-white dark:ring-[#0a0a0a]" />
                   <div className="flex flex-col sm:flex-row gap-4 sm:items-start">
-                    {item.image && (
-                      <div className="relative w-full sm:w-44 aspect-[3/2] shrink-0 overflow-hidden rounded-lg ring-1 ring-neutral-200 dark:ring-neutral-800 bg-neutral-100 dark:bg-neutral-900">
-                        <Image
-                          src={item.image.src}
-                          alt={item.image.alt}
-                          fill
-                          sizes="180px"
-                          className="object-cover"
-                        />
-                      </div>
+                    {shots.length > 0 && (
+                        <div className="flex flex-wrap gap-3 shrink-0">
+                          {shots.map((shot) => (
+                            <div
+                              key={shot.src}
+                              className={`relative aspect-[3/4] overflow-hidden rounded-lg ring-1 ring-neutral-200 dark:ring-neutral-800 bg-neutral-100 dark:bg-neutral-900 ${
+                                shots.length > 1
+                                  ? "w-[calc(50%-0.375rem)] sm:w-40"
+                                  : "w-full sm:w-52"
+                              }`}
+                            >
+                              <Image
+                                src={shot.src}
+                                alt={shot.alt}
+                                fill
+                                sizes="(min-width: 640px) 208px, 90vw"
+                                className="object-contain"
+                              />
+                            </div>
+                          ))}
+                        </div>
                     )}
                     <div className="min-w-0">
                       <p className="text-[10px] uppercase tracking-[0.22em] font-mono text-amber-700 dark:text-amber-400">
@@ -483,7 +504,8 @@ export default function Home() {
                     </div>
                   </div>
                 </motion.li>
-              ))}
+                );
+              })}
             </ol>
           </motion.div>
         </div>
