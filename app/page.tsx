@@ -59,7 +59,14 @@ const products = [
   },
 ];
 
-const influenceShots = [
+type InfluenceShot = {
+  src: string;
+  alt: string;
+  caption: string;
+  objectPosition?: string;
+};
+
+const influenceShots: InfluenceShot[] = [
   {
     src: "/assets/influence/speaking-shenzhen.jpg",
     alt: "孟健在 AI 破局行动家大会主会场演讲",
@@ -85,6 +92,12 @@ const influenceShots = [
     alt: "OpenClaw 华语区实战分享会嘉宾海报，孟健的身份是 AI 出海创业者",
     caption: "OpenClaw 华语区 · 实战分享",
   },
+  {
+    src: "/assets/influence/media-nbd-lobster.jpg",
+    alt: "每经头条卡片：每日经济新闻引用孟健谈 OpenClaw「龙虾」记忆膨胀与 Token 成本",
+    caption: "每经头条 · 养虾调查专访",
+    objectPosition: "center 68%",
+  },
 ];
 
 type InfluenceItem = {
@@ -96,6 +109,13 @@ type InfluenceItem = {
 };
 
 const influenceItems: InfluenceItem[] = [
+  {
+    kicker: "专访",
+    title: "每日经济新闻 / 每经头条",
+    text: "被《每日经济新闻》专访引用，谈 OpenClaw「龙虾」记忆膨胀推高 Token 成本、低价套餐用量限制，以及赋予 AI 电脑操控权限的安全风险。2026-03-12。",
+    href: "https://www.nbd.com.cn/articles/2026-03-12/4289959.html",
+    linkLabel: "阅读原文",
+  },
   {
     kicker: "播客",
     title: "小宇宙《浪说》",
@@ -186,15 +206,29 @@ export default function Home() {
       "2025 GDEC · AIGC 代码生成-CSDN 分赛道评委",
       "破局行动第09期精英教练",
     ],
-    subjectOf: {
-      "@type": "PodcastEpisode",
-      name: "腾讯到字节:AI时代前端工程师孟健的突围",
-      url: "https://www.xiaoyuzhoufm.com/episode/67e2c9b0a3dfefa31f12fbb3",
-      partOfSeries: {
-        "@type": "PodcastSeries",
-        name: "浪说播客",
+    subjectOf: [
+      {
+        "@type": "NewsArticle",
+        headline:
+          "全民「养虾」调查：大厂7.9元「包吃住」，为何有人1天花费超2000元？起底 OpenClaw 背后的算力「刺客」",
+        url: "https://www.nbd.com.cn/articles/2026-03-12/4289959.html",
+        datePublished: "2026-03-12",
+        publisher: {
+          "@type": "Organization",
+          name: "每日经济新闻",
+          alternateName: "每经头条",
+        },
       },
-    },
+      {
+        "@type": "PodcastEpisode",
+        name: "腾讯到字节:AI时代前端工程师孟健的突围",
+        url: "https://www.xiaoyuzhoufm.com/episode/67e2c9b0a3dfefa31f12fbb3",
+        partOfSeries: {
+          "@type": "PodcastSeries",
+          name: "浪说播客",
+        },
+      },
+    ],
   };
 
   return (
@@ -438,12 +472,12 @@ export default function Home() {
               variants={fadeIn}
               className="max-w-3xl text-base sm:text-lg text-neutral-600 dark:text-neutral-400 leading-relaxed mb-12"
             >
-              出版、社区和台上的公开记录。书的销量只记突破百万册；其余是播客、奖项、评委聘任，以及已经发生或已经确认的分享。
+              出版、社区和台上的公开记录。书的销量只记突破百万册；其余是媒体专访、播客、奖项、评委聘任，以及已经发生或已经确认的分享。
             </motion.p>
 
             <motion.div
               variants={fadeIn}
-              className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-4 mb-12"
+              className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-4 mb-12"
             >
               {influenceShots.map((shot) => (
                 <figure key={shot.src} className="min-w-0">
@@ -452,8 +486,9 @@ export default function Home() {
                       src={shot.src}
                       alt={shot.alt}
                       fill
-                      sizes="(min-width: 1024px) 18vw, (min-width: 768px) 30vw, 45vw"
+                      sizes="(min-width: 1024px) 15vw, (min-width: 768px) 30vw, 45vw"
                       className="object-cover"
+                      style={shot.objectPosition ? { objectPosition: shot.objectPosition } : undefined}
                     />
                   </div>
                   <figcaption className="mt-2 text-xs text-neutral-500 dark:text-neutral-500 leading-snug">
@@ -828,6 +863,7 @@ export default function Home() {
                     { label: "掘金", href: "https://juejin.cn/user/4212984287073895", icon: <SiJuejin className="w-4 h-4" /> },
                     { label: "公众号文章", href: "https://mp.weixin.qq.com/s/Z4k_5_waWJbRRo5lZBZmog", icon: <FiMessageCircle className="w-4 h-4" /> },
                     { label: "小宇宙《浪说》", href: "https://www.xiaoyuzhoufm.com/episode/67e2c9b0a3dfefa31f12fbb3", icon: <FiExternalLink className="w-4 h-4" /> },
+                    { label: "每日经济新闻专访", href: "https://www.nbd.com.cn/articles/2026-03-12/4289959.html", icon: <FiExternalLink className="w-4 h-4" /> },
                     { label: "京东购书", href: "https://item.jd.com/14960026.html", icon: <FiExternalLink className="w-4 h-4" /> },
                     { label: "友链 · 吴少峰", href: "https://www.wushaofengai.com", icon: <FiExternalLink className="w-4 h-4" /> },
                   ].map((link) => (
