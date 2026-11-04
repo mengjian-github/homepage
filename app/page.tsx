@@ -124,6 +124,13 @@ const influenceItems: InfluenceItem[] = [
     linkLabel: "阅读原文",
   },
   {
+    kicker: "视频",
+    title: "AI破局视频号",
+    text: "短片专访：走出大厂后重新学习做生意，分享 AI 编程出海创业路径。2026-10-25，广州。",
+    href: "https://weixin.qq.com/sph/Ae5ROu39cE",
+    linkLabel: "观看",
+  },
+  {
     kicker: "播客",
     title: "小宇宙《浪说》",
     text: "嘉宾对谈，主题是「腾讯到字节：AI 时代前端工程师孟健的突围」。",
@@ -237,6 +244,18 @@ export default function Home() {
         isPartOf: {
           "@type": "CreativeWorkSeries",
           name: "程序员客栈《开发者说》",
+        },
+      },
+      {
+        "@type": "VideoObject",
+        name: "走出大厂，我开始重新学习做生意",
+        description: "短片专访：走出大厂后重新学习做生意，分享 AI 编程出海创业路径。",
+        url: "https://weixin.qq.com/sph/Ae5ROu39cE",
+        uploadDate: "2026-10-25",
+        contentLocation: "广州市",
+        publisher: {
+          "@type": "Organization",
+          name: "AI破局",
         },
       },
       {
@@ -885,6 +904,7 @@ export default function Home() {
                     { label: "小宇宙《浪说》", href: "https://www.xiaoyuzhoufm.com/episode/67e2c9b0a3dfefa31f12fbb3", icon: <FiExternalLink className="w-4 h-4" /> },
                     { label: "每日经济新闻专访", href: "https://www.nbd.com.cn/articles/2026-03-12/4289959.html", icon: <FiExternalLink className="w-4 h-4" /> },
                     { label: "程序员客栈《开发者说》", href: "https://mp.weixin.qq.com/s/PzEF9hm4rB5I75r9TuVDrQ", icon: <FiExternalLink className="w-4 h-4" /> },
+                    { label: "AI破局视频号", href: "https://weixin.qq.com/sph/Ae5ROu39cE", icon: <FiExternalLink className="w-4 h-4" /> },
                     { label: "京东购书", href: "https://item.jd.com/14960026.html", icon: <FiExternalLink className="w-4 h-4" /> },
                     { label: "友链 · 吴少峰", href: "https://www.wushaofengai.com", icon: <FiExternalLink className="w-4 h-4" /> },
                   ].map((link) => (
