@@ -98,6 +98,11 @@ const influenceShots: InfluenceShot[] = [
     caption: "每经头条 · 养虾调查专访",
     objectPosition: "center 68%",
   },
+  {
+    src: "/assets/influence/media-chengqian-xinhuo.jpg",
+    alt: "程前朋友圈 Vol.18 AI编程出海专访，身份标注为 AI+编程出海创业者",
+    caption: "程前朋友圈 · 新火 Vol.18",
+  },
 ];
 
 type InfluenceItem = {
@@ -129,6 +134,11 @@ const influenceItems: InfluenceItem[] = [
     text: "短片专访：走出大厂后重新学习做生意，分享 AI 编程出海创业路径。2026-10-25，广州。",
     href: "https://weixin.qq.com/sph/Ae5ROu39cE",
     linkLabel: "观看",
+  },
+  {
+    kicker: "专访",
+    title: "程前朋友圈 / 新火社区",
+    text: "程前朋友圈 Vol.18「AI编程出海」，发布在新火社区。专访介绍：用 AI 一个月上线 30 个出海网站，培养出 6 个数字员工，让它们 24 小时自运转；身份标注为 AI+编程出海创业者。2026-06-24，页面显示 3130 次播放。微信打开：#小程序://新火/a9ySEecVhMIN9sK",
   },
   {
     kicker: "播客",
@@ -256,6 +266,21 @@ export default function Home() {
         publisher: {
           "@type": "Organization",
           name: "AI破局",
+        },
+      },
+      {
+        "@type": "Article",
+        headline: "Vol.18 AI编程出海",
+        datePublished: "2026-06-24",
+        description:
+          "程前朋友圈专访，发布在新火社区。身份标注为 AI+编程出海创业者。",
+        isPartOf: {
+          "@type": "CreativeWorkSeries",
+          name: "程前朋友圈",
+        },
+        publisher: {
+          "@type": "Organization",
+          name: "新火社区",
         },
       },
       {
